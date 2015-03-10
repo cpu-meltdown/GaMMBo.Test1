@@ -22,7 +22,7 @@ namespace GaMMBo.Test
         {
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
 
-            SqlCommand selectCommand = new SqlCommand("select Name, Year from Movies", conn);
+            SqlCommand selectCommand = new SqlCommand("select Artist, Album, Year from Music Order By Year", conn);
 
             conn.Open();
             SqlDataReader reader = selectCommand.ExecuteReader();
@@ -31,7 +31,7 @@ namespace GaMMBo.Test
 
             while (reader.Read() == true)
             {
-                selectedMovies += "Movie: " + reader[0] + " Year: " + reader[1] + "\n";
+                selectedMovies += "Artist: " + reader[0] + " Album: " + reader[1] + " Year: "+ reader[2] +"\n";
             }
 
             MessageBox.Show(selectedMovies);
