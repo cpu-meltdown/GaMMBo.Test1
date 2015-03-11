@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GaMMBo.Test
-{
+{//ben dziedzic
     static class Program
     {
         /// <summary>
