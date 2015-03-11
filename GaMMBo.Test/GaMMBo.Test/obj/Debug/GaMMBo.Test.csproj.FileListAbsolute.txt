@@ -25,3 +25,6 @@ C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\G
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
