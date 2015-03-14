@@ -33,9 +33,17 @@ namespace GaMMBo.Test
             {
                 selectedMovies += "Artist: " + reader[0] + " Album: " + reader[1] + " Year: "+ reader[2] +"\n";
             }
-
+            // test can you guys see this
             MessageBox.Show(selectedMovies);
             conn.Close();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            this.Hide();
+            frmMain.ShowDialog();
+            
         }
     }
 }
