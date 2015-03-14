@@ -20,6 +20,12 @@ namespace GaMMBo.Test
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Ben - bring up main form
+            frmMain main = new frmMain();
+            this.Hide();
+            main.ShowDialog();
+
+                              
             // TODO: This line of code loads data into the 'categoriesDataSet1.Music' table. You can move, or remove it, as needed.
             this.musicTableAdapter.Fill(this.categoriesDataSet1.Music);
             //SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
@@ -45,6 +51,19 @@ namespace GaMMBo.Test
             this.Validate();
             this.musicBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.categoriesDataSet1);
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            this.Hide();
+            frmMain.ShowDialog();
+            
+        }
+
+        private void musicDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
