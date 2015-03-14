@@ -28,20 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            this.btnStart = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(43, 76);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(202, 38);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.categoriesDataSet1 = new GaMMBo.Test.CategoriesDataSet1();
@@ -49,11 +35,11 @@
             this.musicTableAdapter = new GaMMBo.Test.CategoriesDataSet1TableAdapters.MusicTableAdapter();
             this.tableAdapterManager = new GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager();
             this.musicBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -118,6 +104,13 @@
             this.musicBindingNavigator.TabIndex = 0;
             this.musicBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -150,16 +143,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -182,7 +168,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // musicDataGridView
@@ -199,6 +185,7 @@
             this.musicDataGridView.Name = "musicDataGridView";
             this.musicDataGridView.Size = new System.Drawing.Size(446, 261);
             this.musicDataGridView.TabIndex = 1;
+            this.musicDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.musicDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -229,10 +216,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btnStart);
-
             this.ClientSize = new System.Drawing.Size(446, 309);
             this.Controls.Add(this.musicDataGridView);
             this.Controls.Add(this.musicBindingNavigator);
@@ -252,8 +235,6 @@
 
         #endregion
 
-
-        private System.Windows.Forms.Button btnStart;
         private CategoriesDataSet1 categoriesDataSet1;
         private System.Windows.Forms.BindingSource musicBindingSource;
         private CategoriesDataSet1TableAdapters.MusicTableAdapter musicTableAdapter;
