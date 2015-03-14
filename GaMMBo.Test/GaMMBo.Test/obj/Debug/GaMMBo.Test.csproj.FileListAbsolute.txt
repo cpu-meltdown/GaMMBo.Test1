@@ -25,6 +25,12 @@ C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\G
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmCategories.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmMain.resources
 C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmLogin.resources
+=======
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
+C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
+>>>>>>> 519894ef70b70295a3c3a2303cffb2a42dcdb46a

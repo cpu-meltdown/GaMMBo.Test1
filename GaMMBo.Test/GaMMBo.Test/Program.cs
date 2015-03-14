@@ -7,8 +7,8 @@ using System.Windows.Forms;
 namespace GaMMBo.Test
 
 
-{//ben dziedzic
-    // Hello world !!!!!
+
+{
 
     static class Program
     {

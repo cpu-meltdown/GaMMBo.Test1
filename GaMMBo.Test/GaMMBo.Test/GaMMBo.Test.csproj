@@ -53,6 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoriesDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CategoriesDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +116,17 @@
     </None>
     <None Include="CategoriesDataSet1.xss">
       <DependentUpon>CategoriesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CategoriesDataSet11.xsc">
+      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CategoriesDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CategoriesDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CategoriesDataSet11.xss">
+      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

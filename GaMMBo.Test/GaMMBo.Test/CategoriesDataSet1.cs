@@ -1,3 +1,4 @@
+
 ﻿namespace GaMMBo.Test {
     
     
@@ -11,3 +12,6 @@ namespace GaMMBo.Test.CategoriesDataSetTableAdapters {
     public partial class MoviesTableAdapter {
     }
 }
+
+﻿
+
