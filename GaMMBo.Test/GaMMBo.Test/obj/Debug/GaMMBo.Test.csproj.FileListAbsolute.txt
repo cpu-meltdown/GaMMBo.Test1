@@ -1,36 +1,14 @@
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
-c:\users\nabil\documents\visual studio 2013\Projects\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
-C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
-C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmCategories.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmLogin.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmMain.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MoviesForm.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MusicForm.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmCategories.resources
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmMain.resources
-C:\Program Files (x86)\GaMMBo 2\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmLogin.resources
-=======
-C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
-C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
-C:\Users\JRWal_000\Documents\Code\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
->>>>>>> 519894ef70b70295a3c3a2303cffb2a42dcdb46a
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb

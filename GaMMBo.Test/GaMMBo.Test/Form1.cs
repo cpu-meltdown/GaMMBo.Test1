@@ -28,22 +28,7 @@ namespace GaMMBo.Test
                               
             // TODO: This line of code loads data into the 'categoriesDataSet1.Music' table. You can move, or remove it, as needed.
             this.musicTableAdapter.Fill(this.categoriesDataSet1.Music);
-            //SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-
-            //SqlCommand selectCommand = new SqlCommand("select Artist, Album, Year from Music Order By Year", conn);
-
-            //conn.Open();
-            //SqlDataReader reader = selectCommand.ExecuteReader();
-
-            //string selectedMovies = string.Empty;
-
-            //while (reader.Read() == true)
-            //{
-            //    selectedMovies += "Artist: " + reader[0] + " Album: " + reader[1] + " Year: "+ reader[2] +"\n";
-            //}
             
-            //MessageBox.Show(selectedMovies);
-            //conn.Close();
         }
 
         private void musicBindingNavigatorSaveItem_Click(object sender, EventArgs e)

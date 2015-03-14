@@ -35,9 +35,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(43, 49);
+            this.btnLogin.Location = new System.Drawing.Point(12, 31);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(192, 34);
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -45,7 +45,7 @@
             // 
             // btnNewUser
             // 
-            this.btnNewUser.Location = new System.Drawing.Point(68, 101);
+            this.btnNewUser.Location = new System.Drawing.Point(12, 136);
             this.btnNewUser.Name = "btnNewUser";
             this.btnNewUser.Size = new System.Drawing.Size(75, 23);
             this.btnNewUser.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // btnGuest
             // 
-            this.btnGuest.Location = new System.Drawing.Point(68, 143);
+            this.btnGuest.Location = new System.Drawing.Point(12, 236);
             this.btnGuest.Name = "btnGuest";
             this.btnGuest.Size = new System.Drawing.Size(75, 23);
             this.btnGuest.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(615, 410);
             this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.btnLogin);

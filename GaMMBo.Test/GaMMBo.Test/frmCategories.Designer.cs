@@ -61,6 +61,7 @@
             this.btnMovies.TabIndex = 2;
             this.btnMovies.Text = "Movies";
             this.btnMovies.UseVisualStyleBackColor = true;
+            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
             // 
             // btnMusic
             // 
@@ -70,6 +71,7 @@
             this.btnMusic.TabIndex = 3;
             this.btnMusic.Text = "Music";
             this.btnMusic.UseVisualStyleBackColor = true;
+            this.btnMusic.Click += new System.EventHandler(this.btnMusic_Click);
             // 
             // btnLogout
             // 
