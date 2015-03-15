@@ -51,6 +51,7 @@
             this.btnNewUser.TabIndex = 1;
             this.btnNewUser.Text = "New User";
             this.btnNewUser.UseVisualStyleBackColor = true;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
             // btnGuest
             // 
@@ -60,8 +61,9 @@
             this.btnGuest.TabIndex = 2;
             this.btnGuest.Text = "Guest";
             this.btnGuest.UseVisualStyleBackColor = true;
+            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
-            // frmMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +71,7 @@
             this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.btnLogin);
-            this.Name = "frmMain";
+            this.Name = "MainForm";
             this.Text = "GaMMBo";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);

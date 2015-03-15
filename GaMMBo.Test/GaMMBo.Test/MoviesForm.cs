@@ -38,5 +38,10 @@ namespace GaMMBo.Test
             CategoriesForm _categoriesForm = new CategoriesForm();
             _categoriesForm.ShowDialog();
         }
+
+        private void moviesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
