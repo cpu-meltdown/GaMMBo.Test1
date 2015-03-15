@@ -3,12 +3,12 @@ C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
-C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmCategories.resources
-C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmLogin.resources
-C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.frmMain.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MoviesForm.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MusicForm.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
 C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.CategoriesForm.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.LoginForm.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MainForm.resources

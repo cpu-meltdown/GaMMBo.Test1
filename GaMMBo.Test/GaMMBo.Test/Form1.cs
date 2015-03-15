@@ -21,7 +21,7 @@ namespace GaMMBo.Test
         private void Form1_Load(object sender, EventArgs e)
         {
             //Ben - bring up main form
-            frmMain main = new frmMain();
+            MainForm main = new MainForm();
             this.Hide();
             main.ShowDialog();
 
@@ -41,7 +41,7 @@ namespace GaMMBo.Test
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            frmMain frmMain = new frmMain();
+            MainForm frmMain = new MainForm();
             this.Hide();
             frmMain.ShowDialog();
             

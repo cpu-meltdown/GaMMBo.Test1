@@ -31,5 +31,12 @@ namespace GaMMBo.Test
             this.musicTableAdapter.Fill(this.categoriesDataSet1.Music);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CategoriesForm _categoriesForm = new CategoriesForm();
+            _categoriesForm.ShowDialog();
+        }
     }
 }
