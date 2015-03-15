@@ -1,6 +1,6 @@
 ﻿namespace GaMMBo.Test
 {
-    partial class frmCategories
+    partial class CategoriesForm
     {
         /// <summary>
         /// Required designer variable.

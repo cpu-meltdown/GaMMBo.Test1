@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace GaMMBo.Test
 {
-    public partial class frmCategories : Form
+    public partial class CategoriesForm : Form
     {
-        public frmCategories()
+        public CategoriesForm()
         {
             InitializeComponent();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            frmMain frmMain = new frmMain();
+            MainForm frmMain = new MainForm();
             this.Hide();
             frmMain.ShowDialog();
         }
