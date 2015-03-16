@@ -77,6 +77,7 @@
             this.moviesDataGridView.Name = "moviesDataGridView";
             this.moviesDataGridView.Size = new System.Drawing.Size(591, 538);
             this.moviesDataGridView.TabIndex = 1;
+            this.moviesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

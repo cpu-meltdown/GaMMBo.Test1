@@ -29,5 +29,23 @@ namespace GaMMBo.Test
             frmlogin.ShowDialog();
 
         }
+
+        private void btnGuest_Click(object sender, EventArgs e)
+        {
+            CategoriesForm frmCategories = new CategoriesForm();
+            this.Hide();
+            frmCategories.ShowDialog();
+        }
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+            LoginForm frmlogin = new LoginForm();
+            this.Hide();
+            frmlogin.txtPassword2.Visible = true;
+            frmlogin.lblPassword2.Visible = true;
+            frmlogin.btnLogin.Text = "Create Account";
+            frmlogin.ShowDialog();
+
+        }
     }
 }
