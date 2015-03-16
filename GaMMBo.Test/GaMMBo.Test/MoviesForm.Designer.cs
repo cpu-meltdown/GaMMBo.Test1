@@ -33,14 +33,15 @@
             this.moviesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.moviesTableAdapter = new GaMMBo.Test.CategoriesDataSet1TableAdapters.MoviesTableAdapter();
             this.tableAdapterManager = new GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager();
-            this.moviesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.moviesFormBackButton = new System.Windows.Forms.Button();
+            this.movieYearDisplayBox = new System.Windows.Forms.TextBox();
+            this.movieNameDisplayBox = new System.Windows.Forms.TextBox();
+            this.movieYearLabel = new System.Windows.Forms.Label();
+            this.movieNameLabel = new System.Windows.Forms.Label();
+            this.moviePircutre = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moviesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePircutre)).BeginInit();
             this.SuspendLayout();
             // 
             // categoriesDataSet1
@@ -64,64 +65,76 @@
             this.tableAdapterManager.MusicTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // moviesDataGridView
+            // moviesFormBackButton
             // 
-            this.moviesDataGridView.AutoGenerateColumns = false;
-            this.moviesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.moviesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.moviesDataGridView.DataSource = this.moviesBindingSource;
-            this.moviesDataGridView.Location = new System.Drawing.Point(0, 28);
-            this.moviesDataGridView.Name = "moviesDataGridView";
-            this.moviesDataGridView.Size = new System.Drawing.Size(591, 538);
-            this.moviesDataGridView.TabIndex = 1;
-            this.moviesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesDataGridView_CellContentClick);
+            this.moviesFormBackButton.Location = new System.Drawing.Point(443, 519);
+            this.moviesFormBackButton.Name = "moviesFormBackButton";
+            this.moviesFormBackButton.Size = new System.Drawing.Size(75, 23);
+            this.moviesFormBackButton.TabIndex = 2;
+            this.moviesFormBackButton.Text = "Back";
+            this.moviesFormBackButton.UseVisualStyleBackColor = true;
+            this.moviesFormBackButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // movieYearDisplayBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.movieYearDisplayBox.Location = new System.Drawing.Point(370, 328);
+            this.movieYearDisplayBox.Name = "movieYearDisplayBox";
+            this.movieYearDisplayBox.Size = new System.Drawing.Size(100, 20);
+            this.movieYearDisplayBox.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn2
+            // movieNameDisplayBox
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.movieNameDisplayBox.Location = new System.Drawing.Point(99, 328);
+            this.movieNameDisplayBox.Name = "movieNameDisplayBox";
+            this.movieNameDisplayBox.Size = new System.Drawing.Size(100, 20);
+            this.movieNameDisplayBox.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn3
+            // movieYearLabel
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Year";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Year";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.movieYearLabel.AutoSize = true;
+            this.movieYearLabel.Location = new System.Drawing.Point(290, 331);
+            this.movieYearLabel.Name = "movieYearLabel";
+            this.movieYearLabel.Size = new System.Drawing.Size(29, 13);
+            this.movieYearLabel.TabIndex = 5;
+            this.movieYearLabel.Text = "Year";
             // 
-            // button1
+            // movieNameLabel
             // 
-            this.button1.Location = new System.Drawing.Point(443, 519);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.movieNameLabel.AutoSize = true;
+            this.movieNameLabel.Location = new System.Drawing.Point(30, 331);
+            this.movieNameLabel.Name = "movieNameLabel";
+            this.movieNameLabel.Size = new System.Drawing.Size(35, 13);
+            this.movieNameLabel.TabIndex = 6;
+            this.movieNameLabel.Text = "Name";
+            // 
+            // moviePircutre
+            // 
+            this.moviePircutre.Location = new System.Drawing.Point(171, 41);
+            this.moviePircutre.Name = "moviePircutre";
+            this.moviePircutre.Size = new System.Drawing.Size(235, 264);
+            this.moviePircutre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moviePircutre.TabIndex = 7;
+            this.moviePircutre.TabStop = false;
             // 
             // MoviesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 568);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.moviesDataGridView);
+            this.Controls.Add(this.moviePircutre);
+            this.Controls.Add(this.movieNameLabel);
+            this.Controls.Add(this.movieYearLabel);
+            this.Controls.Add(this.movieNameDisplayBox);
+            this.Controls.Add(this.movieYearDisplayBox);
+            this.Controls.Add(this.moviesFormBackButton);
             this.Name = "MoviesForm";
             this.Text = "Movies Database";
             this.Load += new System.EventHandler(this.MoviesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moviesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePircutre)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,10 +144,11 @@
         private System.Windows.Forms.BindingSource moviesBindingSource;
         private CategoriesDataSet1TableAdapters.MoviesTableAdapter moviesTableAdapter;
         private CategoriesDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView moviesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button moviesFormBackButton;
+        private System.Windows.Forms.TextBox movieYearDisplayBox;
+        private System.Windows.Forms.TextBox movieNameDisplayBox;
+        private System.Windows.Forms.Label movieYearLabel;
+        private System.Windows.Forms.Label movieNameLabel;
+        private System.Windows.Forms.PictureBox moviePircutre;
     }
 }

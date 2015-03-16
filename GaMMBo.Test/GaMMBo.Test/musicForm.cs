@@ -35,8 +35,8 @@ namespace GaMMBo.Test
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CategoriesForm _categoriesForm = new CategoriesForm();
-            _categoriesForm.ShowDialog();
+            CategoriesForm categoriesForm = new CategoriesForm();
+            categoriesForm.ShowDialog();
         }
     }
 }

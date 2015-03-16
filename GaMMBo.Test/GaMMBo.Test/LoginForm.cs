@@ -19,9 +19,9 @@ namespace GaMMBo.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm frmmain = new MainForm();
+            MainForm mainForm = new MainForm();
             this.Hide();
-            frmmain.ShowDialog();
+            mainForm.ShowDialog();
 
         }
 
