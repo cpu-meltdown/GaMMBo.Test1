@@ -57,5 +57,10 @@ namespace GaMMBo.Test
             CategoriesForm categoriesForm = new CategoriesForm();
             categoriesForm.ShowDialog();
         }
+
+        private void musicPicture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -133,6 +133,7 @@
             this.musicPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.musicPicture.TabIndex = 9;
             this.musicPicture.TabStop = false;
+            this.musicPicture.Click += new System.EventHandler(this.musicPicture_Click);
             // 
             // MusicForm
             // 
