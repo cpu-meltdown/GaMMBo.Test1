@@ -45,7 +45,7 @@ namespace GaMMBo.Test
                 musicAlbumDisplay.Text = sqlReader[1].ToString();
                 musicYearDisplay.Text = sqlReader[2].ToString();
 
-                musicPicture.Image = Image.FromFile (@"C:\Users\Nabil\GaMMBo.Test1\Music_Images\" + musicId +".jpg");
+                musicPicture.Image = Image.FromFile(@"C:\Users\Bassima\Source\Repos\GaMMBo.Test1\Music_Images" + musicId + ".jpg");
             }
 
             conn.Close();

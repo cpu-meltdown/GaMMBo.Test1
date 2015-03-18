@@ -14,3 +14,15 @@ C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form1.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.CategoriesForm.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Form2.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.LoginForm.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MainForm.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MoviesForm.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MusicForm.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
+C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
