@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//instead of having a form for each category we just have one main one that changes just a little depending on the category
+
 namespace GaMMBo.Test
 {
     public partial class PrefMenu : Form
