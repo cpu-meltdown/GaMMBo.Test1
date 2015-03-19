@@ -52,6 +52,24 @@ namespace GaMMBo.Test
 
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // PrefMenu
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "PrefMenu";
+            this.Load += new System.EventHandler(this.PrefMenu_Load_1);
+            this.ResumeLayout(false);
+
+        }
+
+        private void PrefMenu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }

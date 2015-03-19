@@ -27,3 +27,5 @@ C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaM
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
 C:\Users\Bassima\Source\Repos\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.PrefMenu.resources
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
+C:\Users\Nabil\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.PrefMenu.resources
