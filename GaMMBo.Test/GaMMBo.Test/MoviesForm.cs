@@ -45,7 +45,7 @@ namespace GaMMBo.Test
                 movieNameDisplayBox.Text = sqlRerader[0].ToString();
                 movieYearDisplayBox.Text = sqlRerader[1].ToString();
 
-                moviePircutre.Image = Image.FromFile(@"C:\Users\Bassima\Source\Repos\GaMMBo.Test1\Movies_Images" + movieId + ".jpg");
+                moviePircutre.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Movies_Images\" + movieId + ".jpg");
             }
             conn.Close();
         }
