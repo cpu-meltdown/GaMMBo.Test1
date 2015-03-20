@@ -15,5 +15,4 @@ C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.cspr
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
 =======
-C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.PrefMenu.resources
 >>>>>>> a1e06f463919378842735d4d05cce8903babf4a9
