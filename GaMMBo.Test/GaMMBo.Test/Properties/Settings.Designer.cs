@@ -37,8 +37,8 @@ namespace GaMMBo.Test.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Nabil\\Documents\\CategoriesD" +
-            "ata.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Catego" +
+            "riesData.mdf;Integrated Security=True;Connect Timeout=30")]
         public string CategoriesDataConnectionString {
             get {
                 return ((string)(this["CategoriesDataConnectionString"]));
