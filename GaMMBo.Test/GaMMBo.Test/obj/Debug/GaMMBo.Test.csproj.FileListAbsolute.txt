@@ -42,3 +42,4 @@ C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Movi
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.MusicForm.resources
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.Properties.Resources.resources
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
+C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.PrefMenu.resources
