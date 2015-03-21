@@ -37,5 +37,12 @@ namespace GaMMBo.Test
             this.Hide();
             _moviesForm.ShowDialog();
         }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            PrefMenu prefenceForm = new PrefMenu();
+            this.Hide();
+            prefenceForm.ShowDialog();
+        }
     }
 }
