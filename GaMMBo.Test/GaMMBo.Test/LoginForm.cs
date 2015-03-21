@@ -19,19 +19,20 @@ namespace GaMMBo.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm frmmain = new MainForm();
+            MainForm mainForm = new MainForm();
             this.Hide();
-            frmmain.ShowDialog();
+            mainForm.ShowDialog();
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Ben
+            
             if (btnLogin.Text == "Login") {
-                CategoriesForm Cats = new CategoriesForm();
+                CategoriesForm categoriesForm = new CategoriesForm();
                 this.Hide();
-                Cats.ShowDialog();
+                passwordLabel.Visible = false;
+                categoriesForm.ShowDialog();
             } else {
                 //check if all fields entered
                 if (txtUsername.Text.Trim() == "") {
@@ -39,15 +40,15 @@ namespace GaMMBo.Test
                     txtUsername.Focus();
                     return;
                 }
-                if (txtPassword.Text.Trim() == "")
+                if (txtPassword.Text.Trim() == "" || txtPassword.Text.Length < 8)
                 {
                     MessageBox.Show("Please enter a password");
                     txtPassword.Focus();
                     return;
                 }
-                if (txtPassword2.Text.Trim() == "")
+                if (txtPassword2.Text.Trim() == "" || (txtPassword2.Text.Trim() != txtPassword.Text.Trim() ))
                 {
-                    MessageBox.Show("Please enter repeat password");
+                    MessageBox.Show("Please check the password you entered");
                     txtPassword2.Focus();
                     return;
                 }
@@ -70,6 +71,11 @@ namespace GaMMBo.Test
         }
 
         private void txtPAssword2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

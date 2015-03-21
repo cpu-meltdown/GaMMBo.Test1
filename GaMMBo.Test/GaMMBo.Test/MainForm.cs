@@ -27,7 +27,7 @@ namespace GaMMBo.Test
             LoginForm frmlogin = new LoginForm();
             this.Hide();
             frmlogin.ShowDialog();
-
+            
         }
 
         private void btnGuest_Click(object sender, EventArgs e)
@@ -39,12 +39,13 @@ namespace GaMMBo.Test
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-            LoginForm frmlogin = new LoginForm();
+            LoginForm loginForm = new LoginForm();
             this.Hide();
-            frmlogin.txtPassword2.Visible = true;
-            frmlogin.lblPassword2.Visible = true;
-            frmlogin.btnLogin.Text = "Create Account";
-            frmlogin.ShowDialog();
+            loginForm.passwordLabel.Visible = true;
+            loginForm.txtPassword2.Visible = true;
+            loginForm.lblPassword2.Visible = true;
+            loginForm.btnLogin.Text = "Create Account";
+            loginForm.ShowDialog();
 
         }
     }

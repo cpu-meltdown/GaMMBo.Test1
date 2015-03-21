@@ -43,6 +43,7 @@
             this.btnBooks.TabIndex = 0;
             this.btnBooks.Text = "Books";
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnGames
             // 
@@ -83,7 +84,7 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // frmCategories
+            // CategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +94,7 @@
             this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.btnGames);
             this.Controls.Add(this.btnBooks);
-            this.Name = "frmCategories";
+            this.Name = "CategoriesForm";
             this.Text = "frmCategories";
             this.ResumeLayout(false);
 

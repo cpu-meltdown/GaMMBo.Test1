@@ -26,9 +26,9 @@ namespace GaMMBo.Test
 
         private void btnMusic_Click(object sender, EventArgs e)
         {
-            MusicForm _musicForm = new MusicForm();
+            MusicForm musicForm = new MusicForm();
             this.Hide();
-            _musicForm.ShowDialog();
+            musicForm.ShowDialog();
         }
 
         private void btnMovies_Click(object sender, EventArgs e)
@@ -36,6 +36,13 @@ namespace GaMMBo.Test
             MoviesForm _moviesForm = new MoviesForm();
             this.Hide();
             _moviesForm.ShowDialog();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            PrefMenu prefenceForm = new PrefMenu();
+            this.Hide();
+            prefenceForm.ShowDialog();
         }
     }
 }

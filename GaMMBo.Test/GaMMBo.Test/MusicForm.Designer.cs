@@ -33,15 +33,17 @@
             this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.musicTableAdapter = new GaMMBo.Test.CategoriesDataSet1TableAdapters.MusicTableAdapter();
             this.tableAdapterManager = new GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager();
-            this.musicDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.musicFormBackButton = new System.Windows.Forms.Button();
+            this.musicYear = new System.Windows.Forms.Label();
+            this.musicArtist = new System.Windows.Forms.Label();
+            this.musicAlbum = new System.Windows.Forms.Label();
+            this.musicArtistDisplay = new System.Windows.Forms.TextBox();
+            this.musicAlbumDisplay = new System.Windows.Forms.TextBox();
+            this.musicYearDisplay = new System.Windows.Forms.TextBox();
+            this.musicPicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // categoriesDataSet1
@@ -65,70 +67,95 @@
             this.tableAdapterManager.MusicTableAdapter = this.musicTableAdapter;
             this.tableAdapterManager.UpdateOrder = GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // musicDataGridView
+            // musicFormBackButton
             // 
-            this.musicDataGridView.AutoGenerateColumns = false;
-            this.musicDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.musicDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.musicDataGridView.DataSource = this.musicBindingSource;
-            this.musicDataGridView.Location = new System.Drawing.Point(1, 12);
-            this.musicDataGridView.Name = "musicDataGridView";
-            this.musicDataGridView.Size = new System.Drawing.Size(611, 559);
-            this.musicDataGridView.TabIndex = 1;
+            this.musicFormBackButton.Location = new System.Drawing.Point(484, 525);
+            this.musicFormBackButton.Name = "musicFormBackButton";
+            this.musicFormBackButton.Size = new System.Drawing.Size(75, 23);
+            this.musicFormBackButton.TabIndex = 2;
+            this.musicFormBackButton.Text = "Back";
+            this.musicFormBackButton.UseVisualStyleBackColor = true;
+            this.musicFormBackButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // musicYear
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.musicYear.AutoSize = true;
+            this.musicYear.Location = new System.Drawing.Point(392, 431);
+            this.musicYear.Name = "musicYear";
+            this.musicYear.Size = new System.Drawing.Size(29, 13);
+            this.musicYear.TabIndex = 3;
+            this.musicYear.Text = "Year";
             // 
-            // dataGridViewTextBoxColumn2
+            // musicArtist
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Artist";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Artist";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.musicArtist.AutoSize = true;
+            this.musicArtist.Location = new System.Drawing.Point(12, 431);
+            this.musicArtist.Name = "musicArtist";
+            this.musicArtist.Size = new System.Drawing.Size(30, 13);
+            this.musicArtist.TabIndex = 4;
+            this.musicArtist.Text = "Artist";
             // 
-            // dataGridViewTextBoxColumn3
+            // musicAlbum
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Album";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Album";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.musicAlbum.AutoSize = true;
+            this.musicAlbum.Location = new System.Drawing.Point(191, 431);
+            this.musicAlbum.Name = "musicAlbum";
+            this.musicAlbum.Size = new System.Drawing.Size(36, 13);
+            this.musicAlbum.TabIndex = 5;
+            this.musicAlbum.Text = "Album";
             // 
-            // dataGridViewTextBoxColumn4
+            // musicArtistDisplay
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Year";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Year";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.musicArtistDisplay.Location = new System.Drawing.Point(67, 424);
+            this.musicArtistDisplay.Name = "musicArtistDisplay";
+            this.musicArtistDisplay.Size = new System.Drawing.Size(100, 20);
+            this.musicArtistDisplay.TabIndex = 6;
             // 
-            // button1
+            // musicAlbumDisplay
             // 
-            this.button1.Location = new System.Drawing.Point(484, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.musicAlbumDisplay.Location = new System.Drawing.Point(246, 424);
+            this.musicAlbumDisplay.Name = "musicAlbumDisplay";
+            this.musicAlbumDisplay.Size = new System.Drawing.Size(100, 20);
+            this.musicAlbumDisplay.TabIndex = 7;
+            // 
+            // musicYearDisplay
+            // 
+            this.musicYearDisplay.Location = new System.Drawing.Point(444, 424);
+            this.musicYearDisplay.Name = "musicYearDisplay";
+            this.musicYearDisplay.Size = new System.Drawing.Size(100, 20);
+            this.musicYearDisplay.TabIndex = 8;
+            // 
+            // musicPicture
+            // 
+            this.musicPicture.Location = new System.Drawing.Point(194, 90);
+            this.musicPicture.Name = "musicPicture";
+            this.musicPicture.Size = new System.Drawing.Size(227, 221);
+            this.musicPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.musicPicture.TabIndex = 9;
+            this.musicPicture.TabStop = false;
+            this.musicPicture.Click += new System.EventHandler(this.musicPicture_Click);
             // 
             // MusicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 599);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.musicDataGridView);
+            this.Controls.Add(this.musicPicture);
+            this.Controls.Add(this.musicYearDisplay);
+            this.Controls.Add(this.musicAlbumDisplay);
+            this.Controls.Add(this.musicArtistDisplay);
+            this.Controls.Add(this.musicAlbum);
+            this.Controls.Add(this.musicArtist);
+            this.Controls.Add(this.musicYear);
+            this.Controls.Add(this.musicFormBackButton);
             this.Name = "MusicForm";
-            this.Text = "Music Database";
+            this.Text = "Music Recommendations";
             this.Load += new System.EventHandler(this.musicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,11 +165,13 @@
         private System.Windows.Forms.BindingSource musicBindingSource;
         private CategoriesDataSet1TableAdapters.MusicTableAdapter musicTableAdapter;
         private CategoriesDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView musicDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button musicFormBackButton;
+        private System.Windows.Forms.Label musicYear;
+        private System.Windows.Forms.Label musicArtist;
+        private System.Windows.Forms.Label musicAlbum;
+        private System.Windows.Forms.TextBox musicArtistDisplay;
+        private System.Windows.Forms.TextBox musicAlbumDisplay;
+        private System.Windows.Forms.TextBox musicYearDisplay;
+        private System.Windows.Forms.PictureBox musicPicture;
     }
 }
