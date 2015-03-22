@@ -80,6 +80,11 @@ namespace GaMMBo.Test
 
         }
 
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         ////Ben - allows setting the repeat password textbox to visible form another form
         //public Boolean TextBoxValue
         //{

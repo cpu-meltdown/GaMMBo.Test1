@@ -44,11 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriesDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +56,11 @@
     <Compile Include="CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GammboDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GammboDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,18 +72,6 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MoviesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MoviesForm.Designer.cs">
-      <DependentUpon>MoviesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MusicForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MusicForm.Designer.cs">
-      <DependentUpon>MusicForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrefMenu.cs">
       <SubType>Form</SubType>
@@ -105,12 +93,6 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoviesForm.resx">
-      <DependentUpon>MoviesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MusicForm.resx">
-      <DependentUpon>MusicForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PrefMenu.resx">
       <DependentUpon>PrefMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,16 +105,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CategoriesDataSet11.xsc">
-      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
+    <None Include="GammboDBDataSet.xsc">
+      <DependentUpon>GammboDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="CategoriesDataSet11.xsd">
+    <None Include="GammboDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CategoriesDataSet11.Designer.cs</LastGenOutput>
+      <LastGenOutput>GammboDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CategoriesDataSet11.xss">
-      <DependentUpon>CategoriesDataSet11.xsd</DependentUpon>
+    <None Include="GammboDBDataSet.xss">
+      <DependentUpon>GammboDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
