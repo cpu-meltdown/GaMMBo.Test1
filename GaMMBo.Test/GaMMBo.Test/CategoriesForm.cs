@@ -12,6 +12,8 @@ namespace GaMMBo.Test
 {
     public partial class CategoriesForm : Form
     {
+
+        char categoryType;
         public CategoriesForm()
         {
             InitializeComponent();
@@ -26,23 +28,34 @@ namespace GaMMBo.Test
 
         private void btnMusic_Click(object sender, EventArgs e)
         {
-            MusicForm musicForm = new MusicForm();
+            PrefMenu prefMenu = new PrefMenu();
+            categoryType = '1';            // music category was chosen
             this.Hide();
-            musicForm.ShowDialog();
+            prefMenu.displayRandomObject(categoryType);
         }
 
         private void btnMovies_Click(object sender, EventArgs e)
         {
-            MoviesForm _moviesForm = new MoviesForm();
+            PrefMenu prefMenu = new PrefMenu();
+            categoryType = '2';            // movies category was chosen
             this.Hide();
-            _moviesForm.ShowDialog();
+            prefMenu.displayRandomObject(categoryType);
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            PrefMenu prefenceForm = new PrefMenu();
+            PrefMenu prefMenu = new PrefMenu();
+            categoryType = '3';            // books category was chosen
             this.Hide();
-            prefenceForm.ShowDialog();
+            prefMenu.displayRandomObject(categoryType);
+        }
+
+        private void gamesButton_Click(object sender, EventArgs e)
+        {
+            PrefMenu prefMenu = new PrefMenu();
+            categoryType = '4';            // games category was chosen
+            this.Hide();
+            prefMenu.displayRandomObject(categoryType);
         }
     }
 }

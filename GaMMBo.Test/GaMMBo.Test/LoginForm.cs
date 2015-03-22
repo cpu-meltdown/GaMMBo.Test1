@@ -46,7 +46,7 @@ namespace GaMMBo.Test
                     txtPassword.Focus();
                     return;
                 }
-                if (txtPassword2.Text.Trim() == "" || (txtPassword2.Text.Trim() != txtPassword.Text.Trim() ))
+                if (txtPassword2.Text.Trim() == "")
                 {
                     MessageBox.Show("Please check the password you entered");
                     txtPassword2.Focus();
