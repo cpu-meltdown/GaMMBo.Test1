@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.categoriesDataSet1 = new GaMMBo.Test.CategoriesDataSet1();
+            this.GammboDBDataSet = new GaMMBo.Test.GammboDBDataSet();
             this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.musicTableAdapter = new GaMMBo.Test.CategoriesDataSet1TableAdapters.MusicTableAdapter();
-            this.tableAdapterManager = new GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).BeginInit();
+            this.musicTableAdapter = new GaMMBo.Test.GammboDBDataSetTableAdapters.MusicTableAdapter();
+            this.tableAdapterManager = new GaMMBo.Test.GammboDBDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.GammboDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // categoriesDataSet1
+            // GammboDBDataSet
             // 
-            this.categoriesDataSet1.DataSetName = "CategoriesDataSet1";
-            this.categoriesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.GammboDBDataSet.DataSetName = "GammboDBDataSet";
+            this.GammboDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // musicBindingSource
             // 
             this.musicBindingSource.DataMember = "Music";
-            this.musicBindingSource.DataSource = this.categoriesDataSet1;
+            this.musicBindingSource.DataSource = this.GammboDBDataSet;
             // 
             // musicTableAdapter
             // 
@@ -56,7 +56,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.MoviesTableAdapter = null;
             this.tableAdapterManager.MusicTableAdapter = this.musicTableAdapter;
-            this.tableAdapterManager.UpdateOrder = GaMMBo.Test.CategoriesDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = GaMMBo.Test.GammboDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Form1
             // 
@@ -66,7 +66,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GammboDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -74,10 +74,10 @@
 
         #endregion
 
-        private CategoriesDataSet1 categoriesDataSet1;
+        private GammboDBDataSet GammboDBDataSet;
         private System.Windows.Forms.BindingSource musicBindingSource;
-        private CategoriesDataSet1TableAdapters.MusicTableAdapter musicTableAdapter;
-        private CategoriesDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private GammboDBDataSetTableAdapters.MusicTableAdapter musicTableAdapter;
+        private GammboDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
 
 
 

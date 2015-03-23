@@ -80,6 +80,7 @@ namespace GaMMBo.Test
                     txtPassword.Focus();
                     return;
                 }
+
                 if (txtPassword.Text.Length < 8)
                 {
                     lblError.Visible = true;
@@ -165,10 +166,14 @@ namespace GaMMBo.Test
 
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
+//<<<<<<< HEAD
+//        private void txtUsername_TextChanged(object sender, EventArgs e)
+//=======
+//        private void txtPassword_TextChanged(object sender, EventArgs e)
+//>>>>>>> 55ec1c9872ec4624593c8fd0274546dcfcff902e
+//        {
 
-        }
+//        }
 
         ////Ben - allows setting the repeat password textbox to visible form another form
         //public Boolean TextBoxValue

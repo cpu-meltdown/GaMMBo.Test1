@@ -26,8 +26,8 @@ namespace GaMMBo.Test
             main.ShowDialog();
 
                               
-            // TODO: This line of code loads data into the 'categoriesDataSet1.Music' table. You can move, or remove it, as needed.
-            this.musicTableAdapter.Fill(this.categoriesDataSet1.Music);
+            // TODO: This line of code loads data into the 'GammboDBDataSet.Music' table. You can move, or remove it, as needed.
+            this.musicTableAdapter.Fill(this.GammboDBDataSet.Music);
             
         }
 
@@ -35,7 +35,7 @@ namespace GaMMBo.Test
         {
             this.Validate();
             this.musicBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.categoriesDataSet1);
+            this.tableAdapterManager.UpdateAll(this.GammboDBDataSet);
 
         }
 

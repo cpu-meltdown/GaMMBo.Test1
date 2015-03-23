@@ -28,10 +28,16 @@ namespace GaMMBo.Test.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Catego" +
             "ries.mdf")]
-        public string CategoriesConnectionString
-        {
-            get
-            {
+       // public string CategoriesConnectionString
+        //{
+         //   get
+          //  {
+
+        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Gammbo" +
+         //   "DB.mdf")]
+        public string CategoriesConnectionString {
+            get {
+
                 return ((string)(this["CategoriesConnectionString"]));
             }
         }
@@ -40,12 +46,19 @@ namespace GaMMBo.Test.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+//<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Catego" +
             "riesData.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string CategoriesDataConnectionString
-        {
-            get
-            {
+  //      public string CategoriesDataConnectionString
+    //    {
+      //      get
+        //    {
+//=======
+        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Gammbo" +
+        //    "DB.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string CategoriesDataConnectionString {
+            get {
+//>>>>>>> 55ec1c9872ec4624593c8fd0274546dcfcff902e
                 return ((string)(this["CategoriesDataConnectionString"]));
             }
         }

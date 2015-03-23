@@ -66,7 +66,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(268, 26);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+           // this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -76,6 +76,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(268, 26);
             this.txtPassword.TabIndex = 3;
+            //this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnBack
             // 
@@ -83,7 +84,7 @@
             this.btnBack.Location = new System.Drawing.Point(40, 162);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(123, 31);
-            this.btnBack.TabIndex = 4;
+            this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
@@ -94,7 +95,7 @@
             this.btnLogin.Location = new System.Drawing.Point(302, 162);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(123, 31);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -117,7 +118,7 @@
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.PasswordChar = '*';
             this.txtPassword2.Size = new System.Drawing.Size(268, 26);
-            this.txtPassword2.TabIndex = 7;
+            this.txtPassword2.TabIndex = 4;
             this.txtPassword2.Visible = false;
             this.txtPassword2.TextChanged += new System.EventHandler(this.txtPAssword2_TextChanged);
             // 
