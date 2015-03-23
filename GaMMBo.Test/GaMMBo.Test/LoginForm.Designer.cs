@@ -36,7 +36,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPassword2 = new System.Windows.Forms.Label();
             this.txtPassword2 = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -53,7 +53,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(69, 83);
+            this.lblPassword.Location = new System.Drawing.Point(69, 64);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(82, 20);
             this.lblPassword.TabIndex = 1;
@@ -66,11 +66,12 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(268, 26);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(157, 83);
+            this.txtPassword.Location = new System.Drawing.Point(157, 64);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(268, 26);
@@ -102,7 +103,7 @@
             // 
             this.lblPassword2.AutoSize = true;
             this.lblPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword2.Location = new System.Drawing.Point(12, 121);
+            this.lblPassword2.Location = new System.Drawing.Point(12, 110);
             this.lblPassword2.Name = "lblPassword2";
             this.lblPassword2.Size = new System.Drawing.Size(139, 20);
             this.lblPassword2.TabIndex = 6;
@@ -112,7 +113,7 @@
             // txtPassword2
             // 
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword2.Location = new System.Drawing.Point(157, 115);
+            this.txtPassword2.Location = new System.Drawing.Point(157, 107);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.PasswordChar = '*';
             this.txtPassword2.Size = new System.Drawing.Size(268, 26);
@@ -120,24 +121,24 @@
             this.txtPassword2.Visible = false;
             this.txtPassword2.TextChanged += new System.EventHandler(this.txtPAssword2_TextChanged);
             // 
-            // passwordLabel
+            // lblError
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.passwordLabel.Location = new System.Drawing.Point(157, 64);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(320, 13);
-            this.passwordLabel.TabIndex = 8;
-            this.passwordLabel.Text = "Please make sure the password is 8 or more characters";
-            this.passwordLabel.Visible = false;
-            this.passwordLabel.Click += new System.EventHandler(this.label1_Click);
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(105, 91);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(320, 13);
+            this.lblError.TabIndex = 8;
+            this.lblError.Text = "Please make sure the password is 8 or more characters";
+            this.lblError.Visible = false;
+            this.lblError.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 252);
-            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.lblPassword2);
             this.Controls.Add(this.btnLogin);
@@ -165,6 +166,6 @@
         public System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Label lblPassword2;
         public System.Windows.Forms.TextBox txtPassword2;
-        public System.Windows.Forms.Label passwordLabel;
+        public System.Windows.Forms.Label lblError;
     }
 }
