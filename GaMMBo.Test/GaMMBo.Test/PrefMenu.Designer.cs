@@ -41,7 +41,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(29, 210);
+            this.button1.Location = new System.Drawing.Point(42, 243);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(126, 210);
+            this.button2.Location = new System.Drawing.Point(138, 243);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(234, 210);
+            this.button3.Location = new System.Drawing.Point(234, 243);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(300, 12);
+            this.button4.Location = new System.Drawing.Point(310, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(312, 264);
+            this.button5.Location = new System.Drawing.Point(334, 305);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             this.categoryImage.Location = new System.Drawing.Point(42, 35);
             this.categoryImage.Name = "categoryImage";
-            this.categoryImage.Size = new System.Drawing.Size(159, 150);
+            this.categoryImage.Size = new System.Drawing.Size(162, 184);
             this.categoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.categoryImage.TabIndex = 6;
             this.categoryImage.TabStop = false;
@@ -112,7 +112,7 @@
             // categoryObjectDescription
             // 
             this.categoryObjectDescription.AutoSize = true;
-            this.categoryObjectDescription.Location = new System.Drawing.Point(231, 54);
+            this.categoryObjectDescription.Location = new System.Drawing.Point(249, 55);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
             this.categoryObjectDescription.Size = new System.Drawing.Size(60, 13);
             this.categoryObjectDescription.TabIndex = 7;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 290);
+            this.ClientSize = new System.Drawing.Size(421, 340);
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);
             this.Controls.Add(this.categoryObjectName);
