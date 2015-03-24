@@ -22,14 +22,7 @@ namespace GaMMBo.Test
             choice = c;
         }
 
-        
-
-       
-        //Display random game
-        public void displayGame()
-        {
-
-        }
+   
        
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,9 +71,8 @@ namespace GaMMBo.Test
             Random randomNumber = new Random();
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
            
-            if(choice == 1)
+            if(choice == 1)//generates music 
             {
-                
                 SqlCommand sqlCommand = new SqlCommand("Select Album, Description from Music where ID = @ID", conn);
               
                 int musicId = randomNumber.Next(141);
@@ -88,7 +80,7 @@ namespace GaMMBo.Test
                 sqlCommand.Parameters["@ID"].Value = musicId;
 
                 conn.Open();
-               SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+                SqlDataReader sqlReader = sqlCommand.ExecuteReader();
 
                 while (sqlReader.Read())
                 {
@@ -97,10 +89,10 @@ namespace GaMMBo.Test
 
                     categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Music_Images\" + musicId + ".jpg");
                 }
-
-                conn.Close();
+                
+               
             }
-            if (choice == 2)
+            if (choice == 2)//generates movies 
             {
                
                 SqlCommand sqlCommand = new SqlCommand("Select Name, Description from Movies where ID = @ID", conn);
@@ -119,13 +111,12 @@ namespace GaMMBo.Test
 
                     categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Movies_Images\" + movieId + ".jpg");
                 }
-
-                conn.Close();
             }
-            if (choice == 3)
+            if (choice == 3)//generates books 
             {
+                
                 SqlCommand sqlCommand = new SqlCommand("Select Name,Description from Books where ID = @ID", conn);
-             
+               
                 int bookId = randomNumber.Next(51);
                 sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
                 sqlCommand.Parameters["@ID"].Value = bookId;
@@ -141,10 +132,14 @@ namespace GaMMBo.Test
                     categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Books_Images\" + bookId + ".jpg");
                 }
 
-                conn.Close();
+                
             }
-            if (choice == 4) { }
-
+            if (choice == 4)// generates games 
+            {//we need a to add the game database  
+                
+            }
+           
+            conn.Close();
             
         }
 
