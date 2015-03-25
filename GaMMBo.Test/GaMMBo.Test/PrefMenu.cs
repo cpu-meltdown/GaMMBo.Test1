@@ -7,19 +7,142 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace GaMMBo.Test
 {
+
     public partial class PrefMenu : Form
     {
-        public PrefMenu()
+        int choice;
+        public PrefMenu(int c)
         {
             InitializeComponent();
+            choice = c;
         }
 
+   
+       
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CategoriesForm categoriesForm = new CategoriesForm();
+            this.Hide();
+            categoriesForm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrefMenu_Load(object sender, EventArgs e)
+        {
+            Random randomNumber = new Random();
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+           
+            if(choice == 1)//generates music 
+            {
+                SqlCommand sqlCommand = new SqlCommand("Select Album, Description from Music where ID = @ID", conn);
+              
+                int musicId = randomNumber.Next(141);
+                sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+                sqlCommand.Parameters["@ID"].Value = musicId;
+
+                conn.Open();
+                SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    categoryObjectName.Text = sqlReader[0].ToString();
+                    categoryObjectDescription.Text = sqlReader[1].ToString();
+
+                    categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Music_Images\" + musicId + ".jpg");
+                }
+                
+               
+            }
+            if (choice == 2)//generates movies 
+            {
+               
+                SqlCommand sqlCommand = new SqlCommand("Select Name, Description from Movies where ID = @ID", conn);
+               
+                int movieId = randomNumber.Next(136);
+                sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+                sqlCommand.Parameters["@ID"].Value = movieId;
+
+                conn.Open();
+                SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    categoryObjectName.Text = sqlReader[0].ToString();
+                    categoryObjectDescription.Text = sqlReader[1].ToString();
+
+                    categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Movies_Images\" + movieId + ".jpg");
+                }
+            }
+            if (choice == 3)//generates books 
+            {
+                
+                SqlCommand sqlCommand = new SqlCommand("Select Name,Description from Books where ID = @ID", conn);
+               
+                int bookId = randomNumber.Next(51);
+                sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+                sqlCommand.Parameters["@ID"].Value = bookId;
+
+                conn.Open();
+                SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    categoryObjectName.Text = sqlReader[0].ToString();
+                    categoryObjectDescription.Text = sqlReader[1].ToString();
+
+                    categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Books_Images\" + bookId + ".jpg");
+                }
+
+                
+            }
+            if (choice == 4)// generates games 
+            {//we need a to add the game database  
+                
+            }
+           
+            conn.Close();
+            
+        }
+
+
     }
 }

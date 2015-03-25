@@ -41,7 +41,6 @@ namespace GaMMBo.Test
         {
             LoginForm loginForm = new LoginForm();
             this.Hide();
-            loginForm.passwordLabel.Visible = true;
             loginForm.txtPassword2.Visible = true;
             loginForm.lblPassword2.Visible = true;
             loginForm.btnLogin.Text = "Create Account";

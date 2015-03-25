@@ -12,6 +12,7 @@ namespace GaMMBo.Test
 {
     public partial class CategoriesForm : Form
     {
+
         public CategoriesForm()
         {
             InitializeComponent();
@@ -26,16 +27,38 @@ namespace GaMMBo.Test
 
         private void btnMusic_Click(object sender, EventArgs e)
         {
-            MusicForm musicForm = new MusicForm();
+            PrefMenu prefMenu = new PrefMenu(1);
+           
             this.Hide();
-            musicForm.ShowDialog();
+            prefMenu.ShowDialog();
+           
+            
+
         }
 
         private void btnMovies_Click(object sender, EventArgs e)
         {
-            MoviesForm _moviesForm = new MoviesForm();
+            PrefMenu prefMenu = new PrefMenu(2);
+    
             this.Hide();
-            _moviesForm.ShowDialog();
+            prefMenu.ShowDialog();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            PrefMenu prefMenu = new PrefMenu(3);
+           
+            this.Hide();
+            prefMenu.ShowDialog();
+           
+        }
+
+        private void gamesButton_Click(object sender, EventArgs e)
+        {
+            PrefMenu prefMenu = new PrefMenu(4);
+            
+            this.Hide();
+            prefMenu.ShowDialog();
         }
     }
 }
