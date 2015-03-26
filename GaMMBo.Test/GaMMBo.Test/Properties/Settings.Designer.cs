@@ -22,47 +22,27 @@ namespace GaMMBo.Test.Properties {
                 return defaultInstance;
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Catego" +
-            "ries.mdf")]
-       // public string CategoriesConnectionString
-        //{
-         //   get
-          //  {
-
-        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Gammbo" +
-         //   "DB.mdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\ProgramData\\GaMMBo.Test1\\GammboDB" +
+            ".mdf")]
         public string CategoriesConnectionString {
             get {
-
                 return ((string)(this["CategoriesConnectionString"]));
             }
         }
-
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-//<<<<<<< HEAD
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Catego" +
-            "riesData.mdf;Integrated Security=True;Connect Timeout=30")]
-  //      public string CategoriesDataConnectionString
-    //    {
-      //      get
-        //    {
-//=======
-        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Program Files\\GaMMBo.Test1\\Gammbo" +
-        //    "DB.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\ProgramData\\GaMMBo.Test1\\GammboDB" +
+            ".mdf;Integrated Security=True;Connect Timeout=30")]
         public string CategoriesDataConnectionString {
             get {
-//>>>>>>> 55ec1c9872ec4624593c8fd0274546dcfcff902e
                 return ((string)(this["CategoriesDataConnectionString"]));
             }
         }
-
-
     }
 }

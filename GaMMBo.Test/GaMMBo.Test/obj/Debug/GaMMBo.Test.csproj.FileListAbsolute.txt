@@ -11,3 +11,9 @@ C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
 C:\Program Files\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
+C:\Program Data\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
+C:\Program Data\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
+C:\Program Data\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
+C:\ProgramData\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
+C:\ProgramData\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
+C:\ProgramData\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
