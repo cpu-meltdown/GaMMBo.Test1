@@ -135,7 +135,24 @@ namespace GaMMBo.Test
                 
             }
             if (choice == 4)// generates games 
-            {//we need a to add the game database  
+            {
+                SqlCommand sqlCommand = new SqlCommand("Select Name,Description from Games where ID = @ID", conn);
+
+                int gameId = randomNumber.Next(84);
+                sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+                sqlCommand.Parameters["@ID"].Value = gameId;
+
+                conn.Open();
+                SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    categoryObjectName.Text = sqlReader[0].ToString();
+                    categoryObjectDescription.Text = sqlReader[1].ToString();
+
+                    categoryImage.Image = Image.FromFile(@"C:\Program Files\GaMMBo.Test1\Games_Images\" + gameId + ".jpg");
+                }
+
                 
             }
            
