@@ -117,7 +117,7 @@ namespace GaMMBo.Test
                 
                 SqlCommand sqlCommand = new SqlCommand("Select Name,Description from Books where ID = @ID", conn);
                
-                int bookId = randomNumber.Next(51);
+                int bookId = randomNumber.Next(74);
                 sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
                 sqlCommand.Parameters["@ID"].Value = bookId;
 
