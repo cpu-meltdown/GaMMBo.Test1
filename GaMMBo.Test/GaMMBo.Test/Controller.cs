@@ -12,12 +12,14 @@ namespace GaMMBo.Test
 
     static class Controller
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        // who is logged on
+        int userID;
+
+        // entry point of program
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
