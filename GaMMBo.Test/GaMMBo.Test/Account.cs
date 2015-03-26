@@ -12,21 +12,31 @@ namespace GaMMBo.Test
     class Account
     {
         // creates a new user, new user table
+        // returns that new userID
         public void newUser()
         {
 
         }
 
         // gets attributes from user table
-        public void getAttributes()
+        // needs userID of who to access
+        public void getAttributes(int x)
         {
 
         }
 
         // deletes user
-        public void deleteUser()
+        // needs userID of who to delete
+        public void deleteUser(int x)
         {
 
+        }
+
+        // looks for user and if successful returns UserID
+        // needs name, password
+        public void logIn()
+        {
+         
         }
     }
 }

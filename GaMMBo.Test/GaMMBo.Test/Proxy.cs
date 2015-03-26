@@ -35,6 +35,33 @@ namespace GaMMBo.Test
 
         }
 
+        // search many many table for specific user and specific object
+        // for visibility of that object
+        public void getUserGame(int x, int y)
+        {
+
+        }
+
+        // search many many table for specific user and specific object
+        // for visibility of that object
+        public void getUserMusic(int x, int y)
+        {
+
+        }
+
+        // search many many table for specific user and specific object
+        // for visibility of that object
+        public void getUserMovie(int x, int y)
+        {
+
+        }
+
+        // search many many table for specific user and specific object
+        // for visibility of that object
+        public void getUserBook(int x, int y)
+        {
+
+        }
        
     }
 }
