@@ -33,11 +33,14 @@ namespace GaMMBo.Test
                 //validate login
                 String pass = "";
                 SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-                SqlCommand login = new SqlCommand("SELECT [Password] FROM Accounts WHERE [Username] = @username", conn);
+                SqlCommand login = new SqlCommand("SELECT [Password] FROM Users WHERE [UserName] = @username", conn);
                 login.Parameters.Add("@username", SqlDbType.NVarChar);
                 login.Parameters["@username"].Value = txtUsername.Text;
-                conn.Open();
-                SqlDataReader sqlReader = login.ExecuteReader();
+                try { conn.Open(); }
+                catch (Exception ex) { MessageBox.Show(":" + ex); }
+
+                 SqlDataReader sqlReader = login.ExecuteReader(); 
+ 
                 if (sqlReader.HasRows == false)
                 {
                     MessageBox.Show("Invalid username");
@@ -49,11 +52,13 @@ namespace GaMMBo.Test
                     {
                         pass = sqlReader[0].ToString();
                     }
-                    if (pass != txtPassword.Text) {
+                    if (pass != txtPassword.Text)
+                    {
                         MessageBox.Show("Invalid password");
                         return;
                     }
-                    else {
+                    else
+                    {
                         CategoriesForm categoriesForm = new CategoriesForm();
                         this.Hide();
                         categoriesForm.ShowDialog();
@@ -67,7 +72,7 @@ namespace GaMMBo.Test
 
 
 
-            } else {
+            } else {  // new account
                 //check if all fields entered
                 if (txtUsername.Text.Trim() == "") {
                     MessageBox.Show("Please enter a username");
@@ -102,7 +107,7 @@ namespace GaMMBo.Test
 
                 //check for duplicate username
                 SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-                SqlCommand chkUser = new SqlCommand("SELECT [Username] FROM Accounts WHERE [Username] = @username", conn);
+                SqlCommand chkUser = new SqlCommand("SELECT [UserName] FROM Users WHERE [UserName] = @username", conn);
                 chkUser.Parameters.Add("@username", SqlDbType.NVarChar);
                 chkUser.Parameters["@username"].Value = txtUsername.Text;
                 conn.Open();
@@ -124,7 +129,7 @@ namespace GaMMBo.Test
 
 
                 //create acount
-                SqlCommand addUser = new SqlCommand("INSERT INTO ACCOUNTS VALUES (@username, @password)", conn);
+                SqlCommand addUser = new SqlCommand("INSERT INTO Users VALUES (@username, @password)", conn);
                 addUser.Parameters.Add("@username", SqlDbType.NVarChar);
                 addUser.Parameters["@username"].Value = txtUsername.Text;
                 addUser.Parameters.Add("@password", SqlDbType.NVarChar);
