@@ -87,7 +87,7 @@ namespace GaMMBo.Test
                     categoryObjectName.Text = sqlReader[0].ToString();
                     categoryObjectDescription.Text = sqlReader[1].ToString();
 
-                    categoryImage.Image = Image.FromFile(@"C:\ProgramData\GaMMBo.Test1\Music_Images\" + musicId + ".jpg");
+                    categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + musicId + ".jpg");
                 }
                 
                
@@ -109,7 +109,7 @@ namespace GaMMBo.Test
                     categoryObjectName.Text = sqlReader[0].ToString();
                     categoryObjectDescription.Text = sqlReader[1].ToString();
 
-                    categoryImage.Image = Image.FromFile(@"C:\ProgramData\GaMMBo.Test1\Movies_Images\" + movieId + ".jpg");
+                    categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + movieId + ".jpg");
                 }
             }
             if (choice == 3)//generates books 
@@ -129,7 +129,7 @@ namespace GaMMBo.Test
                     categoryObjectName.Text = sqlReader[0].ToString();
                     categoryObjectDescription.Text = sqlReader[1].ToString();
 
-                    categoryImage.Image = Image.FromFile(@"C:\ProgramData\GaMMBo.Test1\Books_Images\" + bookId + ".jpg");
+                    categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + bookId + ".jpg");
                 }
 
                 
@@ -150,7 +150,7 @@ namespace GaMMBo.Test
                     categoryObjectName.Text = sqlReader[0].ToString();
                     categoryObjectDescription.Text = sqlReader[1].ToString();
 
-                    categoryImage.Image = Image.FromFile(@"C:\ProgramData\GaMMBo.Test1\Games_Images\" + gameId + ".jpg");
+                    categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + gameId + ".jpg");
                 }
 
                 
