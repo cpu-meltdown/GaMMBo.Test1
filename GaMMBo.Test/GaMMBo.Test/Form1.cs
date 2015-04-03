@@ -21,10 +21,10 @@ namespace GaMMBo.Test
         private void Form1_Load(object sender, EventArgs e)
         {
             //Ben - bring up main form
-            MainForm main = new MainForm();
+            //MainForm main = new MainForm();
             this.Hide();
-            main.ShowDialog();
-
+            //main.ShowDialog();
+            Controller.frmMain.ShowDialog();
                               
             // TODO: This line of code loads data into the 'GammboDBDataSet.Music' table. You can move, or remove it, as needed.
             this.musicTableAdapter.Fill(this.GammboDBDataSet.Music);

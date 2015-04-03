@@ -24,27 +24,30 @@ namespace GaMMBo.Test
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginForm frmlogin = new LoginForm();
-            this.Hide();
-            frmlogin.ShowDialog();
+            //LoginForm frmLogin = new LoginForm();
+          //  this.Hide();
+            Controller.frmMain.Hide();
+            Controller.frmLogin.ShowDialog();
             
         }
 
         private void btnGuest_Click(object sender, EventArgs e)
         {
-            CategoriesForm frmCategories = new CategoriesForm();
-            this.Hide();
-            frmCategories.ShowDialog();
+            //CategoriesForm frmCategories = new CategoriesForm();
+            //this.Hide();
+            Controller.frmMain.Hide();
+            Controller.frmCategories.ShowDialog();
         }
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.txtPassword2.Visible = true;
-            loginForm.lblPassword2.Visible = true;
-            loginForm.btnLogin.Text = "Create Account";
-            loginForm.ShowDialog();
+            //LoginForm loginForm = new LoginForm();
+            //this.Hide();
+            Controller.frmMain.Hide();
+            Controller.frmLogin.txtPassword2.Visible = true;
+            Controller.frmLogin.lblPassword2.Visible = true;
+            Controller.frmLogin.btnLogin.Text = "Create Account";
+            Controller.frmLogin.ShowDialog();
 
         }
     }

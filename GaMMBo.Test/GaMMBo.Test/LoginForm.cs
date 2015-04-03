@@ -18,52 +18,60 @@ namespace GaMMBo.Test
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            this.Hide();
-            mainForm.ShowDialog();
+            Controller.frmLogin.Hide();
+            Controller.frmMain.Show();
+
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            if (btnLogin.Text == "Login") {
-                //validate login
-                String pass = "";
-                SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-                SqlCommand login = new SqlCommand("SELECT [Password] FROM Users WHERE [UserName] = @username", conn);
-                login.Parameters.Add("@username", SqlDbType.NVarChar);
-                login.Parameters["@username"].Value = txtUsername.Text;
-                try { conn.Open(); }
-                catch (Exception ex) { MessageBox.Show(":" + ex); }
 
-                 SqlDataReader sqlReader = login.ExecuteReader(); 
+            Controller.login(txtUsername.Text, "123");
+
+
+            if (btnLogin.Text == "Login") {
+
+                Controller.login(txtUsername.Text, "123");
+
+
+
+                ////validate login
+                //String pass = "";
+                //SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+                //SqlCommand login = new SqlCommand("SELECT [Password] FROM Users WHERE [UserName] = @username", conn);
+                //login.Parameters.Add("@username", SqlDbType.NVarChar);
+                //login.Parameters["@username"].Value = txtUsername.Text;
+                //try { conn.Open(); }
+                //catch (Exception ex) { MessageBox.Show(":" + ex); }
+
+                // SqlDataReader sqlReader = login.ExecuteReader(); 
  
-                if (sqlReader.HasRows == false)
-                {
-                    MessageBox.Show("Invalid username");
-                    return;
-                }
-                else
-                {
-                    while (sqlReader.Read())
-                    {
-                        pass = sqlReader[0].ToString();
-                    }
-                    if (pass != txtPassword.Text)
-                    {
-                        MessageBox.Show("Invalid password");
-                        return;
-                    }
-                    else
-                    {
-                        CategoriesForm categoriesForm = new CategoriesForm();
-                        this.Hide();
-                        categoriesForm.ShowDialog();
-                    }
-                }
+                //if (sqlReader.HasRows == false)
+                //{
+                //    MessageBox.Show("Invalid username");
+                //    return;
+                //}
+                //else
+                //{
+                //    while (sqlReader.Read())
+                //    {
+                //        pass = sqlReader[0].ToString();
+                //    }
+                //    if (pass != txtPassword.Text)
+                //    {
+                //        MessageBox.Show("Invalid password");
+                //        return;
+                //    }
+                //    else
+                //    {
+                //        CategoriesForm categoriesForm = new CategoriesForm();
+                //        this.Hide();
+                //        categoriesForm.ShowDialog();
+                //    }
+                //}
 
 
 
