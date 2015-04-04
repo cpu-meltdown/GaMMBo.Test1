@@ -33,11 +33,12 @@
             this.moviesButton = new System.Windows.Forms.Button();
             this.musicButton = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // booksButton
             // 
-            this.booksButton.Location = new System.Drawing.Point(72, 33);
+            this.booksButton.Location = new System.Drawing.Point(103, 54);
             this.booksButton.Name = "booksButton";
             this.booksButton.Size = new System.Drawing.Size(94, 68);
             this.booksButton.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // gamesButton
             // 
-            this.gamesButton.Location = new System.Drawing.Point(272, 33);
+            this.gamesButton.Location = new System.Drawing.Point(303, 54);
             this.gamesButton.Name = "gamesButton";
             this.gamesButton.Size = new System.Drawing.Size(94, 68);
             this.gamesButton.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // moviesButton
             // 
-            this.moviesButton.Location = new System.Drawing.Point(72, 164);
+            this.moviesButton.Location = new System.Drawing.Point(103, 185);
             this.moviesButton.Name = "moviesButton";
             this.moviesButton.Size = new System.Drawing.Size(94, 68);
             this.moviesButton.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // musicButton
             // 
-            this.musicButton.Location = new System.Drawing.Point(272, 164);
+            this.musicButton.Location = new System.Drawing.Point(303, 185);
             this.musicButton.Name = "musicButton";
             this.musicButton.Size = new System.Drawing.Size(94, 68);
             this.musicButton.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(347, 240);
+            this.btnLogout.Location = new System.Drawing.Point(414, 283);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(94, 35);
             this.btnLogout.TabIndex = 4;
@@ -85,11 +86,20 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(13, 13);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(0, 13);
+            this.lblUser.TabIndex = 5;
+            // 
             // CategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 330);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.musicButton);
             this.Controls.Add(this.moviesButton);
@@ -98,6 +108,7 @@
             this.Name = "CategoriesForm";
             this.Text = "frmCategories";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +119,6 @@
         private System.Windows.Forms.Button moviesButton;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button musicButton;
+        public System.Windows.Forms.Label lblUser;
     }
 }

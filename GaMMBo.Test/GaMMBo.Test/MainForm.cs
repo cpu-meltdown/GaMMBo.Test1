@@ -27,6 +27,9 @@ namespace GaMMBo.Test
             //LoginForm frmLogin = new LoginForm();
           //  this.Hide();
             Controller.frmMain.Hide();
+            Controller.frmLogin.txtPassword2.Visible = false;
+            Controller.frmLogin.lblPassword2.Visible = false;
+            Controller.frmLogin.btnLogin.Text = "Login";
             Controller.frmLogin.ShowDialog();
             
         }
@@ -36,6 +39,7 @@ namespace GaMMBo.Test
             //CategoriesForm frmCategories = new CategoriesForm();
             //this.Hide();
             Controller.frmMain.Hide();
+            Controller.frmCategories.lblUser.Text = "Guest";
             Controller.frmCategories.ShowDialog();
         }
 

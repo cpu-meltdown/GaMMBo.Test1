@@ -66,7 +66,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(268, 26);
             this.txtUsername.TabIndex = 2;
-           // this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -76,7 +76,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(268, 26);
             this.txtPassword.TabIndex = 3;
-            //this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnBack
             // 
@@ -159,10 +158,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.Label lblUsername;
+        public System.Windows.Forms.Label lblPassword;
+        public System.Windows.Forms.TextBox txtUsername;
+        public System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnBack;
         public System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Label lblPassword2;

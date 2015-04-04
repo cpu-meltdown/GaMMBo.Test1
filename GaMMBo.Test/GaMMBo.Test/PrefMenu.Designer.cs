@@ -28,71 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLike = new System.Windows.Forms.Button();
+            this.btnDislike = new System.Windows.Forms.Button();
+            this.btnSkip = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.categoryObjectName = new System.Windows.Forms.Label();
             this.categoryImage = new System.Windows.Forms.PictureBox();
             this.categoryObjectDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoryImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnLike
             // 
-            this.button1.Location = new System.Drawing.Point(42, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Like";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLike.Location = new System.Drawing.Point(93, 307);
+            this.btnLike.Name = "btnLike";
+            this.btnLike.Size = new System.Drawing.Size(75, 23);
+            this.btnLike.TabIndex = 0;
+            this.btnLike.Text = "Like";
+            this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnDislike
             // 
-            this.button2.Location = new System.Drawing.Point(138, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Dislike";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDislike.Location = new System.Drawing.Point(189, 307);
+            this.btnDislike.Name = "btnDislike";
+            this.btnDislike.Size = new System.Drawing.Size(75, 23);
+            this.btnDislike.TabIndex = 1;
+            this.btnDislike.Text = "Dislike";
+            this.btnDislike.UseVisualStyleBackColor = true;
+            this.btnDislike.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnSkip
             // 
-            this.button3.Location = new System.Drawing.Point(234, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Skip";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSkip.Location = new System.Drawing.Point(285, 307);
+            this.btnSkip.Name = "btnSkip";
+            this.btnSkip.Size = new System.Drawing.Size(75, 23);
+            this.btnSkip.TabIndex = 2;
+            this.btnSkip.Text = "Skip";
+            this.btnSkip.UseVisualStyleBackColor = true;
+            this.btnSkip.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnSearch
             // 
-            this.button4.Location = new System.Drawing.Point(310, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnSearch.Location = new System.Drawing.Point(310, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnBack
             // 
-            this.button5.Location = new System.Drawing.Point(334, 305);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Back";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnBack.Location = new System.Drawing.Point(386, 373);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button5_Click);
             // 
             // categoryObjectName
             // 
             this.categoryObjectName.AutoSize = true;
-            this.categoryObjectName.Location = new System.Drawing.Point(26, 9);
+            this.categoryObjectName.Location = new System.Drawing.Point(21, 37);
             this.categoryObjectName.Name = "categoryObjectName";
             this.categoryObjectName.Size = new System.Drawing.Size(35, 13);
             this.categoryObjectName.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // categoryImage
             // 
-            this.categoryImage.Location = new System.Drawing.Point(42, 35);
+            this.categoryImage.Location = new System.Drawing.Point(147, 84);
             this.categoryImage.Name = "categoryImage";
             this.categoryImage.Size = new System.Drawing.Size(162, 184);
             this.categoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,7 @@
             // categoryObjectDescription
             // 
             this.categoryObjectDescription.AutoSize = true;
-            this.categoryObjectDescription.Location = new System.Drawing.Point(249, 55);
+            this.categoryObjectDescription.Location = new System.Drawing.Point(21, 62);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
             this.categoryObjectDescription.Size = new System.Drawing.Size(60, 13);
             this.categoryObjectDescription.TabIndex = 7;
@@ -123,15 +123,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 340);
+            this.ClientSize = new System.Drawing.Size(483, 421);
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);
             this.Controls.Add(this.categoryObjectName);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnSkip);
+            this.Controls.Add(this.btnDislike);
+            this.Controls.Add(this.btnLike);
             this.Name = "PrefMenu";
             this.Text = "PrefMenu";
             this.Load += new System.EventHandler(this.PrefMenu_Load);
@@ -143,11 +143,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLike;
+        private System.Windows.Forms.Button btnDislike;
+        private System.Windows.Forms.Button btnSkip;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label categoryObjectName;
         private System.Windows.Forms.PictureBox categoryImage;
         private System.Windows.Forms.Label categoryObjectDescription;

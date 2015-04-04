@@ -15,11 +15,11 @@ namespace GaMMBo.Test
 
     public partial class PrefMenu : Form
     {
-        int choice;
-        public PrefMenu(int c)
+        public int choice;
+        public PrefMenu()
         {
             InitializeComponent();
-            choice = c;
+            //choice = c;
         }
 
    
@@ -46,9 +46,9 @@ namespace GaMMBo.Test
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CategoriesForm categoriesForm = new CategoriesForm();
-            this.Hide();
-            categoriesForm.ShowDialog();
+           // CategoriesForm categoriesForm = new CategoriesForm();
+            Controller.frmPref.Hide();
+            Controller.frmCategories.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
