@@ -143,13 +143,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnLike;
-        private System.Windows.Forms.Button btnDislike;
-        private System.Windows.Forms.Button btnSkip;
-        private System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.Button btnLike;
+        public System.Windows.Forms.Button btnDislike;
+        public System.Windows.Forms.Button btnSkip;
+        public System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label categoryObjectName;
-        private System.Windows.Forms.PictureBox categoryImage;
-        private System.Windows.Forms.Label categoryObjectDescription;
+        public System.Windows.Forms.Label categoryObjectName;
+        public System.Windows.Forms.PictureBox categoryImage;
+        public System.Windows.Forms.Label categoryObjectDescription;
     }
 }

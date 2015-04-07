@@ -289,6 +289,7 @@
             this.Controls.Add(this.top1);
             this.Name = "ResultsForm";
             this.Text = "Results";
+            this.Load += new System.EventHandler(this.ResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.top1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.top2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.top3)).EndInit();

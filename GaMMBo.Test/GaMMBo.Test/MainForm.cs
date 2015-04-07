@@ -57,8 +57,10 @@ namespace GaMMBo.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ResultsForm frmresults = new ResultsForm();
-            frmresults.ShowDialog();
+            //ResultsForm frmresults = new ResultsForm();
+            Controller.frmResults.Show();
+           
+            
 
         }
     }
