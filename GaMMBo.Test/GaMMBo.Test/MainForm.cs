@@ -54,5 +54,12 @@ namespace GaMMBo.Test
             Controller.frmLogin.ShowDialog();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ResultsForm frmresults = new ResultsForm();
+            frmresults.ShowDialog();
+
+        }
     }
 }
