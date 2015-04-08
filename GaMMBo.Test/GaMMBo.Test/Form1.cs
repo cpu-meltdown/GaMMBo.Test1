@@ -27,7 +27,7 @@ namespace GaMMBo.Test
             Controller.frmMain.ShowDialog();
                               
             // TODO: This line of code loads data into the 'GammboDBDataSet.Music' table. You can move, or remove it, as needed.
-            this.musicTableAdapter.Fill(this.GammboDBDataSet.Music);
+           // this.musicTableAdapter.Fill(this.GammboDBDataSet.Music); Bassima - keeps giving me an sql exception error so i commented it out
             
         }
 
