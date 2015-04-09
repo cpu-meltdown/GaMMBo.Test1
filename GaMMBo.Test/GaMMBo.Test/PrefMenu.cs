@@ -138,7 +138,7 @@ namespace GaMMBo.Test
             if (choice == 1)//generates music 
             {
                 type = "Music";
-                objectId = randomNumber.Next(141);
+                objectId = randomNumber.Next(141)+ 1;
 
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
             }
@@ -146,20 +146,20 @@ namespace GaMMBo.Test
             {
                 type = "Movies";
 
-                objectId = randomNumber.Next(136);
+                objectId = randomNumber.Next(136) + 1;
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
             }
             else if (choice == 3)//generates books 
             {
                 type = "Books";
 
-                objectId = randomNumber.Next(120);
+                objectId = randomNumber.Next(120) + 1;
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
             }
             else if (choice == 4)// generates games 
             {
                 type = "Games";
-                objectId = randomNumber.Next(84);
+                objectId = randomNumber.Next(84) +1;
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
 
             }
