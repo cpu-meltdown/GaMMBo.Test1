@@ -13,41 +13,34 @@ using System.Data.SqlClient;
 namespace GaMMBo.Test
 {
     //if you guys need me to explain anything just let me know 
-<<<<<<< HEAD
     private class Genre
     {
         string genreName;
 
-        public Genre(string name){
+        public Genre(string name)
+        {
             genreName = name;
         }
 
-        public string getGenreName (){
+        public string getGenreName()
+        {
             return genreName;
         }
     }
     public partial class PrefMenu : Form
     {
-        Genre[] moviesGenres ;
-        Genre[] musicGenres ;
+        Genre[] moviesGenres;
+        Genre[] musicGenres;
         Genre[] gamesGenres;
-        Genre[] booksGenres ;
+        Genre[] booksGenres;
 
-=======
-    public partial class PrefMenu : Form
-    {
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
         public int skipNum = 0;// variable that keeps track how many times the user skips
         public int choice;// variable keeps track of what category is being accessed
         public int objectId;//the id of the object being voted on
         public int userId = 4;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
-                               // when the user logs in the number will be sent here like the choice 
+        // when the user logs in the number will be sent here like the choice 
         public int numOfvotes = 0;// keeps track how many objects having been voted on hasnt be used yet will be
-<<<<<<< HEAD
         public int vote = 1; // variable for the userlinker tables 
-=======
-        public int vote = 0; // variable for the userlinker tables 
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
         public Boolean userVoting = false;//will be set prior to this point when the user either logs in or clicks guest
         // the rest are self explanatory i may move or remove at the end before i transfer all to proxy
         Random randomNumber = new Random();
@@ -75,7 +68,7 @@ namespace GaMMBo.Test
             }
             else
             {
-                
+
                 this.getGuestObject();
             }
 
@@ -93,7 +86,7 @@ namespace GaMMBo.Test
             }
             else
             {
-                
+
                 this.getGuestObject();
             }
         }
@@ -146,7 +139,6 @@ namespace GaMMBo.Test
 
         private void PrefMenu_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             //Setting up Music Genres
             musicGenres[0] = new Genre("Rap");
             musicGenres[1] = new Genre("Rock");
@@ -183,17 +175,12 @@ namespace GaMMBo.Test
             gamesGenres[4] = new Genre("Racing");
             gamesGenres[5] = new Genre("RPG");
 
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
             if (userVoting)//userVoting is a boolean that will be set when the user either logs in or will enter as a guest
             {
                 this.getUserObject();
             }
-<<<<<<< HEAD
-            
 
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
+
             else
             {
                 this.getGuestObject();
@@ -208,11 +195,7 @@ namespace GaMMBo.Test
             if (choice == 1)//generates music 
             {
                 type = "Music";
-<<<<<<< HEAD
                 objectId = randomNumber.Next(141);
-=======
-                objectId = randomNumber.Next(141)+ 1;
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
 
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
             }
@@ -220,32 +203,20 @@ namespace GaMMBo.Test
             {
                 type = "Movies";
 
-<<<<<<< HEAD
                 objectId = randomNumber.Next(136);
-=======
-                objectId = randomNumber.Next(136) + 1;
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
             }
             else if (choice == 3)//generates books 
             {
                 type = "Books";
 
-<<<<<<< HEAD
                 objectId = randomNumber.Next(120);
-=======
-                objectId = randomNumber.Next(120) + 1;
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
             }
             else if (choice == 4)// generates games 
             {
                 type = "Games";
-<<<<<<< HEAD
                 objectId = randomNumber.Next(84);
-=======
-                objectId = randomNumber.Next(84) +1;
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
 
             }
@@ -267,8 +238,8 @@ namespace GaMMBo.Test
 
         }
 
-<<<<<<< HEAD
-        public void modifyMusicGenres(){
+        public void modifyMusicGenres()
+        {
             /*you need musicId and userId so you can get the genre of the music
              * after you get the music object genre this code should work
              * 
@@ -356,45 +327,31 @@ namespace GaMMBo.Test
              * Now you have evertyhing you need to use SQL Commands and modify tables
              */
         }
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
         public void likeOrdislikeObject(int v)
-        {   
+        {
             // this method inserts a voted object into the linker tables the parameter v can either be 0 for dislike or 1 for like
-            
+
             vote = v;
 
 
             if (choice == 1)
             {
-<<<<<<< HEAD
                 modifyMusicGenres();  // nabil
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 type = "Music";
             }
             else if (choice == 2)
             {
-<<<<<<< HEAD
                 modifyMovieGenres(); // nabil
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 type = "Movie";
             }
             else if (choice == 3)
             {
-<<<<<<< HEAD
                 modifyBooksGenres();  // nabil
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 type = "Book";
             }
             else if (choice == 4)
             {
-<<<<<<< HEAD
                 modifyGamesGenres();  // nabil
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
                 type = "Game";
             }
             SqlCommand saveLike = new SqlCommand("INSERT INTO User" + type + "Linker VALUES (@userId, @typeId, @vote)", conn);
@@ -413,7 +370,7 @@ namespace GaMMBo.Test
 
 
         private void getUserObject()// takes into account objects that have already been voted on
-        {    
+        {
             String name = null;
 
             String linker = null;
@@ -502,10 +459,7 @@ namespace GaMMBo.Test
         }
 
 
-<<<<<<< HEAD
-        
 
-=======
->>>>>>> 4c35407e57c85c3e5c7b8d5e615793b0f212a378
+
     }
 }
