@@ -11,6 +11,13 @@ namespace GaMMBo.Test
     // of the object and we can call that seperately in controller.
     class Proxy
     {
+       
+        public Proxy()
+        {
+
+            
+
+        }
         // get 1 specific game. returns values in table
         public void getGame(int x)
         {
@@ -46,7 +53,7 @@ namespace GaMMBo.Test
         // for visibility of that object
         public void getUserMusic(int x, int y)
         {
-
+            
         }
 
         // search many many table for specific user and specific object
@@ -62,6 +69,6 @@ namespace GaMMBo.Test
         {
 
         }
-       
+
     }
 }

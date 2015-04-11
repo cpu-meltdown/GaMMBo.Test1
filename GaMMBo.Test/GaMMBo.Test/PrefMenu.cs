@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 
 namespace GaMMBo.Test
-{
+{     
     //if you guys need me to explain anything just let me know 
     public class Genre
     {
@@ -29,6 +29,7 @@ namespace GaMMBo.Test
     }
     public partial class PrefMenu : Form
     {
+        Proxy prox = new Proxy();
         Genre[] moviesGenres = new Genre [6];
         Genre[] musicGenres = new Genre [7];
         Genre[] gamesGenres = new Genre [6];
