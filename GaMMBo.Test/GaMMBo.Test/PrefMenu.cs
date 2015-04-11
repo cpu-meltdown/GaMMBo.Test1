@@ -13,23 +13,29 @@ using System.Data.SqlClient;
 namespace GaMMBo.Test
 {     
     //if you guys need me to explain anything just let me know 
-    public class Genre
+    
+    public partial class PrefMenu : Form
     {
-        string genreName;
 
-        public Genre(string name)
+        public class Genre
         {
-            genreName = name;
+            string genreName;
+
+            public Genre(string name)
+            {
+                genreName = name;
+            }
+
+            public string getGenreName()
+            {
+                return genreName;
+            }
         }
 
-        public string getGenreName()
-        {
-            return genreName;
-        }
     }
     public partial class PrefMenu : Form
     {
-        Proxy prox = new Proxy();
+
         Genre[] moviesGenres = new Genre [6];
         Genre[] musicGenres = new Genre [7];
         Genre[] gamesGenres = new Genre [6];
@@ -265,7 +271,7 @@ namespace GaMMBo.Test
 
             conn.Close();
               int genreNumber1, genreNumber2;
-               string genreName1, genreName2;
+              string genreName1, genreName2;
 
                if (musicGenre >= 10)
                {
