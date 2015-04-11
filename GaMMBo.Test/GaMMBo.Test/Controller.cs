@@ -20,6 +20,7 @@ namespace GaMMBo.Test
          public static PrefMenu frmPref = new PrefMenu();
          public static ResultsForm frmResults = new ResultsForm();
 
+         public static String catName;
 
 
 

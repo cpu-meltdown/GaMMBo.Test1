@@ -52,6 +52,9 @@ namespace GaMMBo.Test
             top8.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\27.jpg");
             top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\28.jpg");
             top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\29.jpg");
+
+
+
         }
 
     }
