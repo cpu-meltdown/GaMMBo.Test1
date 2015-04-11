@@ -134,9 +134,26 @@ namespace GaMMBo.Test
         {
             skipNum = 0;
             numOfvotes = 0;
+  
+
+
             // CategoriesForm categoriesForm = new CategoriesForm();
-            Controller.frmPref.Hide();
-            Controller.frmCategories.Show();
+
+
+
+            if (btnLike.Visible == false)
+            {
+                Controller.frmPref.Hide();
+                Controller.frmResults.Show();
+
+            }
+            else
+            {
+                Controller.frmPref.Hide();
+                Controller.frmCategories.Show();
+            }
+
+
         }
 
         private void label1_Click(object sender, EventArgs e) { }

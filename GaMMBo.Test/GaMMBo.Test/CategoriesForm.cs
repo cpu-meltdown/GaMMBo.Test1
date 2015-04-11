@@ -20,9 +20,10 @@ namespace GaMMBo.Test
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            MainForm frmMain = new MainForm();
-            this.Hide();
-            frmMain.ShowDialog();
+    
+
+            Controller.frmCategories.Hide();
+            Controller.frmMain.Show();
         }
 
         private void btnMusic_Click(object sender, EventArgs e)
