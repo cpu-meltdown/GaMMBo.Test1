@@ -49,6 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.top1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.top2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.top3)).BeginInit();
@@ -261,11 +262,21 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "10";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(701, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 39);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ResultsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 505);
+            this.ClientSize = new System.Drawing.Size(902, 549);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -328,6 +339,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
 
     }
 }
