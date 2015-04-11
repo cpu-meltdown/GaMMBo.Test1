@@ -14,27 +14,27 @@ namespace GaMMBo.Test
 {     
     //if you guys need me to explain anything just let me know 
     
+    
     public partial class PrefMenu : Form
     {
+        
 
-        public class Genre
-        {
-            string genreName;
-
-            public Genre(string name)
+            public class Genre
             {
-                genreName = name;
-            }
+                string genreName;
 
-            public string getGenreName()
-            {
-                return genreName;
-            }
+                public Genre(string name)
+                {
+                    genreName = name;
+                }
+
+                public string getGenreName()
+                {
+                    return genreName;
+                }
+            
+
         }
-
-    }
-    public partial class PrefMenu : Form
-    {
 
         Genre[] moviesGenres = new Genre [6];
         Genre[] musicGenres = new Genre [7];
