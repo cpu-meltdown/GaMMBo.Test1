@@ -34,7 +34,6 @@ namespace GaMMBo.Test
             Controller.frmPref.choice = 1;
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
-           
             
 
         }

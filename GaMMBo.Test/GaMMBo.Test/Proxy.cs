@@ -28,27 +28,27 @@ namespace GaMMBo.Test
 
     }
 
-   public  class Proxy
+   public static class Proxy
     {
        
-        public int choice;// variable keeps track of what category is being accessed
-        public int objectId;//the id of the object being voted on
-        public int userId = 1;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
+        public static int choice;// variable keeps track of what category is being accessed
+        public static int objectId;//the id of the object being voted on
+        public static int userId = 1;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
                
-        Random randomNumber = new Random();
-        String type = null;
-        Image image = null;
-        SqlCommand sqlCommand = null;
-        SqlDataReader sqlReader = null;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-        Genre[] moviesGenres = new Genre[6];
-        Genre[] musicGenres = new Genre[7];
-        Genre[] gamesGenres = new Genre[6];
-        Genre[] booksGenres = new Genre[9];
-        PrefMenu form = new PrefMenu();
-       public Proxy(int c,int u)
-        {  choice = c;
+        static Random randomNumber = new Random();
+        static String type = null;
+        static Image image = null;
+        static SqlCommand sqlCommand = null;
+        static SqlDataReader sqlReader = null;
+        static SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+        static Genre[] moviesGenres = new Genre[6];
+        static Genre[] musicGenres = new Genre[7];
+        static Genre[] gamesGenres = new Genre[6];
+        static Genre[] booksGenres = new Genre[9];
+       public static void initializeGenres (int c,int u)
+        {  
+           choice = c;
            userId = u;
             
            //Setting up Music Genres
@@ -89,7 +89,7 @@ namespace GaMMBo.Test
        
        
        }
-       public void getGuestObject()
+       public static void getGuestObject()
        {
           
               
@@ -100,27 +100,27 @@ namespace GaMMBo.Test
                    type = "Music";
                    objectId = randomNumber.Next(141)+ 1;
 
-                   form.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
+                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
                }
                else if (choice == 2)//generates movies 
                {
                    type = "Movies";
 
                    objectId = randomNumber.Next(136)+ 1;
-                   form.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
+                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
                }
                else if (choice == 3)//generates books 
                {
                    type = "Books";
 
                    objectId = randomNumber.Next(120)+ 1;
-                   form.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
+                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
                }
                else if (choice == 4)// generates games 
                {
                    type = "Games";
                    objectId = randomNumber.Next(84)+ 1;
-                   form.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
+                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
 
                }
                sqlCommand = new SqlCommand("Select Name, Description from " + type + " where ID = @ID", conn);
@@ -132,8 +132,8 @@ namespace GaMMBo.Test
 
                while (sqlReader.Read())
                {
-                   form.categoryObjectName.Text = sqlReader[0].ToString();
-                   form.categoryObjectDescription.Text = sqlReader[1].ToString();
+                   Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
+                   Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
                }
 
                conn.Close();
@@ -141,7 +141,7 @@ namespace GaMMBo.Test
               
            
        }
-       public void modifyMusicGenres(String sign)
+       public static void modifyMusicGenres(String sign)
        {
            int musicGenre = 0;
 
@@ -187,7 +187,7 @@ namespace GaMMBo.Test
 
        }
 
-       public void modifyMovieGenres(String sign)
+       public static void modifyMovieGenres(String sign)
        {
            int movieGenre = 0;
 
@@ -232,7 +232,7 @@ namespace GaMMBo.Test
            conn.Close();
        }
 
-       public void modifyBooksGenres(String sign)
+       public static void modifyBooksGenres(String sign)
        {
            int bookGenre = 0;
 
@@ -277,7 +277,7 @@ namespace GaMMBo.Test
            conn.Close();
        }
 
-       public void modifyGamesGenres(String sign)
+       public static void modifyGamesGenres(String sign)
        {
            int gameGenre = 0;
 
@@ -323,7 +323,7 @@ namespace GaMMBo.Test
        }
 
 
-       public void insertID()//when the user starts a column will be made for them in the user table of the category they are voting on 
+       public static void insertID()//when the user starts a column will be made for them in the user table of the category they are voting on 
        // this may need to be moved outside of here to when the user is actually made
        {
            if (choice == 1)
@@ -359,7 +359,7 @@ namespace GaMMBo.Test
            
        }
 
-       public void getUserObject()// takes into account objects that have already been voted on
+       public static void getUserObject()// takes into account objects that have already been voted on
        {
           
                String name = null;
@@ -424,7 +424,7 @@ namespace GaMMBo.Test
                if (name == null)
                {
                    sqlCommand = new SqlCommand("Select " + type + ".Name , " + type + ".Description From " + type + " Where " + type + ".Id = @ID ", conn);
-                   form.categoryImage.Image = image;
+                   Controller.frmPref.categoryImage.Image = image;
                    sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
                    sqlCommand.Parameters["@ID"].Value = objectId;
 
@@ -434,8 +434,8 @@ namespace GaMMBo.Test
 
                    while (sqlReader.Read())
                    {
-                      form.categoryObjectName.Text = sqlReader[0].ToString();
-                      form.categoryObjectDescription.Text = sqlReader[1].ToString();
+                      Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
+                      Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
 
                    }
                    conn.Close();
@@ -444,13 +444,13 @@ namespace GaMMBo.Test
 
                else
                {
-                   this.getUserObject();
+                    getUserObject();
                }
 
                
        }
 
-       public void likeOrdislikeObject(int v, String sign)
+       public static void likeOrdislikeObject(int v, String sign)
        {
            // this method inserts a voted object into the linker tables the parameter v can either be 0 for dislike or 1 for like
            // the sign can either be a + or - for incrementing and decrementing 

@@ -29,7 +29,7 @@ namespace GaMMBo.Test
        
         public Boolean userVoting = false;//will be set prior to this point when the user either logs in or clicks guest
         // the rest are self explanatory i may move or remove at the end before i transfer all to proxy
-        Proxy proxy;
+       
         public PrefMenu()
         {
             InitializeComponent();
@@ -41,13 +41,13 @@ namespace GaMMBo.Test
 
             if (userVoting)
             {
-                proxy.likeOrdislikeObject(1, "+");
-                proxy.getUserObject();
+                Proxy.likeOrdislikeObject(1, "+");
+                Proxy.getUserObject();
             }
             else
             {
 
-                proxy.getGuestObject();
+                Proxy.getGuestObject();
             }            
         }
 
@@ -57,13 +57,13 @@ namespace GaMMBo.Test
                     // disklike button 
                 if (userVoting)
                 {
-                    proxy.likeOrdislikeObject(0, "-");
-                    proxy.getUserObject();
+                    Proxy.likeOrdislikeObject(0, "-");
+                    Proxy.getUserObject();
                 }
                 else
                 {
 
-                    proxy.getGuestObject();
+                    Proxy.getGuestObject();
                 }
             
         }
@@ -75,11 +75,11 @@ namespace GaMMBo.Test
             {
                 if (userVoting)
                 {
-                    proxy.getUserObject();
+                    Proxy.getUserObject();
                 }
                 else
                 {
-                    proxy.getGuestObject();
+                    Proxy.getGuestObject();
                 }
 
                 skipNum = skipNum + 1;
@@ -134,18 +134,17 @@ namespace GaMMBo.Test
 
         private void PrefMenu_Load(object sender, EventArgs e)
         {
-            proxy = new Proxy(choice, userId);
-
+            Proxy.initializeGenres(Controller.frmPref.choice, Controller.frmPref.userId);
             if (userVoting)//userVoting is a boolean that will be set when the user either logs in or will enter as a guest
             {
-                proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
-                proxy.getUserObject();
+                Proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
+                Proxy.getUserObject();
             }
 
 
             else
             {
-                proxy.getGuestObject();
+                Proxy.getGuestObject();
             }
 
 
