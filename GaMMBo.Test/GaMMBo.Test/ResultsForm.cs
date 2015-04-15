@@ -20,21 +20,6 @@ namespace GaMMBo.Test
             InitializeComponent();
         }
 
-        private void categoryImage_Click(object sender, EventArgs e)
-        {
-            getResultDetails(1, categoryIds[0], top1);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void top2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ResultsForm_Load(object sender, EventArgs e)
         {
             categoryIds = new int[10] { 2, 21, 22, 23, 24, 25, 26, 27, 28, 29 };
@@ -47,22 +32,24 @@ namespace GaMMBo.Test
         {
 
             String catName = "";
+            Controller.catName = "Movies";
+            catName = Controller.catName + "_Images";
 
-            switch (category)
-            {
-                case 1:
-                    catName = "Movies_Images";
-                    break;
-                case 2:
-                    catName = "Music_Images";
-                    break;
-                case 3:
-                    catName = "Books_Images";
-                    break;
-                case 4:
-                    catName = "Games_Images";
-                    break;
-            }
+            //switch (category)
+            //{
+            //    case 1:
+            //        catName = "Movies_Images";
+            //        break;
+            //    case 2:
+            //        catName = "Music_Images";
+            //        break;
+            //    case 3:
+            //        catName = "Books_Images";
+            //        break;
+            //    case 4:
+            //        catName = "Games_Images";
+            //        break;
+            //}
 
 
             Controller.frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
@@ -79,30 +66,12 @@ namespace GaMMBo.Test
 
         }
 
-        public static void getResultDetails(int category, int resultId, PictureBox pic)
+        public static void getResultDetails(int resultId, PictureBox pic)
         {
-
-            String catName = "";
-
-            switch (category)
-            {
-                case 1:
-                    catName = "Movies";
-                    break;
-                case 2:
-                    catName = "Music";
-                    break;
-                case 3:
-                    catName = "Books";
-                    break;
-                case 4:
-                    catName = "Games";
-                    break;
-            }
 
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
             //SqlCommand sqlCommand = new SqlCommand("Select Album, Description from Music where ID = @ID", conn);
-            SqlCommand getResults = new SqlCommand("Select Name, Description from " + catName + " where ID = @ID", conn);
+            SqlCommand getResults = new SqlCommand("Select Name, Description from " + Controller.catName + " where ID = @ID", conn);
             getResults.Parameters.Add("@ID", SqlDbType.Int);
             getResults.Parameters["@ID"].Value = resultId;
 
@@ -137,9 +106,55 @@ namespace GaMMBo.Test
             Controller.frmCategories.Show();
         }
 
+
+        private void top1_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[0], top1);
+        }
+
+        private void top2_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[1], top2);
+        }
+
+        private void top3_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[2], top3);
+        }
+
+        private void top4_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[3], top4);
+        }
+
+        private void top5_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[4], top5);
+        }
+
+        private void top6_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[5], top6);
+        }
+
         private void top7_Click(object sender, EventArgs e)
         {
+            getResultDetails(categoryIds[6], top7);
+        }
 
+        private void top8_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[7], top8);
+        }
+
+        private void top9_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[8], top9);
+        }
+
+        private void top10_Click(object sender, EventArgs e)
+        {
+            getResultDetails(categoryIds[9], top10);
         }
 
         

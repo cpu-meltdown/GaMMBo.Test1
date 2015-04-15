@@ -89,7 +89,8 @@ namespace GaMMBo.Test
 
              if (pass1.Length < 8)
              {
-                 frmLogin.lblError.Visible = true;
+                 //frmLogin.lblError.Visible = true;
+                 MessageBox.Show("Password must be at least 8 characters");
                  frmLogin.txtPassword.Focus();
                  return;
              }
@@ -149,6 +150,9 @@ namespace GaMMBo.Test
              conn.Close();
 
              MessageBox.Show("Account created successfully");
+             frmLogin.txtUsername.Text = "";
+             frmLogin.txtPassword.Text = "";
+             frmLogin.txtPassword2.Text = "";
 
              frmLogin.Hide();
              frmMain.Show();

@@ -103,7 +103,7 @@
             // 
             this.lblPassword2.AutoSize = true;
             this.lblPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword2.Location = new System.Drawing.Point(12, 110);
+            this.lblPassword2.Location = new System.Drawing.Point(12, 99);
             this.lblPassword2.Name = "lblPassword2";
             this.lblPassword2.Size = new System.Drawing.Size(139, 20);
             this.lblPassword2.TabIndex = 6;
@@ -113,7 +113,7 @@
             // txtPassword2
             // 
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword2.Location = new System.Drawing.Point(157, 107);
+            this.txtPassword2.Location = new System.Drawing.Point(157, 96);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.PasswordChar = '*';
             this.txtPassword2.Size = new System.Drawing.Size(268, 26);
@@ -125,11 +125,11 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(105, 91);
+            this.lblError.Location = new System.Drawing.Point(13, 134);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(320, 13);
+            this.lblError.Size = new System.Drawing.Size(325, 13);
             this.lblError.TabIndex = 8;
-            this.lblError.Text = "Please make sure the password is 8 or more characters";
+            this.lblError.Text = "*Please make sure the password is 8 or more characters";
             this.lblError.Visible = false;
             this.lblError.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -137,7 +137,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 252);
+            this.ClientSize = new System.Drawing.Size(488, 231);
+            this.ControlBox = false;
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.lblPassword2);
@@ -148,7 +149,9 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);

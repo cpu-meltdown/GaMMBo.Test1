@@ -51,6 +51,7 @@ namespace GaMMBo.Test
             Controller.frmLogin.txtPassword2.Visible = true;
             Controller.frmLogin.lblPassword2.Visible = true;
             Controller.frmLogin.btnLogin.Text = "Create Account";
+            Controller.frmLogin.Text = "New User";
             Controller.frmLogin.ShowDialog();
 
         }

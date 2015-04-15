@@ -89,7 +89,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(13, 13);
+            this.lblUser.Location = new System.Drawing.Point(26, 17);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(0, 13);
             this.lblUser.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 330);
+            this.ClientSize = new System.Drawing.Size(527, 330);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.musicButton);
