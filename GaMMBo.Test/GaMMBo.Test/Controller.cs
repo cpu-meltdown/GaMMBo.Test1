@@ -30,7 +30,7 @@ namespace GaMMBo.Test
              //validate login
              String pass = "";
              SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-             SqlCommand login = new SqlCommand("SELECT [Password] FROM Users WHERE [UserName] = @username", conn);
+             SqlCommand login = new SqlCommand("SELECT [UserName], [Password] FROM Users WHERE [UserName] = @username", conn);
              login.Parameters.Add("@username", SqlDbType.NVarChar);
              login.Parameters["@username"].Value = user;
              try { conn.Open(); }
@@ -48,7 +48,8 @@ namespace GaMMBo.Test
              {
                  while (sqlReader.Read())
                  {
-                     pass = sqlReader[0].ToString();
+                     frmLogin.txtUsername.Text = sqlReader[0].ToString();
+                     pass = sqlReader[1].ToString();
                  }
                  if (pass != password)
                  {
@@ -58,8 +59,10 @@ namespace GaMMBo.Test
                  }
                  else
                  {
-                     userName = user;
-                     frmCategories.lblUser.Text = user;
+                     userName = frmLogin.txtUsername.Text;
+                     frmCategories.lblUser.Text = frmLogin.txtUsername.Text;
+                     frmLogin.txtUsername.Text = "";
+                     frmLogin.txtPassword.Text = "";
                      frmLogin.Hide();
                      frmCategories.ShowDialog();
                  }
