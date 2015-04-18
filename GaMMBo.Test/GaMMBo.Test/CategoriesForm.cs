@@ -43,7 +43,7 @@ namespace GaMMBo.Test
             }
 
             Controller.frmCategories.Hide();
-            Controller.frmMain.ShowDialog();
+            Controller.frmMain.Show();
         }
 
         private void btnMusic_Click(object sender, EventArgs e)

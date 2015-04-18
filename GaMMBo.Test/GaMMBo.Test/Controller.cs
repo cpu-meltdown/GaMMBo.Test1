@@ -54,7 +54,7 @@ namespace GaMMBo.Test
 
              Application.EnableVisualStyles();
             // Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Form1());
+             Application.Run(new MainForm());
 
              // buttons call proxy methods directly
              // it seems overly redundant to have methods that call methods
