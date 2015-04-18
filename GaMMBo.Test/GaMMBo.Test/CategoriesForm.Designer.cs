@@ -68,7 +68,7 @@
             // 
             // musicButton
             // 
-            this.musicButton.Location = new System.Drawing.Point(303, 185);
+            this.musicButton.Location = new System.Drawing.Point(313, 185);
             this.musicButton.Name = "musicButton";
             this.musicButton.Size = new System.Drawing.Size(94, 68);
             this.musicButton.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(414, 283);
+            this.btnLogout.Location = new System.Drawing.Point(443, 287);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(94, 35);
             this.btnLogout.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 330);
+            this.ClientSize = new System.Drawing.Size(583, 334);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.musicButton);
@@ -107,6 +107,7 @@
             this.Controls.Add(this.booksButton);
             this.Name = "CategoriesForm";
             this.Text = "frmCategories";
+            this.Load += new System.EventHandler(this.CategoriesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

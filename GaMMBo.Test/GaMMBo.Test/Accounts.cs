@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GaMMBo.Test
 {
-    static class Account
+    static class Accounts
     {
         private static int userId = 0;
         private static string userName;
@@ -111,7 +111,7 @@ namespace GaMMBo.Test
                 {
                     MessageBox.Show(":" + err);
                 }
-
+                
             }
             MessageBox.Show("Account created successfully");
 
@@ -220,18 +220,18 @@ namespace GaMMBo.Test
         }
 
         public static void deleteTemproraryAccount()
-        {
+         {
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
 
-            string[] tables = { "UserMovies", "UserMusic", "UserBooks", "UserGames", "UserMovieLinker"
-                              ,"UserMusicLinker", "UserBookLinker", "UserGameLinker", "Users"};
+            string[] tables = { "Users","UserMovies", "UserMusic", "UserBooks", "UserGames", "UserMovieLinker"
+                              ,"UserMusicLinker", "UserBookLinker", "UserGameLinker"};
 
 
             conn.Open();
             for (int i = 0; i < tables.Length; i++)
             {
                 SqlCommand deleteUser = new SqlCommand("Delete from " + tables[i] +
-                        " Where UserId = @Id ", conn);
+                        " Where UserId = @Id", conn);
                 deleteUser.Parameters.Add("@Id", SqlDbType.Int);
                 deleteUser.Parameters["@Id"].Value = userId;
                 try
@@ -246,9 +246,9 @@ namespace GaMMBo.Test
                 deleteUser.Dispose();
 
             }
-            Controller.guest = false;
-            conn.Close();
+             Controller.guest = false;
+             conn.Close();
 
-        }
+         }
     }
 }

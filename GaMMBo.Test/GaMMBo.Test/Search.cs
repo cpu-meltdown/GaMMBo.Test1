@@ -3,12 +3,7 @@
 public class Search
 {
 
-    int[] arrayIDMusic;
-    int[] arrayIDMovie;
-    int[] arrayIDBook;
-    int[] arrayIDGame;
-
-    int[] arrayValue;
+    
 
     int musicSize;
     int movieSize;
@@ -26,30 +21,29 @@ public class Search
         user = controller.loggedOn();
         int value = 0;
         
-        arrayID = int[11];
-        arrayValue = int[11];
-        
+        int[] arrayID = new int[10];
+        int[] arrayValue = new int[10];
+        int[] uMusic = new int[7];
+        int[] uMovie = new int[6];
+        int[] uBook = new int[9];
+        int[] uGame = new int[6];
 
-        if (change == false){ }
 
         // music search loops
-        else if(selection == 1)
+        if(selection == 1)
         {
 
             // get user data
-            
-            int uMusicCo = Account.getUserComedy();
-            int uMusicTh = Account.getUserThriller();
-            int uMusicFa = Account.getUserFantasy();
-            int uMusicAc = Account.getUserAction();
-            int uMucisRo = Account.getUserRomance();
-            int uMusicDr = Account.getUserDrama();
+            uMusic = Proxy.getUserValues();
+
 
             // this loop enters the many many to check visibility of each movie
             for(int i = 0; i < musicSize; i++){
 
+
                 // if the user has voted on this movie we do not want to add it to the results
                 if (Proxy.voteValue(i, user, selection) == true) { }
+
 
                 else
                 {
@@ -58,10 +52,10 @@ public class Search
 
                     if (value > arrayValue[9])
                     {
-                        arrayID[10] = i;
-                        arrayValue[10] = value;
+                        arrayID[9] = i;
+                        arrayValue[9] = value;
 
-                        for(int j = 10; j > 0; j++){
+                        for(int j = 9; j > 0; j++){
                             while((arrayValue[j] > (arrayValue[j-1])) && (i > 1)){
                                 int tempValue = arrayValue[j];
                                 int tempID = arrayID[j];
@@ -83,8 +77,7 @@ public class Search
         else if(selection == 2)
         {
 
-            uHorror = Account.getHorror(user);
-            uComedy = Account.getComedy(user);
+            uMovie = Proxy.getUserValues();
 
             // this loop enters the many many to check visibility of each movie
             for(int i = 0; i < movieSize; i++){
@@ -103,9 +96,16 @@ public class Search
                         arrayValue[10] = value;
 
                         for(int j = 10; j > 0; j++){
-                            if(arrayValue[j] > (arrayValue[j-1])){
+                            while ((arrayValue[j] > (arrayValue[j - 1])) && (i > 1))
+                            {
                                 int tempValue = arrayValue[j];
                                 int tempID = arrayID[j];
+
+                                arrayValue[j] = arrayValue[j - 1];
+                                arrayID[j] = arrayID[j - 1];
+
+                                arrayValue[j - 1] = tempValue;
+                                arrayID[j - 1] = tempID;
 
                             }
                         }
@@ -118,15 +118,7 @@ public class Search
         else if(selection == 3)
         {
 
-            int uBookRo = Account.getUserRomance();
-            int uBookFa = Account.getUserFantasy();
-            int uBookMy = Account.getUserMystery();
-            int uBookTh = Account.getUserThriller();
-            int uBookSc = Account.getUserScience();
-            int uBookFi = Account.getUserFiction();
-            int uBookNo = Account.getUserNovel();
-            int uBookAu = Account.getUserAutobiography();
-            int uBookYo = Account.getUserYoung();
+            uBook = Proxy.getUserValues();
 
             // this loop enters the many many to check visibility of each movie
             for(int i = 0; i < bookSize; i++){
@@ -145,9 +137,16 @@ public class Search
                         arrayValue[10] = value;
 
                         for(int j = 10; j > 0; j++){
-                            if(arrayValue[j] > (arrayValue[j-1])){
+                            while ((arrayValue[j] > (arrayValue[j - 1])) && (i > 1))
+                            {
                                 int tempValue = arrayValue[j];
                                 int tempID = arrayID[j];
+
+                                arrayValue[j] = arrayValue[j - 1];
+                                arrayID[j] = arrayID[j - 1];
+
+                                arrayValue[j - 1] = tempValue;
+                                arrayID[j - 1] = tempID;
 
                             }
                         }
@@ -160,12 +159,7 @@ public class Search
         else
         {
 
-            int uGameSt = Account.getUserStrategy();
-            int uGameSp = Account.getUserSports();
-            int uGameAd = Account.getUserAdventure();
-            int uGameFi = Account.getUserFighting();
-            int uGameRa = Account.getUserRacing();
-            int uGameRp = Account.getUserRPG();
+            uGames = Proxy.getUserValues();
 
             // this loop enters the many many to check visibility of each movie
             for(int i = 0; i < gameSize; i++){
@@ -184,9 +178,16 @@ public class Search
                         arrayValue[10] = value;
 
                         for(int j = 10; j > 0; j++){
-                            if(arrayValue[j] > (arrayValue[j-1])){
+                            while ((arrayValue[j] > (arrayValue[j - 1])) && (i > 1))
+                            {
                                 int tempValue = arrayValue[j];
                                 int tempID = arrayID[j];
+
+                                arrayValue[j] = arrayValue[j - 1];
+                                arrayID[j] = arrayID[j - 1];
+
+                                arrayValue[j - 1] = tempValue;
+                                arrayID[j - 1] = tempID;
 
                             }
                         }
