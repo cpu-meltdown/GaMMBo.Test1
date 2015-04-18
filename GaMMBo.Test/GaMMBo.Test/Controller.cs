@@ -26,25 +26,25 @@ namespace GaMMBo.Test
 
          public static int getUserId()
          {
-             return Accounts.getUserId();
+             return Account.getUserId();
          }
 
          public static void createTemproraryAccount(){
-             Accounts.createTemproraryAccount();
+             Account.createTemproraryAccount();
          }
          public static void deleteTemproraryAccount()
          {
-             Accounts.deleteTemproraryAccount();
+             Account.deleteTemproraryAccount();
          }
 
          public static void login(string userName, string password)
          {
-             Accounts.login(userName, password);
+             Account.login(userName, password);
          }
 
          public static void addUser(string userName, string password1, string password2)
          {
-             Accounts.addUser(userName, password1, password2);
+             Account.addUser(userName, password1, password2);
          }
 
          // entry point of program

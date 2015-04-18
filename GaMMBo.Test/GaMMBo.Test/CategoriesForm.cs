@@ -20,7 +20,8 @@ namespace GaMMBo.Test
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (Controller.guest)
+            
+        if (Controller.guest)
             {
                 DialogResult dialogResult =
                     MessageBox.Show("Do you want to save your changes and create an account? ", 
@@ -35,13 +36,14 @@ namespace GaMMBo.Test
                         Controller.deleteTemproraryAccount();
                         break;
                     case DialogResult.Cancel:
+                        Controller.frmCategories.ShowDialog();
                         break;
 
                 }
             }
 
             Controller.frmCategories.Hide();
-            Controller.frmMain.Show();
+            Controller.frmMain.ShowDialog();
         }
 
         private void btnMusic_Click(object sender, EventArgs e)
