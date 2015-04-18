@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace GaMMBo.Test
 {
     public partial class LoginForm : Form
     {
+
+        public string entered;
+
 
         public LoginForm()
         {
@@ -42,13 +46,34 @@ namespace GaMMBo.Test
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+
             if (Controller.guest)
             {
                 Controller.frmLogin.txtPassword2.Visible = true;
                 Controller.frmLogin.lblPassword2.Visible = true;
                 Controller.frmLogin.btnLogin.Text = "Create Account";
             }
+
+            txtUsername.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtUsername.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection users = new AutoCompleteStringCollection();
+
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+            SqlCommand auto = new SqlCommand("SELECT [UserName] FROM Users WHERE UserName like @username", conn);
+            auto.Parameters.Add("@username", SqlDbType.NVarChar);
+            auto.Parameters["@username"].Value = entered + "%";
+            conn.Open();
+
+            SqlDataReader sqlReader = auto.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                users.Add(sqlReader[0].ToString());
+            }
+
+            txtUsername.AutoCompleteCustomSource = users;
         }
+
 
         private void txtPAssword2_TextChanged(object sender, EventArgs e)
         {
@@ -64,6 +89,50 @@ namespace GaMMBo.Test
         {
 
         }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtUsername_KeyUp(object sender, KeyEventArgs e)
+        {
+
+
+            entered = txtUsername.Text;// += e.KeyCode;
+
+
+
+
+
+            //select UserName from Users where UserName like 'b%'
+
+
+
+            // catch (Exception ex) { MessageBox.Show(": " + ex); }
+            //sqlReader.Read();
+            //if (sqlReader.HasRows == true)
+            //{
+            //    txtUsername.Text = sqlReader[0].ToString();
+            //}
+            //else
+            //{
+            //    txtUsername.Text.Substring(0, txtUsername.Text.Length - 1);
+            //    //MessageBox.Show("no resutls");
+
+            //}
+            ////conn.Close();
+
+
+
+
+
+            //MessageBox.Show( entered);
+
+        }
+        
+
+  
 
 //<<<<<<< HEAD
 //        private void txtUsername_TextChanged(object sender, EventArgs e)

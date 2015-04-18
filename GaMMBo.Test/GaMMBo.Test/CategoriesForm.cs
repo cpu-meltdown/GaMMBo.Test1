@@ -33,7 +33,7 @@ namespace GaMMBo.Test
                         Controller.frmLogin.ShowDialog();
                         break;
                     case DialogResult.No:
-                        Controller.deleteTemproraryAccount();
+                        Account.deleteTemproraryAccount();
                         break;
                     case DialogResult.Cancel:
                         Controller.frmCategories.ShowDialog();

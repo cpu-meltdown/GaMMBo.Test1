@@ -124,6 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 421);
+            this.ControlBox = false;
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);
             this.Controls.Add(this.categoryObjectName);
@@ -133,6 +134,7 @@
             this.Controls.Add(this.btnDislike);
             this.Controls.Add(this.btnLike);
             this.Name = "PrefMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrefMenu";
             this.Load += new System.EventHandler(this.PrefMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoryImage)).EndInit();
