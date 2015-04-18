@@ -38,8 +38,10 @@ namespace GaMMBo.Test
         {
             //CategoriesForm frmCategories = new CategoriesForm();
             //this.Hide();
-            Controller.frmMain.Hide();
+            Controller.guest = true;
             Controller.frmCategories.lblUser.Text = "Guest";
+            Controller.createTemproraryAccount();
+            Controller.frmMain.Hide();
             Controller.frmCategories.ShowDialog();
         }
 

@@ -33,7 +33,7 @@ namespace GaMMBo.Test
        
         public static int choice;// variable keeps track of what category is being accessed
         public static int objectId;//the id of the object being voted on
-        public static int userId = 1;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
+        public static int userId = Controller.getUserId();//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
                
         static Random randomNumber = new Random();
@@ -49,7 +49,7 @@ namespace GaMMBo.Test
        public static void initializeGenres (int c,int u)
         {  
            choice = c;
-           userId = u;
+           userId = Controller.getUserId() ;
             
            //Setting up Music Genres
            musicGenres[0] = new Genre("Rap");
@@ -89,58 +89,7 @@ namespace GaMMBo.Test
        
        
        }
-       public static void getGuestObject()
-       {
-          
-              
-               // goes into database and prints random object 
-
-               if (choice == 1)//generates music 
-               {
-                   type = "Music";
-                   objectId = randomNumber.Next(141)+ 1;
-
-                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
-               }
-               else if (choice == 2)//generates movies 
-               {
-                   type = "Movies";
-
-                   objectId = randomNumber.Next(136)+ 1;
-                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
-               }
-               else if (choice == 3)//generates books 
-               {
-                   type = "Books";
-
-                   objectId = randomNumber.Next(120)+ 1;
-                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
-               }
-               else if (choice == 4)// generates games 
-               {
-                   type = "Games";
-                   objectId = randomNumber.Next(84)+ 1;
-                   Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
-
-               }
-               sqlCommand = new SqlCommand("Select Name, Description from " + type + " where ID = @ID", conn);
-               sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
-               sqlCommand.Parameters["@ID"].Value = objectId;
-
-               conn.Open();
-               SqlDataReader sqlReader = sqlCommand.ExecuteReader();
-
-               while (sqlReader.Read())
-               {
-                   Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
-                   Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
-               }
-
-               conn.Close();
-
-              
-           
-       }
+      
        public static void modifyMusicGenres(String sign)
        {
            int musicGenre = 0;
@@ -371,7 +320,7 @@ namespace GaMMBo.Test
                {
                    type = "Music";
                    linker = "UserMusicLinker";
-                   objectId = randomNumber.Next(141) + 1;
+                   objectId = randomNumber.Next(140) + 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
 
 
@@ -380,7 +329,7 @@ namespace GaMMBo.Test
                {
                    type = "Movies";
                    linker = "UserMovieLinker";
-                   objectId = randomNumber.Next(136)+ 1;
+                   objectId = randomNumber.Next(135)+ 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
 
 
@@ -397,7 +346,7 @@ namespace GaMMBo.Test
                {
                    type = "Games";
                    linker = "UserGameLinker";
-                   objectId = randomNumber.Next(84)+ 1;
+                   objectId = randomNumber.Next(83)+ 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
                }//this sql command checks if that particular object and user is in the specific linker table 
                sqlCommand =

@@ -13,6 +13,7 @@ namespace GaMMBo.Test
 {
     public partial class LoginForm : Form
     {
+
         public LoginForm()
         {
             InitializeComponent();
@@ -34,14 +35,19 @@ namespace GaMMBo.Test
                 Controller.login(txtUsername.Text, txtPassword.Text);
             } else {
                 // new account
-                Controller.addUser(txtUsername.Text, txtPassword.Text, txtPassword2.Text);
+                Controller.addUser(txtUsername.Text, txtPassword.Text, txtPassword2.Text);  
             }   
 
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            if (Controller.guest)
+            {
+                Controller.frmLogin.txtPassword2.Visible = true;
+                Controller.frmLogin.lblPassword2.Visible = true;
+                Controller.frmLogin.btnLogin.Text = "Create Account";
+            }
         }
 
         private void txtPAssword2_TextChanged(object sender, EventArgs e)

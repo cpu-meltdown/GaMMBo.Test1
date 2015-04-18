@@ -20,7 +20,25 @@ namespace GaMMBo.Test
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-    
+            if (Controller.guest)
+            {
+                DialogResult dialogResult =
+                    MessageBox.Show("Do you want to save your changes and create an account? ", 
+                    "Last Chance",MessageBoxButtons.YesNoCancel);
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        Controller.frmCategories.Hide();
+                        Controller.frmLogin.ShowDialog();
+                        break;
+                    case DialogResult.No:
+                        Controller.deleteTemproraryAccount();
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+
+                }
+            }
 
             Controller.frmCategories.Hide();
             Controller.frmMain.Show();
@@ -64,6 +82,11 @@ namespace GaMMBo.Test
             Controller.frmPref.choice = 4;
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
+        }
+
+        private void CategoriesForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

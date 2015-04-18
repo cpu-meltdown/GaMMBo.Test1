@@ -11,61 +11,46 @@ using System.Data.SqlClient;
 
 
 namespace GaMMBo.Test
-{     
+{
     //needs for limit to be set
-    
-    
+
+
     public partial class PrefMenu : Form
     {
-       
-        
+
+
 
         public int skipNum = 0;// variable that keeps track how many times the user skips
         public int choice;// variable keeps track of what category is being accessed
         public int objectId;//the id of the object being voted on
-        public int userId = 1;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
+        public int userId = Proxy.userId;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
         public int numOfvotes = 0;// keeps track how many objects having been voted on hasnt be used yet will be
-       
+
         public Boolean userVoting = false;//will be set prior to this point when the user either logs in or clicks guest
         // the rest are self explanatory i may move or remove at the end before i transfer all to proxy
-       
+
         public PrefMenu()
         {
             InitializeComponent();
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
             // like button
 
-            if (userVoting)
-            {
-                Proxy.likeOrdislikeObject(1, "+");
-                Proxy.getUserObject();
-            }
-            else
-            {
 
-                Proxy.getGuestObject();
-            }            
+            Proxy.likeOrdislikeObject(1, "+");
+            Proxy.getUserObject();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-                    // disklike button 
-                if (userVoting)
-                {
-                    Proxy.likeOrdislikeObject(0, "-");
-                    Proxy.getUserObject();
-                }
-                else
-                {
+            Proxy.likeOrdislikeObject(0, "-");
+            Proxy.getUserObject();
 
-                    Proxy.getGuestObject();
-                }
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,14 +58,8 @@ namespace GaMMBo.Test
             // skip button limit is set to 5 skips if the user reaches five a message pops up telling them to either like or dislike
             if (skipNum < 5)
             {
-                if (userVoting)
-                {
                     Proxy.getUserObject();
-                }
-                else
-                {
-                    Proxy.getGuestObject();
-                }
+                
 
                 skipNum = skipNum + 1;
                 // return;
@@ -104,7 +83,7 @@ namespace GaMMBo.Test
         {
             skipNum = 0;
             numOfvotes = 0;
-  
+
 
 
             // CategoriesForm categoriesForm = new CategoriesForm();
@@ -135,31 +114,20 @@ namespace GaMMBo.Test
         private void PrefMenu_Load(object sender, EventArgs e)
         {
             Proxy.initializeGenres(Controller.frmPref.choice, Controller.frmPref.userId);
-            if (userVoting)//userVoting is a boolean that will be set when the user either logs in or will enter as a guest
-            {
-                Proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
-                Proxy.getUserObject();
-            }
-
-
-            else
-            {
-                Proxy.getGuestObject();
-            }
-
-
+            Proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
+            Proxy.getUserObject();
         }
-        
-
-       
-       
 
 
-      
-        
 
 
-      
+
+
+
+
+
+
+
 
 
     }
