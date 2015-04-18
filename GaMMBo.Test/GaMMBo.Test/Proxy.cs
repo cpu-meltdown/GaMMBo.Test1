@@ -322,14 +322,17 @@ namespace GaMMBo.Test
            conn.Open();
 
            sqlCommand.ExecuteNonQuery();
+          
 
            conn.Close();
        }
 
 
        public static void insertID()//when the user starts a column will be made for them in the user table of the category they are voting on 
-       // this may need to be moved outside of here to when the user is actually made
+      //checks if the id is there first 
        {
+           
+           Boolean makeNewColumn = true;
            if (choice == 1)
            {
                type = "Music";
@@ -351,16 +354,29 @@ namespace GaMMBo.Test
 
            }
 
-           SqlCommand sqlCommand = new SqlCommand("INSERT INTO User" + type + " (UserId) SELECT UserId  From Users Where UserId= @userId", conn);
+           SqlCommand sqlCommand = new SqlCommand("Select * FROM User" + type + "  Where UserId = @userId", conn);
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
            sqlCommand.Parameters["@userId"].Value = userId;
 
            conn.Open();
-
-           sqlCommand.ExecuteNonQuery();
+           SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+           if (sqlReader.HasRows) { makeNewColumn = false; }
 
            conn.Close();
-           
+           if (makeNewColumn)
+           {
+
+               sqlCommand = new SqlCommand("INSERT INTO User" + type + " (UserId) SELECT UserId  From Users Where UserId= @userId", conn);
+               sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
+               sqlCommand.Parameters["@userId"].Value = userId;
+
+               conn.Open();
+
+               sqlCommand.ExecuteNonQuery();
+
+               conn.Close();
+
+           }
        }
 
        public static void getUserObject()// takes into account objects that have already been voted on
