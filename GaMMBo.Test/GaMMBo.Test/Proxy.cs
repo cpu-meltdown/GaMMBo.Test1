@@ -35,7 +35,7 @@ namespace GaMMBo.Test
         public static int objectId;//the id of the object being voted on
         public static int userId = 1;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
-               
+        public static int numOfvotes = 0;
         static Random randomNumber = new Random();
         static String type = null;
         static Image image = null;
@@ -91,14 +91,16 @@ namespace GaMMBo.Test
        }
        public static void getGuestObject()
        {
-          
-              
+           if (numOfvotes > 10) { MessageBox.Show("The user  saw 10 objects this is where we display the results"); }
+           else
+           {
+               numOfvotes = numOfvotes + 1;
                // goes into database and prints random object 
 
                if (choice == 1)//generates music 
                {
                    type = "Music";
-                   objectId = randomNumber.Next(141)+ 1;
+                   objectId = randomNumber.Next(141) + 1;
 
                    Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Music_Images\" + objectId + ".jpg");
                }
@@ -106,20 +108,20 @@ namespace GaMMBo.Test
                {
                    type = "Movies";
 
-                   objectId = randomNumber.Next(136)+ 1;
+                   objectId = randomNumber.Next(136) + 1;
                    Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
                }
                else if (choice == 3)//generates books 
                {
                    type = "Books";
 
-                   objectId = randomNumber.Next(120)+ 1;
+                   objectId = randomNumber.Next(120) + 1;
                    Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
                }
                else if (choice == 4)// generates games 
                {
                    type = "Games";
-                   objectId = randomNumber.Next(84)+ 1;
+                   objectId = randomNumber.Next(84) + 1;
                    Controller.frmPref.categoryImage.Image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
 
                }
@@ -138,8 +140,9 @@ namespace GaMMBo.Test
 
                conn.Close();
 
-              
-           
+
+
+           }
        }
        public static void modifyMusicGenres(String sign)
        {
@@ -361,7 +364,10 @@ namespace GaMMBo.Test
 
        public static void getUserObject()// takes into account objects that have already been voted on
        {
-          
+           if (numOfvotes > 10) { MessageBox.Show("The user saw 10 objects this is where we display the results"); }
+           else
+           {
+               numOfvotes = numOfvotes + 1;
                String name = null;
 
                String linker = null;
@@ -380,7 +386,7 @@ namespace GaMMBo.Test
                {
                    type = "Movies";
                    linker = "UserMovieLinker";
-                   objectId = randomNumber.Next(136)+ 1;
+                   objectId = randomNumber.Next(136) + 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Movies_Images\" + objectId + ".jpg");
 
 
@@ -389,7 +395,7 @@ namespace GaMMBo.Test
                {
                    type = "Books";
                    linker = "UserBookLinker";
-                   objectId = randomNumber.Next(120)+ 1;
+                   objectId = randomNumber.Next(120) + 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Books_Images\" + objectId + ".jpg");
 
                }
@@ -397,7 +403,7 @@ namespace GaMMBo.Test
                {
                    type = "Games";
                    linker = "UserGameLinker";
-                   objectId = randomNumber.Next(84)+ 1;
+                   objectId = randomNumber.Next(84) + 1;
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
                }//this sql command checks if that particular object and user is in the specific linker table 
                sqlCommand =
@@ -434,8 +440,8 @@ namespace GaMMBo.Test
 
                    while (sqlReader.Read())
                    {
-                      Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
-                      Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
+                       Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
+                       Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
 
                    }
                    conn.Close();
@@ -444,10 +450,11 @@ namespace GaMMBo.Test
 
                else
                {
-                    getUserObject();
+                   getUserObject();
                }
 
-               
+
+           }
        }
 
        public static void likeOrdislikeObject(int v, String sign)
