@@ -557,15 +557,111 @@ namespace GaMMBo.Test
 
            while (sqlReader.Read())
            {
-               for (int i = 0; i <= number; i++)
+               for (int i = 0; i < 9; i++)
                {
-                   local[i] = int.Parse(sqlReader[i].ToString());
+                   if (i <= number)
+                   {
+                       local[i] = int.Parse(sqlReader[i].ToString());
+                   }
+                   else 
+                   {
+                       local[i] = 0;
+                   }
                }
            }
 
            conn.Close();
            return local;
 
+       }
+
+       public static int[] getObjectValue(int num)
+       {
+
+           int objectGenre = 0;
+           int objectID = num;
+           string type = null;
+
+           int[] local = new int[9];
+
+           if (choice == 1)
+           {
+               type = "Music";
+           }
+           else if (choice == 2)
+           {
+               type = "Movies";
+           }
+           else if (choice == 3)
+           {
+               type = "Books";
+           }
+           else
+           {
+               type = "Games";
+           }
+
+
+           sqlCommand = new SqlCommand("Select genre from " + type + " where Id = @ID", conn);
+           sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+           sqlCommand.Parameters["@ID"].Value = objectId;
+
+           conn.Open();
+           SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+           while (sqlReader.Read())
+           {
+               objectGenre = int.Parse(sqlReader[0].ToString());
+
+           }
+
+           conn.Close();
+
+           int genreNumber1, genreNumber2;
+
+           if (objectGenre >= 10)
+           {
+               genreNumber1 = objectGenre / 10;
+               genreNumber2 = objectGenre % 10;
+
+               for (int i = 0; i < 9; i++)
+               {
+                   if (i == (genreNumber1 - 1) || i == (genreNumber2 - 1))
+                   {
+                       local[i] = 1;
+                   }
+                   else
+                   {
+                       local[i] = 0;
+                   }
+               }
+
+           }
+           else
+           {
+               genreNumber1 = objectGenre;
+
+               for (int i = 0; i < 9; i++)
+               {
+                   if (i == (genreNumber1 - 1))
+                   {
+                       local[i] = 1;
+                   }
+                   else
+                   {
+                       local[i] = 0;
+                   }
+               }
+               
+           }
+           
+           conn.Open();
+
+           sqlCommand.ExecuteNonQuery();
+
+           conn.Close();
+
+           return local;
        }
     }
 }
