@@ -669,7 +669,7 @@ namespace GaMMBo.Test
        public static bool getVisibility()
        {
             
-            String voteValue = 0;
+            String voteValue = null;
             String linker = null;
 
 
