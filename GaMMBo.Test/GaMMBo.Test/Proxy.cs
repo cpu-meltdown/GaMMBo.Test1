@@ -518,7 +518,212 @@ namespace GaMMBo.Test
            conn.Close();
        }
 
+       public static int[] getUserValues()
+       {
+           int number = 0;
+
+           string type = null;
+
+           int[] local = new int[9];
+
+           if (choice == 1)
+           {
+               type = "Music";
+               number = 7;
+           }
+           else if (choice == 2)
+           {
+               type = "Movies";
+               number = 6;
+           }
+           else if (choice == 3)
+           {
+               type = "Books";
+               number = 9;
+           }
+           else
+           {
+               type = "Games";
+               number = 6;
+           }
 
 
+           sqlCommand = new SqlCommand("Select * from User" + type + " where userID = @userID", conn);
+           sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
+           sqlCommand.Parameters["@userId"].Value = userId;
+
+           conn.Open();
+           SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+           while (sqlReader.Read())
+           {
+               for (int i = 0; i < 9; i++)
+               {
+                   if (i <= number)
+                   {
+                       local[i] = int.Parse(sqlReader[i].ToString());
+                   }
+                   else 
+                   {
+                       local[i] = 0;
+                   }
+               }
+           }
+
+           conn.Close();
+           return local;
+
+       }
+
+       public static int[] getObjectValue(int num)
+       {
+
+           int objectGenre = 0;
+           int objectID = num;
+           string type = null;
+
+           int[] local = new int[9];
+
+           if (choice == 1)
+           {
+               type = "Music";
+           }
+           else if (choice == 2)
+           {
+               type = "Movies";
+           }
+           else if (choice == 3)
+           {
+               type = "Books";
+           }
+           else
+           {
+               type = "Games";
+           }
+
+
+           sqlCommand = new SqlCommand("Select genre from " + type + " where Id = @ID", conn);
+           sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+           sqlCommand.Parameters["@ID"].Value = objectId;
+
+           conn.Open();
+           SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+           while (sqlReader.Read())
+           {
+               objectGenre = int.Parse(sqlReader[0].ToString());
+
+           }
+
+           conn.Close();
+
+           int genreNumber1, genreNumber2;
+
+           if (objectGenre >= 10)
+           {
+               genreNumber1 = objectGenre / 10;
+               genreNumber2 = objectGenre % 10;
+
+               for (int i = 0; i < 9; i++)
+               {
+                   if (i == (genreNumber1 - 1) || i == (genreNumber2 - 1))
+                   {
+                       local[i] = 1;
+                   }
+                   else
+                   {
+                       local[i] = 0;
+                   }
+               }
+
+           }
+           else
+           {
+               genreNumber1 = objectGenre;
+
+               for (int i = 0; i < 9; i++)
+               {
+                   if (i == (genreNumber1 - 1))
+                   {
+                       local[i] = 1;
+                   }
+                   else
+                   {
+                       local[i] = 0;
+                   }
+               }
+               
+           }
+           
+           conn.Open();
+
+           sqlCommand.ExecuteNonQuery();
+
+           conn.Close();
+
+           return local;
+       }
+
+       // peeks into Linker table to see if object has been voted on or not
+       // returns true for voted and false for not voted
+       public static bool getVisibility()
+       {
+            
+            String voteValue = 0;
+            String linker = null;
+
+
+            if (choice == 1)//generates music 
+            {
+                type = "Music";
+                linker = "UserMusicLinker";
+                
+            }
+            else if (choice == 2)//generates Movies
+            {
+                type = "Movies";
+                linker = "UserMovieLinker";
+
+            }
+            else if (choice == 3)//books
+            {
+                type = "Books";
+                linker = "UserBookLinker";
+                
+            }
+            else if (choice == 4)//games
+            {
+                type = "Games";
+                linker = "UserGameLinker";
+                
+            }//this sql command checks if that particular object and user is in the specific linker table 
+
+            sqlCommand =
+                                       new SqlCommand("Select " + linker + ".Voted From " + type +
+                                       " Left Join " + linker + " ON " + linker + "." + type + "Id = " + type + ".Id " +
+                                       " Where " + linker + "." + type + "Id = @ID AND " + linker + ".UserId = @UID", conn);
+
+            sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+            sqlCommand.Parameters["@ID"].Value = objectId;
+            sqlCommand.Parameters.Add("@UID", SqlDbType.Int);
+            sqlCommand.Parameters["@UID"].Value = userId;
+
+            conn.Open();
+            sqlReader = sqlCommand.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                voteValue = sqlReader[0].ToString();
+            }
+
+            if (voteValue == "null")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
