@@ -663,5 +663,67 @@ namespace GaMMBo.Test
 
            return local;
        }
+
+       // peeks into Linker table to see if object has been voted on or not
+       // returns true for voted and false for not voted
+       public static bool getVisibility()
+       {
+            
+            String voteValue = 0;
+            String linker = null;
+
+
+            if (choice == 1)//generates music 
+            {
+                type = "Music";
+                linker = "UserMusicLinker";
+                
+            }
+            else if (choice == 2)//generates Movies
+            {
+                type = "Movies";
+                linker = "UserMovieLinker";
+
+            }
+            else if (choice == 3)//books
+            {
+                type = "Books";
+                linker = "UserBookLinker";
+                
+            }
+            else if (choice == 4)//games
+            {
+                type = "Games";
+                linker = "UserGameLinker";
+                
+            }//this sql command checks if that particular object and user is in the specific linker table 
+
+            sqlCommand =
+                                       new SqlCommand("Select " + linker + ".Voted From " + type +
+                                       " Left Join " + linker + " ON " + linker + "." + type + "Id = " + type + ".Id " +
+                                       " Where " + linker + "." + type + "Id = @ID AND " + linker + ".UserId = @UID", conn);
+
+            sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
+            sqlCommand.Parameters["@ID"].Value = objectId;
+            sqlCommand.Parameters.Add("@UID", SqlDbType.Int);
+            sqlCommand.Parameters["@UID"].Value = userId;
+
+            conn.Open();
+            sqlReader = sqlCommand.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                voteValue = sqlReader[0].ToString();
+            }
+
+            if (voteValue == "null")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

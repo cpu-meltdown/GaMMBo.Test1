@@ -60,7 +60,7 @@ public class Search
 
 
             // if the user has voted on this movie we do not want to add it to the results
-            if (Proxy.voteValue(i, user, selection) == true) { }
+            if (Proxy.getVisibility == true) { }
 
 
             else
