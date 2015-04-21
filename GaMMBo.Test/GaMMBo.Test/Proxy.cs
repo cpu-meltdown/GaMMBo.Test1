@@ -54,7 +54,7 @@ namespace GaMMBo.Test
            //Setting up Music Genres
            musicGenres[0] = new Genre("Rap");
            musicGenres[1] = new Genre("Rock");
-           musicGenres[2] = new Genre("HipHop");
+           musicGenres[2] = new Genre("HipHop");// There is no space because when there was it would only read up til Hip
            musicGenres[3] = new Genre("Country");
            musicGenres[4] = new Genre("Metal");
            musicGenres[5] = new Genre("Pop");
