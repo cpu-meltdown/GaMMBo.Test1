@@ -25,7 +25,7 @@ namespace GaMMBo.Test
         public int objectId;//the id of the object being voted on
         public int userId = Proxy.userId;//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
-        public int numOfvotes = 0;// keeps track how many objects having been voted on hasnt be used yet will be
+       
 
         public Boolean userVoting = false;//will be set prior to this point when the user either logs in or clicks guest
         // the rest are self explanatory i may move or remove at the end before i transfer all to proxy
@@ -82,7 +82,7 @@ namespace GaMMBo.Test
         private void button5_Click(object sender, EventArgs e)
         {
             skipNum = 0;
-            numOfvotes = 0;
+        
 
 
 

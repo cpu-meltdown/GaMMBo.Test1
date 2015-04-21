@@ -35,7 +35,7 @@ namespace GaMMBo.Test
         public static int objectId;//the id of the object being voted on
         public static int userId = Controller.getUserId();//if the voting being done is by a user their id is stored in this variable its set to 4 only so i could test 
         // when the user logs in the number will be sent here like the choice 
-        public static int numOfvotes = 0;
+        public static int numOfvotes;
         static Random randomNumber = new Random();
         static String type = null;
         static Image image = null;
@@ -47,7 +47,8 @@ namespace GaMMBo.Test
         static Genre[] gamesGenres = new Genre[6];
         static Genre[] booksGenres = new Genre[9];
        public static void initializeGenres (int c,int u)
-        {  
+        {
+            numOfvotes = 0;
            choice = c;
            userId = Controller.getUserId() ;
             
@@ -77,7 +78,7 @@ namespace GaMMBo.Test
            booksGenres[5] = new Genre("Fiction");
            booksGenres[6] = new Genre("Novel");
            booksGenres[7] = new Genre("Autobiography");
-           booksGenres[8] = new Genre("YoundAdult");
+           booksGenres[8] = new Genre("YoungAdult");
 
            //Setting up Games Genres
            gamesGenres[0] = new Genre("Strategy");
