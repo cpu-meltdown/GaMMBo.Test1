@@ -38,7 +38,7 @@
             // 
             // booksButton
             // 
-            this.booksButton.Location = new System.Drawing.Point(103, 54);
+            this.booksButton.Location = new System.Drawing.Point(302, 185);
             this.booksButton.Name = "booksButton";
             this.booksButton.Size = new System.Drawing.Size(94, 68);
             this.booksButton.TabIndex = 0;
@@ -48,17 +48,17 @@
             // 
             // gamesButton
             // 
-            this.gamesButton.Location = new System.Drawing.Point(303, 54);
+            this.gamesButton.Location = new System.Drawing.Point(69, 17);
             this.gamesButton.Name = "gamesButton";
-            this.gamesButton.Size = new System.Drawing.Size(94, 68);
+            this.gamesButton.Size = new System.Drawing.Size(125, 115);
             this.gamesButton.TabIndex = 1;
-            this.gamesButton.Text = "Games";
+            this.gamesButton.Text = "games";
             this.gamesButton.UseVisualStyleBackColor = true;
             this.gamesButton.Click += new System.EventHandler(this.gamesButton_Click);
             // 
             // moviesButton
             // 
-            this.moviesButton.Location = new System.Drawing.Point(103, 185);
+            this.moviesButton.Location = new System.Drawing.Point(312, 53);
             this.moviesButton.Name = "moviesButton";
             this.moviesButton.Size = new System.Drawing.Size(94, 68);
             this.moviesButton.TabIndex = 2;
@@ -68,11 +68,11 @@
             // 
             // musicButton
             // 
-            this.musicButton.Location = new System.Drawing.Point(313, 185);
+            this.musicButton.Location = new System.Drawing.Point(69, 160);
             this.musicButton.Name = "musicButton";
-            this.musicButton.Size = new System.Drawing.Size(94, 68);
+            this.musicButton.Size = new System.Drawing.Size(125, 124);
             this.musicButton.TabIndex = 3;
-            this.musicButton.Text = "Music";
+            this.musicButton.Text = "music";
             this.musicButton.UseVisualStyleBackColor = true;
             this.musicButton.Click += new System.EventHandler(this.btnMusic_Click);
             // 
@@ -98,6 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(645, 354);
             this.ControlBox = false;
             this.Controls.Add(this.lblUser);

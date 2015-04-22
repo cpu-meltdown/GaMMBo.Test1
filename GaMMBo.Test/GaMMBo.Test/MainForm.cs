@@ -22,31 +22,42 @@ namespace GaMMBo.Test
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+       
+
+       
+
+      
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //ResultsForm frmresults = new ResultsForm();
+            Controller.frmResults.Show();
+           
+            
+
+        }
+
+       
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             //LoginForm frmLogin = new LoginForm();
-          //  this.Hide();
+            //  this.Hide();
             Controller.frmMain.Hide();
             Controller.frmLogin.txtPassword2.Visible = false;
             Controller.frmLogin.lblPassword2.Visible = false;
             Controller.frmLogin.btnLogin.Text = "Login";
             Controller.frmLogin.ShowDialog();
-            
         }
 
-        private void btnGuest_Click(object sender, EventArgs e)
+        private void newUser_Click(object sender, EventArgs e)
         {
-            //CategoriesForm frmCategories = new CategoriesForm();
-            //this.Hide();
-            Controller.guest = true;
-            Controller.frmCategories.lblUser.Text = "Guest";
-            Controller.createTemproraryAccount();
-            Controller.frmMain.Hide();
-            Controller.frmCategories.ShowDialog();
-        }
 
-        private void btnNewUser_Click(object sender, EventArgs e)
-        {
             //LoginForm loginForm = new LoginForm();
             //this.Hide();
             Controller.frmMain.Hide();
@@ -58,19 +69,25 @@ namespace GaMMBo.Test
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void guest_Click(object sender, EventArgs e)
         {
-            //ResultsForm frmresults = new ResultsForm();
-            Controller.frmResults.Show();
-           
-            
+            //CategoriesForm frmCategories = new CategoriesForm();
+            //this.Hide();
+            Controller.guest = true;
+            Controller.frmCategories.lblUser.Text = "Guest";
+            Controller.createTemproraryAccount();
+            Controller.frmMain.Hide();
+            Controller.frmCategories.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
     }
 }
