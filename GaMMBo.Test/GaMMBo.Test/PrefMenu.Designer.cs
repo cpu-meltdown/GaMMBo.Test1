@@ -41,7 +41,7 @@
             // 
             // btnLike
             // 
-            this.btnLike.Location = new System.Drawing.Point(93, 307);
+            this.btnLike.Location = new System.Drawing.Point(70, 336);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(75, 23);
             this.btnLike.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // btnDislike
             // 
-            this.btnDislike.Location = new System.Drawing.Point(189, 307);
+            this.btnDislike.Location = new System.Drawing.Point(208, 336);
             this.btnDislike.Name = "btnDislike";
             this.btnDislike.Size = new System.Drawing.Size(75, 23);
             this.btnDislike.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // btnSkip
             // 
-            this.btnSkip.Location = new System.Drawing.Point(285, 307);
+            this.btnSkip.Location = new System.Drawing.Point(336, 336);
             this.btnSkip.Name = "btnSkip";
             this.btnSkip.Size = new System.Drawing.Size(75, 23);
             this.btnSkip.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(310, 12);
+            this.btnSearch.Location = new System.Drawing.Point(4, 404);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(386, 373);
+            this.btnBack.Location = new System.Drawing.Point(494, 404);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 4;
@@ -92,18 +92,20 @@
             // categoryObjectName
             // 
             this.categoryObjectName.AutoSize = true;
-            this.categoryObjectName.Location = new System.Drawing.Point(21, 37);
+            this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryObjectName.Location = new System.Drawing.Point(11, 9);
             this.categoryObjectName.Name = "categoryObjectName";
-            this.categoryObjectName.Size = new System.Drawing.Size(35, 13);
+            this.categoryObjectName.Size = new System.Drawing.Size(68, 25);
             this.categoryObjectName.TabIndex = 5;
             this.categoryObjectName.Text = "Name";
             this.categoryObjectName.Click += new System.EventHandler(this.label1_Click);
             // 
             // categoryImage
             // 
-            this.categoryImage.Location = new System.Drawing.Point(147, 84);
+            this.categoryImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.categoryImage.Location = new System.Drawing.Point(155, 104);
             this.categoryImage.Name = "categoryImage";
-            this.categoryImage.Size = new System.Drawing.Size(162, 184);
+            this.categoryImage.Size = new System.Drawing.Size(181, 207);
             this.categoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.categoryImage.TabIndex = 6;
             this.categoryImage.TabStop = false;
@@ -112,9 +114,10 @@
             // categoryObjectDescription
             // 
             this.categoryObjectDescription.AutoSize = true;
-            this.categoryObjectDescription.Location = new System.Drawing.Point(21, 62);
+            this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryObjectDescription.Location = new System.Drawing.Point(12, 49);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
-            this.categoryObjectDescription.Size = new System.Drawing.Size(60, 13);
+            this.categoryObjectDescription.Size = new System.Drawing.Size(103, 21);
             this.categoryObjectDescription.TabIndex = 7;
             this.categoryObjectDescription.Text = "Description";
             this.categoryObjectDescription.Click += new System.EventHandler(this.label2_Click);
@@ -123,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 421);
+            this.ClientSize = new System.Drawing.Size(581, 439);
             this.ControlBox = false;
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);

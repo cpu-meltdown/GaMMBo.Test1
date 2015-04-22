@@ -113,6 +113,27 @@ namespace GaMMBo.Test
 
         private void PrefMenu_Load(object sender, EventArgs e)
         {
+
+            if (choice == 1)
+            {
+                this.BackColor = System.Drawing.Color.LightBlue;
+
+            }
+            else if (choice == 2)
+            {
+                this.BackColor = System.Drawing.Color.LightPink;
+            }
+
+            else if (choice == 3)
+            {
+                this.BackColor = System.Drawing.Color.LightGreen;
+
+            }
+            else if (choice == 4)
+            {
+                this.BackColor = System.Drawing.Color.LightYellow;
+
+            }
             Proxy.initializeGenres(Controller.frmPref.choice, Controller.frmPref.userId);
             Proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
             Proxy.getUserObject();

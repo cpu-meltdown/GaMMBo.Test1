@@ -463,7 +463,7 @@ namespace GaMMBo.Test
                    {
                        Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
                        Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
-
+                     
                    }
                    conn.Close();
                }
