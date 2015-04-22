@@ -78,6 +78,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(268, 26);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // btnBack
             // 
@@ -122,6 +123,7 @@
             this.txtPassword2.TabIndex = 4;
             this.txtPassword2.Visible = false;
             this.txtPassword2.TextChanged += new System.EventHandler(this.txtPAssword2_TextChanged);
+            this.txtPassword2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword2_KeyPress);
             // 
             // lblError
             // 

@@ -119,6 +119,22 @@ namespace GaMMBo.Test
             //MessageBox.Show( entered);
 
         }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //makes sure spaces aren't used in password
+            if (e.KeyChar == ' ') { 
+                e.Handled = true;            
+            }
+        }
+
+        private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //makes sure spaces aren't used in password
+            if (e.KeyChar == ' '){
+                e.Handled = true;
+            }
+        }
         
 
   
