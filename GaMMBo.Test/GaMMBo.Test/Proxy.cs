@@ -93,7 +93,10 @@ namespace GaMMBo.Test
 
        public static void getGuestObject()
        {
-           if (numOfvotes > 10) { MessageBox.Show("The user  saw 10 objects this is where we display the results"); }
+           if (numOfvotes > 10) {
+               
+               MessageBox.Show("The user  saw 10 objects this is where we display the results");
+           }
            else
            {
                numOfvotes = numOfvotes + 1;
