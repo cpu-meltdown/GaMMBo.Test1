@@ -99,13 +99,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 354);
+            this.ControlBox = false;
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.musicButton);
             this.Controls.Add(this.moviesButton);
             this.Controls.Add(this.gamesButton);
             this.Controls.Add(this.booksButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CategoriesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCategories";
             this.Load += new System.EventHandler(this.CategoriesForm_Load);
             this.ResumeLayout(false);

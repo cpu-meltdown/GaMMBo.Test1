@@ -133,6 +133,7 @@
             this.Controls.Add(this.btnSkip);
             this.Controls.Add(this.btnDislike);
             this.Controls.Add(this.btnLike);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PrefMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrefMenu";

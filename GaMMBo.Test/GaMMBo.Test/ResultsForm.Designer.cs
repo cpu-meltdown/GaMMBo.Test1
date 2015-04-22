@@ -298,7 +298,9 @@
             this.Controls.Add(this.top3);
             this.Controls.Add(this.top2);
             this.Controls.Add(this.top1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ResultsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Results";
             this.Load += new System.EventHandler(this.ResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.top1)).EndInit();

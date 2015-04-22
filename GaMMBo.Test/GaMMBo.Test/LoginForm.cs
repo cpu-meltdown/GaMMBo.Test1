@@ -25,6 +25,9 @@ namespace GaMMBo.Test
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            Controller.frmLogin.txtUsername.Text = "";
+            Controller.frmLogin.txtPassword.Text = "";
+            Controller.frmLogin.txtPassword2.Text = "";
             Controller.frmLogin.Hide();
             Controller.frmMain.Show();
 
@@ -92,7 +95,11 @@ namespace GaMMBo.Test
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            //makes sure spaces aren't used in password
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtUsername_KeyUp(object sender, KeyEventArgs e)
@@ -129,6 +136,24 @@ namespace GaMMBo.Test
 
             //MessageBox.Show( entered);
 
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //makes sure spaces aren't used in password
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //makes sure spaces aren't used in password
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
         }
         
 

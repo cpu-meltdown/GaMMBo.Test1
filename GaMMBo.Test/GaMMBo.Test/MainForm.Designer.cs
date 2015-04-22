@@ -98,6 +98,7 @@
             this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.btnLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GaMMBo";

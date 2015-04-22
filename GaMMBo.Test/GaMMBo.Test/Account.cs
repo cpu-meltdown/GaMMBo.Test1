@@ -68,7 +68,7 @@ namespace GaMMBo.Test
             }
             catch (Exception err)
             {
-                MessageBox.Show(":" + err);
+                MessageBox.Show("Error: " + err);
             }
 
             conn.Close();
@@ -90,7 +90,7 @@ namespace GaMMBo.Test
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(":" + err);
+                    MessageBox.Show("Error: " + err);
                 }
                 Controller.guest = false;
             }
@@ -109,15 +109,18 @@ namespace GaMMBo.Test
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(":" + err);
+                    MessageBox.Show("Error: " + err);
                 }
 
             }
             MessageBox.Show("Account created successfully");
+            Controller.frmLogin.txtUsername.Text = "";
+            Controller.frmLogin.txtPassword.Text = "";
+            Controller.frmLogin.txtPassword2.Text = "";
 
-            conn.Close();
             Controller.frmLogin.Hide();
             Controller.frmMain.Show();
+            conn.Close();
         }
 
 
@@ -126,11 +129,11 @@ namespace GaMMBo.Test
             //validate login
             String pass = "";
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
-            SqlCommand login = new SqlCommand("SELECT [Password] FROM Users WHERE [UserName] = @username", conn);
-            login.Parameters.Add("@username", SqlDbType.VarChar);
+            SqlCommand login = new SqlCommand("SELECT [UserName], [Password] FROM Users WHERE [UserName] = @username", conn);
+            login.Parameters.Add("@username", SqlDbType.NVarChar);
             login.Parameters["@username"].Value = user;
             try { conn.Open(); }
-            catch (Exception ex) { MessageBox.Show(":" + ex); }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 
             SqlDataReader sqlReader = login.ExecuteReader();
 
@@ -144,7 +147,8 @@ namespace GaMMBo.Test
             {
                 while (sqlReader.Read())
                 {
-                    pass = sqlReader[0].ToString();
+                    Controller.frmLogin.txtUsername.Text = sqlReader[0].ToString();
+                    pass = sqlReader[1].ToString();
                 }
                 if (pass != password)
                 {
@@ -154,8 +158,10 @@ namespace GaMMBo.Test
                 }
                 else
                 {
-                    userName = user;
-                    Controller.frmCategories.lblUser.Text = user;
+                    userName = Controller.frmLogin.txtUsername.Text;
+                    Controller.frmCategories.lblUser.Text = Controller.frmLogin.txtUsername.Text;
+                    Controller.frmLogin.txtUsername.Text = "";
+                    Controller.frmLogin.txtPassword.Text = "";
                     Controller.frmLogin.Hide();
                     Controller.frmCategories.ShowDialog();
                 }
@@ -182,7 +188,7 @@ namespace GaMMBo.Test
             }
             catch (Exception err)
             {
-                MessageBox.Show(":" + err);
+                MessageBox.Show("Error: " + err);
             }
             conn.Close();
             return userId;
@@ -213,7 +219,7 @@ namespace GaMMBo.Test
             }
             catch (Exception err)
             {
-                MessageBox.Show(":" + err);
+                MessageBox.Show("Error: " + err);
             }
             conn.Close();
             userId = getUserId();
@@ -241,7 +247,7 @@ namespace GaMMBo.Test
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(":" + err);
+                    MessageBox.Show("Error: " + err);
                 }
                 deleteUser.Dispose();
 

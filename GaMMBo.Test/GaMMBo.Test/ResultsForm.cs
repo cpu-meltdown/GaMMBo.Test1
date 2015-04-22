@@ -76,7 +76,7 @@ namespace GaMMBo.Test
             getResults.Parameters["@ID"].Value = resultId;
 
             try { conn.Open(); }
-            catch (Exception ex) { MessageBox.Show(":" + ex); }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 
             SqlDataReader sqlReader = getResults.ExecuteReader();
 
