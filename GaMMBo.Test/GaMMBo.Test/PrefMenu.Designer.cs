@@ -93,7 +93,7 @@
             // 
             this.categoryObjectName.AutoSize = true;
             this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryObjectName.ForeColor = System.Drawing.Color.Gray;
+            this.categoryObjectName.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectName.Location = new System.Drawing.Point(11, 9);
             this.categoryObjectName.Name = "categoryObjectName";
             this.categoryObjectName.Size = new System.Drawing.Size(68, 25);
@@ -116,7 +116,7 @@
             // 
             this.categoryObjectDescription.AutoSize = true;
             this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryObjectDescription.ForeColor = System.Drawing.Color.Gray;
+            this.categoryObjectDescription.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectDescription.Location = new System.Drawing.Point(12, 49);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
             this.categoryObjectDescription.Size = new System.Drawing.Size(103, 21);
