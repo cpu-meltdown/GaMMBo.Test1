@@ -585,7 +585,7 @@ namespace GaMMBo.Test
        {
 
            int objectGenre = 0;
-           int objectID = num + 1;
+           //int objectID = num;
            string type = null;
 
            int[] local = new int[9];
@@ -610,7 +610,7 @@ namespace GaMMBo.Test
 
            sqlCommand = new SqlCommand("Select genre from " + type + " where Id = @ID", conn);
            sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
-           sqlCommand.Parameters["@ID"].Value = objectId;
+           sqlCommand.Parameters["@ID"].Value = num;
 
            conn.Open();
            SqlDataReader sqlReader = sqlCommand.ExecuteReader();

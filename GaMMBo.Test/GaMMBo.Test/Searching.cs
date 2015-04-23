@@ -65,12 +65,12 @@ namespace GaMMBo.Test
 
 
             // this loop enters the many many to check visibility of each movie
-            for (int i = 0; i < size; i++)
+            for (int i = 1; i < size + 1; i++)
             {
 
 
                 //if the user has voted on this movie we do not want to add it to the results
-                if (Proxy.getVisibility() == true) { }
+                if (Proxy.getVisibility() == true) { ;}
 
 
                 else
@@ -88,7 +88,7 @@ namespace GaMMBo.Test
                     // selection sort the following new item into the final array
                     if (value > arrayValue[9])
                     {
-                        arrayID[9] = i+1;
+                        arrayID[9] = i;
                         arrayValue[9] = value;
 
                         for (int j = 9; j > 0; j--)
