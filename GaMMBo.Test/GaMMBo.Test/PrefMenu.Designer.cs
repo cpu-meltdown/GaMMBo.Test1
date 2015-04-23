@@ -92,11 +92,11 @@
             // categoryObjectName
             // 
             this.categoryObjectName.AutoSize = true;
-            this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryObjectName.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectName.Location = new System.Drawing.Point(11, 9);
             this.categoryObjectName.Name = "categoryObjectName";
-            this.categoryObjectName.Size = new System.Drawing.Size(68, 25);
+            this.categoryObjectName.Size = new System.Drawing.Size(56, 21);
             this.categoryObjectName.TabIndex = 5;
             this.categoryObjectName.Text = "Name";
             this.categoryObjectName.Click += new System.EventHandler(this.label1_Click);
