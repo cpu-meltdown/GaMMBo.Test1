@@ -695,7 +695,7 @@ namespace GaMMBo.Test
                 linker = "UserBookLinker";
                 
             }
-            else if (choice == 4)//games
+            else
             {
                 type = "Games";
                 linker = "UserGameLinker";
@@ -703,9 +703,8 @@ namespace GaMMBo.Test
             }//this sql command checks if that particular object and user is in the specific linker table 
 
             sqlCommand =
-                                       new SqlCommand("Select " + linker + ".Voted From " + type +
-                                       " Left Join " + linker + " ON " + linker + "." + type + "Id = " + type + ".Id " +
-                                       " Where " + linker + "." + type + "Id = @ID AND " + linker + ".UserId = @UID", conn);
+                                       new SqlCommand("Select Voted From " + linker +
+                                       " Where " + type + "Id = @ID AND UserId = @UID", conn);
 
             sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
             sqlCommand.Parameters["@ID"].Value = objectId;
@@ -713,12 +712,14 @@ namespace GaMMBo.Test
             sqlCommand.Parameters["@UID"].Value = userId;
 
             conn.Open();
-            sqlReader = sqlCommand.ExecuteReader();
+            SqlDataReader sqlReader = sqlCommand.ExecuteReader();
 
             while (sqlReader.Read())
             {
                 voteValue = sqlReader[0].ToString();
             }
+
+            conn.Close();
 
             if (voteValue == "null")
             {
@@ -728,6 +729,8 @@ namespace GaMMBo.Test
             {
                 return true;
             }
+
+            
         }
     }
 }

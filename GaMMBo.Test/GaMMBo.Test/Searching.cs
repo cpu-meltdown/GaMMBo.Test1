@@ -21,7 +21,7 @@ namespace GaMMBo.Test
         // then compare those movies to the user attributes and get a value
         // then sort the movies based on the values given
         // selection is the value 1-4 to delegate which catagory currently in
-        public static int[] topTenSearch(int selection)
+        public static int[] topTenSearch()
         {
 
             int musicSize = 10;
@@ -47,15 +47,15 @@ namespace GaMMBo.Test
 
 
             // music search loops
-            if (selection == 1)
+            if (Proxy.choice == 1)
             {
                 size = musicSize;
             }
-            else if (selection == 2)
+            else if (Proxy.choice == 2)
             {
                 size = movieSize;
             }
-            else if (selection == 3)
+            else if (Proxy.choice == 3)
             {
                 size = bookSize;
             }
