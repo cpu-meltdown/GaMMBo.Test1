@@ -8,12 +8,10 @@ namespace GaMMBo.Test
 {
     public class Searching
     {
-
-
-
-
-
-
+        public static int musicSize = 140;
+        public static int movieSize = 135;
+        public static int bookSize = 120;
+        public static int gameSize = 83;
 
 
         // if they have then we go onto the user and get all attribute values
@@ -24,24 +22,22 @@ namespace GaMMBo.Test
         public static int[] topTenSearch()
         {
 
-            int musicSize = 10;
-            int movieSize = 10; 
-            int bookSize= 10;
-            int gameSize= 10;
-
+            
+            
             int[] arrayID = new int[10];
             int[] arrayValue = new int[10];
 
+            /**
             for (int i = 0; i < 10; i++)
             {
                 arrayID[i] = 0;
                 arrayValue[i] = 0;
             }
+            */
 
+            int[] userPreferences = new int[10];
 
-            int[] userPreferences = new int[9];
-
-            int[] objectAttributes = new int[9];
+            int[] objectAttributes = new int[10];
 
             int size = 0;
 
@@ -73,31 +69,31 @@ namespace GaMMBo.Test
             {
 
 
-                // if the user has voted on this movie we do not want to add it to the results
+                //if the user has voted on this movie we do not want to add it to the results
                 if (Proxy.getVisibility() == true) { }
 
 
                 else
                 {
-                   // oValue = Proxy.getObjectValue(i);
+                    objectAttributes = Proxy.getObjectValue(i);
                     int value = 0;
 
                     // 9 is used here because 9 is the maximum length of these arrays
-                   // for (int i = 0; i < 9; i++)
+                    for (int z = 0; z < 9; z++)
                     {
-                       // value += oValue[i] * userPreferences[i];
+                        value += objectAttributes[z] * userPreferences[z];
                     }
 
 
                     // selection sort the following new item into the final array
                     if (value > arrayValue[9])
                     {
-                        arrayID[9] = i;
+                        arrayID[9] = i+1;
                         arrayValue[9] = value;
 
-                        for (int j = 9; j > 0; j++)
+                        for (int j = 9; j > 0; j--)
                         {
-                            while ((arrayValue[j] > (arrayValue[j - 1])) && (i > 1))
+                            if (arrayValue[j] > arrayValue[j - 1])
                             {
                                 int tempValue = arrayValue[j];
                                 int tempID = arrayID[j];
