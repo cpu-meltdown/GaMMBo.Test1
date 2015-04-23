@@ -93,7 +93,7 @@
             // 
             this.categoryObjectName.AutoSize = true;
             this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryObjectName.ForeColor = System.Drawing.Color.Gray;
+            this.categoryObjectName.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectName.Location = new System.Drawing.Point(11, 9);
             this.categoryObjectName.Name = "categoryObjectName";
             this.categoryObjectName.Size = new System.Drawing.Size(68, 25);
@@ -115,11 +115,11 @@
             // categoryObjectDescription
             // 
             this.categoryObjectDescription.AutoSize = true;
-            this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryObjectDescription.ForeColor = System.Drawing.Color.Gray;
+            this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryObjectDescription.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectDescription.Location = new System.Drawing.Point(12, 49);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
-            this.categoryObjectDescription.Size = new System.Drawing.Size(103, 21);
+            this.categoryObjectDescription.Size = new System.Drawing.Size(98, 20);
             this.categoryObjectDescription.TabIndex = 7;
             this.categoryObjectDescription.Text = "Description";
             this.categoryObjectDescription.Click += new System.EventHandler(this.label2_Click);
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 439);
+            this.ClientSize = new System.Drawing.Size(585, 439);
             this.ControlBox = false;
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);
