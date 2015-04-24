@@ -545,6 +545,44 @@ namespace GaMMBo.Test
            conn.Close();
        }
 
+
+       public static void getGenreObjects(int num)
+       {
+           int genre = num + 1;
+           int count = 0;
+           int[] userObject = new int[5];
+           if (choice == 1)
+           {
+               type = "Music";
+           }
+           else if (choice == 2)
+           {
+               type = "Movies";
+           }
+           else if (choice == 3)
+           {
+               type = "Books";
+           }
+           else
+           {
+               type = "Games";
+           }
+
+           sqlCommand = new SqlCommand("Select Id From " + type + " Where Genre % 10  = " + genre + " OR Genre / 10 = " + genre, conn);
+
+           conn.Open();
+           sqlReader = sqlCommand.ExecuteReader();
+
+           while (sqlReader.Read() && (count < 5))
+           {
+
+               userObject[count] = int.Parse(sqlReader[0].ToString());
+
+           }
+           conn.Close();
+       }
+
+
        public static int[] getUserValues()
        {
            int number = 0;
