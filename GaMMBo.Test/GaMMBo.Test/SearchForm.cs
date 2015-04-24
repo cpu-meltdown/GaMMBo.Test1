@@ -32,53 +32,53 @@ namespace GaMMBo.Test
             
             if (Proxy.choice == 1)
             {
-                comboBox1.Items.Add("Rap");
-                comboBox1.Items.Add("Rock");
-                comboBox1.Items.Add("Hip Hop");
-                comboBox1.Items.Add("Country");
-                comboBox1.Items.Add("Metal");
-                comboBox1.Items.Add("Pop");
-                comboBox1.Items.Add("Electronic");
+                searchFormDropBox.Items.Add("Rap");
+                searchFormDropBox.Items.Add("Rock");
+                searchFormDropBox.Items.Add("Hip Hop");
+                searchFormDropBox.Items.Add("Country");
+                searchFormDropBox.Items.Add("Metal");
+                searchFormDropBox.Items.Add("Pop");
+                searchFormDropBox.Items.Add("Electronic");
 
             }
             else if (Proxy.choice == 2)
             {
-                comboBox1.Items.Add("Comedy");
-                comboBox1.Items.Add("Thriller");
-                comboBox1.Items.Add("Fantasy");
-                comboBox1.Items.Add("Action");
-                comboBox1.Items.Add("Romance");
+                searchFormDropBox.Items.Add("Comedy");
+                searchFormDropBox.Items.Add("Thriller");
+                searchFormDropBox.Items.Add("Fantasy");
+                searchFormDropBox.Items.Add("Action");
+                searchFormDropBox.Items.Add("Romance");
 
             }
 
             else if (Proxy.choice == 3)
             {
-                comboBox1.Items.Add("Romance");
-                comboBox1.Items.Add("Fantasy");
-                comboBox1.Items.Add("Mystery");
-                comboBox1.Items.Add("Thriller");
-                comboBox1.Items.Add("Science");
-                comboBox1.Items.Add("Fiction");
-                comboBox1.Items.Add("Novel");
-                comboBox1.Items.Add("Autobiography");
-                comboBox1.Items.Add("Young Adult");
+                searchFormDropBox.Items.Add("Romance");
+                searchFormDropBox.Items.Add("Fantasy");
+                searchFormDropBox.Items.Add("Mystery");
+                searchFormDropBox.Items.Add("Thriller");
+                searchFormDropBox.Items.Add("Science");
+                searchFormDropBox.Items.Add("Fiction");
+                searchFormDropBox.Items.Add("Novel");
+                searchFormDropBox.Items.Add("Autobiography");
+                searchFormDropBox.Items.Add("Young Adult");
 
             }
             else if (Proxy.choice == 4)
             {
-                comboBox1.Items.Add("Strategy");
-                comboBox1.Items.Add("Sports");
-                comboBox1.Items.Add("Adventure");
-                comboBox1.Items.Add("Fighting");
-                comboBox1.Items.Add("Racing");
-                comboBox1.Items.Add("RPG");
+                searchFormDropBox.Items.Add("Strategy");
+                searchFormDropBox.Items.Add("Sports");
+                searchFormDropBox.Items.Add("Adventure");
+                searchFormDropBox.Items.Add("Fighting");
+                searchFormDropBox.Items.Add("Racing");
+                searchFormDropBox.Items.Add("RPG");
 
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+          //  searchFormDropBox.Text;
         }
     }
 }
