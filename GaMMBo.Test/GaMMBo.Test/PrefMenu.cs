@@ -75,7 +75,8 @@ namespace GaMMBo.Test
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //search button
+            Controller.frmPref.Hide();
+            Controller.frmSearch.Show();
 
         }
 

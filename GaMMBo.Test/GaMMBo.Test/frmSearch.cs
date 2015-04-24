@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace GaMMBo.Test
 {
-    public partial class frmSearch : Form
+    public partial class SearchForm : Form
     {
-        public frmSearch()
+        public SearchForm()
         {
             InitializeComponent();
+        }
+
+        private void searchByNameButton_Click(object sender, EventArgs e)
+        {
+            if (Controller.frmSearch.searchFormLabel1.Text.Trim() == "")
+                MessageBox.Show("Check your input please.");
+            else
+            {
+                Proxy.searchByName(Controller.frmSearch.searchFormTextBox.Text);
+            }
+        }
+
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

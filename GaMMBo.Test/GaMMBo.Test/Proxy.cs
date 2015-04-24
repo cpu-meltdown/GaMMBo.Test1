@@ -48,7 +48,7 @@ namespace GaMMBo.Test
         static Genre[] booksGenres = new Genre[9];
        public static void initializeGenres (int c,int u)
         {
-            numOfvotes = 0;
+           numOfvotes = 0;
            choice = c;
            userId = Controller.getUserId() ;
             
@@ -91,6 +91,29 @@ namespace GaMMBo.Test
        
        }
 
+       public static void searchByName(string objectName) {
+           conn.Open();
+           sqlCommand = new SqlCommand("Select id, name, description from " + type + " where name = @name",conn);
+           sqlCommand.Parameters.Add("@name", SqlDbType.NVarChar);
+           sqlCommand.Parameters["@name"].Value = objectName;
+
+           sqlReader = sqlCommand.ExecuteReader();
+           if (sqlReader.HasRows)
+           {
+               while (sqlReader.Read())
+               {
+                   objectId = int.Parse(sqlReader[0].ToString());
+                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + type + "_images\\"+ objectId +".jpg");
+                   Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
+                   Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
+                   Controller.frmSearch.Hide();
+                   Controller.frmPref.Show();
+               }
+           }
+           else
+               MessageBox.Show("Sorry, but " + objectName + " does not exist in the database.");
+           conn.Close();
+       }
        public static void getGuestObject()
        {
            if (numOfvotes > 10) {
@@ -702,9 +725,8 @@ namespace GaMMBo.Test
                 
             }//this sql command checks if that particular object and user is in the specific linker table 
 
-            sqlCommand =
-                                       new SqlCommand("Select Voted From " + linker +
-                                       " Where " + type + "Id = @ID AND UserId = @UID", conn);
+            sqlCommand = new SqlCommand("Select Voted From " + linker +
+                        " Where " + type + "Id = @ID AND UserId = @UID", conn);
 
             sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
             sqlCommand.Parameters["@ID"].Value = objectId;
