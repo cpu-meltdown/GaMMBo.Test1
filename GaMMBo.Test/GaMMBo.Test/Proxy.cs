@@ -577,12 +577,16 @@ namespace GaMMBo.Test
 
            while (sqlReader.Read() && (count < 5))
            {
-
+               
                userObject[count] = int.Parse(sqlReader[0].ToString());
+               count = count + 1;
 
            }
            conn.Close();
+          
            return userObject;
+           
+           
        }
 
 
@@ -800,10 +804,11 @@ namespace GaMMBo.Test
            int count = 0;
            if (choice == 1) 
            {
-               for (count = 0; count < 7; count++) 
+               while (count < 7) 
                {
                    if (musicGenres[count].getGenreName().Equals(name))
                    { return count; }
+                   else { count = count + 1; }
                
                }
            
@@ -811,20 +816,22 @@ namespace GaMMBo.Test
            }
            else if(choice == 2)
            {
-               for (count = 0; count < 6; count++)
+               while (count < 6)
                {
                    if (moviesGenres[count].getGenreName().Equals(name))
                    { return count; }
+                   else { count = count + 1; }
 
                }
            
            }
            else if (choice == 3) 
            {
-               for (count = 0; count < 9; count++)
+               while ( count < 9)
                {
                    if (booksGenres[count].getGenreName().Equals(name))
                    { return count; }
+                   else { count = count + 1; }
 
                }
            
@@ -832,10 +839,11 @@ namespace GaMMBo.Test
            }
            else if (choice == 4) 
            {
-               for (count = 0; count < 6; count++)
+               while(count < 6)
                {
                    if (gamesGenres[count].getGenreName().Equals(name))
                    { return count; }
+                   else { count = count + 1; }
 
                }
            

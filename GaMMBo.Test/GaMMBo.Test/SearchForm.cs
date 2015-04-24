@@ -84,12 +84,17 @@ namespace GaMMBo.Test
 
         private void button2_Click(object sender, EventArgs e)
         {   int genreNum = 0;
+            
         int[] resultId = new int[5];
             if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
-            else 
-            { genreNum = Proxy.getGenreNumber(genreName);
+            else
+            {
+                genreNum = Proxy.getGenreNumber(genreName);
 
                 resultId = Proxy.getGenreObjects(genreNum);
+                GenreResultsForm.setGenreArray(resultId);
+                Controller.frmSearch.Hide();
+                Controller.genreForm.ShowDialog();
             
             }
         }

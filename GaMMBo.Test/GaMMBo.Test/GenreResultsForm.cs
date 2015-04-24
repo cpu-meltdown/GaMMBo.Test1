@@ -12,20 +12,22 @@ namespace GaMMBo.Test
 {
     public partial class GenreResultsForm : Form
     {
-        int[] categoryIds = new int[5];
+        static int[] categoryIds = new int[5];
         public GenreResultsForm()
         {
-           
-            InitializeComponent();
+           InitializeComponent();
         }
 
-        
+        public static void setGenreArray(int [] cid) 
+        {
+            categoryIds = cid;
+        }
 
         private void GenreResultsForm_Load(object sender, EventArgs e)
         {
             string catName = null;
 
-           
+            MessageBox.Show(categoryIds[1].ToString());
             if (Proxy.choice == 1) 
             {
                 catName = "Movies_Images";
@@ -46,11 +48,12 @@ namespace GaMMBo.Test
             }
 
             Controller.genreForm.result1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
+           
             Controller.genreForm.result2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
             Controller.genreForm.result3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
             Controller.genreForm.result4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
             Controller.genreForm.result5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
-            
+           
         }
 
     }

@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GammboDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GenreResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreResultsForm.Designer.cs">
+      <DependentUpon>GenreResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="Searching.cs" />
     <EmbeddedResource Include="CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreResultsForm.resx">
+      <DependentUpon>GenreResultsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
