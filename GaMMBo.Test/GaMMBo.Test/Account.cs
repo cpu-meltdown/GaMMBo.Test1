@@ -119,7 +119,7 @@ namespace GaMMBo.Test
             Controller.frmLogin.txtPassword2.Text = "";
 
             Controller.frmLogin.Hide();
-            Controller.frmMain.Show();
+            Controller.frmCategories.Show();
             conn.Close();
         }
 

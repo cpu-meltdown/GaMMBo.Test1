@@ -314,7 +314,7 @@ namespace GaMMBo.Test
            }
            else
            {
-               genreName1 = musicGenres[gameGenre - 1].getGenreName();
+               genreName1 = gamesGenres[gameGenre - 1].getGenreName();
                sqlCommand = new SqlCommand("Update UserGames set " + genreName1 + " = " + genreName1 + sign + " 1  where UserId = @userId", conn);
            }
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
