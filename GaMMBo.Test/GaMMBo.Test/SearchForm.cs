@@ -12,6 +12,7 @@ namespace GaMMBo.Test
 {
     public partial class SearchForm : Form
     {
+        string genreName;
         public SearchForm()
         {
             InitializeComponent();
@@ -78,7 +79,19 @@ namespace GaMMBo.Test
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          //  searchFormDropBox.Text;
+            genreName = searchFormDropBox.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {   int genreNum = 0;
+        int[] resultId = new int[5];
+            if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
+            else 
+            { genreNum = Proxy.getGenreNumber(genreName);
+
+                resultId = Proxy.getGenreObjects(genreNum);
+            
+            }
         }
     }
 }

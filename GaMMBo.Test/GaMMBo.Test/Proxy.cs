@@ -55,7 +55,7 @@ namespace GaMMBo.Test
            //Setting up Music Genres
            musicGenres[0] = new Genre("Rap");
            musicGenres[1] = new Genre("Rock");
-           musicGenres[2] = new Genre("HipHop");// There is no space because when there was it would only read up til Hip
+           musicGenres[2] = new Genre("Hip Hop");// There is no space because when there was it would only read up til Hip
            musicGenres[3] = new Genre("Country");
            musicGenres[4] = new Genre("Metal");
            musicGenres[5] = new Genre("Pop");
@@ -78,7 +78,7 @@ namespace GaMMBo.Test
            booksGenres[5] = new Genre("Fiction");
            booksGenres[6] = new Genre("Novel");
            booksGenres[7] = new Genre("Autobiography");
-           booksGenres[8] = new Genre("YoungAdult");
+           booksGenres[8] = new Genre("Young Adult");
 
            //Setting up Games Genres
            gamesGenres[0] = new Genre("Strategy");
@@ -117,6 +117,7 @@ namespace GaMMBo.Test
        }
        public static void getGuestObject()
        {
+           
            if (numOfvotes > 10) {
                
                MessageBox.Show("The user  saw 10 objects this is where we display the results");
@@ -200,13 +201,13 @@ namespace GaMMBo.Test
                genreNumber2 = musicGenre % 10;
                genreName1 = musicGenres[genreNumber1 - 1].getGenreName();
                genreName2 = musicGenres[genreNumber2 - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserMusic set " + genreName1 + " = " + genreName1 + sign + " 1 , " + genreName2 + " = " + genreName2 + sign + "1  Where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserMusic set [" + genreName1 + "] = [" + genreName1+"]" + sign + " 1 , [" + genreName2 + "] = [" + genreName2 +"]"+ sign + "1  Where UserId = @userId", conn);
 
            }
            else
            {
                genreName1 = musicGenres[musicGenre - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserMusic set " + genreName1 + " = " + genreName1 + sign + " 1  where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserMusic set [" + genreName1 + "]= [" + genreName1+"]" + sign + " 1  where UserId = @userId", conn);
            }
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
            sqlCommand.Parameters["@userId"].Value = userId;
@@ -291,13 +292,13 @@ namespace GaMMBo.Test
                genreNumber2 = bookGenre % 10;
                genreName1 = booksGenres[genreNumber1 - 1].getGenreName();
                genreName2 = booksGenres[genreNumber2 - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserBooks set " + genreName1 + " = " + genreName1 + sign + " 1 , " + genreName2 + " = " + genreName2 + sign + "1  Where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserBooks set [" + genreName1 + "] = [" + genreName1 +"]"+ sign + " 1 , [" + genreName2 + "] = [" + genreName2 +"]"+ sign + "1  Where UserId = @userId", conn);
 
            }
            else
            {
                genreName1 = booksGenres[bookGenre - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserBooks set " + genreName1 + " = " + genreName1 + sign + " 1  where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserBooks set [" + genreName1 + "] = [" + genreName1 +"]"+ sign + " 1  where UserId = @userId", conn);
            }
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
            sqlCommand.Parameters["@userId"].Value = userId;
@@ -409,6 +410,7 @@ namespace GaMMBo.Test
 
        public static void getUserObject()// takes into account objects that have already been voted on
        {
+         
            if (numOfvotes > 10) { MessageBox.Show("The user saw 10 objects this is where we display the results"); }
            else
            {
@@ -546,7 +548,7 @@ namespace GaMMBo.Test
        }
 
 
-       public static void getGenreObjects(int num)
+       public static int [] getGenreObjects(int num)
        {
            int genre = num + 1;
            int count = 0;
@@ -580,6 +582,7 @@ namespace GaMMBo.Test
 
            }
            conn.Close();
+           return userObject;
        }
 
 
@@ -792,5 +795,57 @@ namespace GaMMBo.Test
 
             
         }
+       public static int getGenreNumber(string name)
+       {
+           int count = 0;
+           if (choice == 1) 
+           {
+               for (count = 0; count < 7; count++) 
+               {
+                   if (musicGenres[count].getGenreName().Equals(name))
+                   { return count; }
+               
+               }
+           
+           
+           }
+           else if(choice == 2)
+           {
+               for (count = 0; count < 6; count++)
+               {
+                   if (moviesGenres[count].getGenreName().Equals(name))
+                   { return count; }
+
+               }
+           
+           }
+           else if (choice == 3) 
+           {
+               for (count = 0; count < 9; count++)
+               {
+                   if (booksGenres[count].getGenreName().Equals(name))
+                   { return count; }
+
+               }
+           
+           
+           }
+           else if (choice == 4) 
+           {
+               for (count = 0; count < 6; count++)
+               {
+                   if (gamesGenres[count].getGenreName().Equals(name))
+                   { return count; }
+
+               }
+           
+            
+           
+           }
+
+           return count;       
+       
+       }
+
     }
 }
