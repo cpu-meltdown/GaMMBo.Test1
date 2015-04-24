@@ -103,9 +103,10 @@ namespace GaMMBo.Test
                while (sqlReader.Read())
                {
                    objectId = int.Parse(sqlReader[0].ToString());
-                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + type + "_images\\"+ objectId +".jpg");
+                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + type + "_images\\" + objectId +".jpg");
                    Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
                    Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
+                   Controller.frmPref.categoryImage.Image = image;
                    Controller.frmSearch.Hide();
                    Controller.frmPref.Show();
                }
@@ -453,8 +454,7 @@ namespace GaMMBo.Test
 
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
                }//this sql command checks if that particular object and user is in the specific linker table 
-               sqlCommand =
-                                          new SqlCommand("Select " + type + ".Name  From " + type +
+               sqlCommand =  new SqlCommand("Select " + type + ".Name  From " + type +
                                            " Inner Join " + linker + " ON " + linker + "." + type + "Id = " + type + ".Id " +
                                           " Where " + linker + "." + type + "Id = @ID AND " + linker + ".UserId = @UID", conn);
 
