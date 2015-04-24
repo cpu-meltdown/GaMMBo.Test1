@@ -1,15 +1,19 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace GaMMBo.Test
 {
-    public class Search
+    public class Searching
     {
 
-        int musicSize;
-        int movieSize;
-        int bookSize;
-        int gamesSize;
+
+
+
+
+
 
 
         // if they have then we go onto the user and get all attribute values
@@ -17,8 +21,13 @@ namespace GaMMBo.Test
         // then compare those movies to the user attributes and get a value
         // then sort the movies based on the values given
         // selection is the value 1-4 to delegate which catagory currently in
-        public static int[] topTenSearch(int selection)
+        public static int[] topTenSearch()
         {
+
+            int musicSize = 10;
+            int movieSize = 10; 
+            int bookSize= 10;
+            int gameSize= 10;
 
             int[] arrayID = new int[10];
             int[] arrayValue = new int[10];
@@ -38,15 +47,15 @@ namespace GaMMBo.Test
 
 
             // music search loops
-            if (selection == 1)
+            if (Proxy.choice == 1)
             {
                 size = musicSize;
             }
-            else if (selection == 2)
+            else if (Proxy.choice == 2)
             {
                 size = movieSize;
             }
-            else if (selection == 3)
+            else if (Proxy.choice == 3)
             {
                 size = bookSize;
             }
@@ -65,18 +74,18 @@ namespace GaMMBo.Test
 
 
                 // if the user has voted on this movie we do not want to add it to the results
-                if (Proxy.getVisibility == true) { }
+                if (Proxy.getVisibility() == true) { }
 
 
                 else
                 {
-                    oValue = Proxy.getObjectValue(i);
+                   // oValue = Proxy.getObjectValue(i);
                     int value = 0;
 
                     // 9 is used here because 9 is the maximum length of these arrays
-                    for (int i = 0; i < 9; i++)
+                   // for (int i = 0; i < 9; i++)
                     {
-                        value += oValue[i] * userPreferences[i];
+                       // value += oValue[i] * userPreferences[i];
                     }
 
 
@@ -107,5 +116,15 @@ namespace GaMMBo.Test
 
             return arrayID;
         }
+
+
+
+
+
+
+
+
+
+
     }
 }

@@ -320,16 +320,16 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox top1;
-        private System.Windows.Forms.PictureBox top2;
-        private System.Windows.Forms.PictureBox top3;
-        private System.Windows.Forms.PictureBox top4;
-        private System.Windows.Forms.PictureBox top5;
-        private System.Windows.Forms.PictureBox top10;
-        private System.Windows.Forms.PictureBox top9;
-        private System.Windows.Forms.PictureBox top8;
-        private System.Windows.Forms.PictureBox top7;
-        private System.Windows.Forms.PictureBox top6;
+        public System.Windows.Forms.PictureBox top1;
+        public System.Windows.Forms.PictureBox top2;
+        public System.Windows.Forms.PictureBox top3;
+        public System.Windows.Forms.PictureBox top4;
+        public System.Windows.Forms.PictureBox top5;
+        public System.Windows.Forms.PictureBox top10;
+        public System.Windows.Forms.PictureBox top9;
+        public System.Windows.Forms.PictureBox top8;
+        public System.Windows.Forms.PictureBox top7;
+        public System.Windows.Forms.PictureBox top6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

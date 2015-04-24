@@ -24,6 +24,7 @@ namespace GaMMBo.Test
         {
             categoryIds = new int[10] { 2, 21, 22, 23, 24, 25, 26, 27, 28, 29 };
             loadResults(1, categoryIds);
+                
         }
 
 
