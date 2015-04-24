@@ -18,6 +18,7 @@ namespace GaMMBo.Test
         public static MainForm frmMain = new MainForm();
         public static LoginForm frmLogin = new LoginForm();
         public static CategoriesForm frmCategories = new CategoriesForm();
+        public static GenreResultsForm genreForm = new GenreResultsForm();
         public static PrefMenu frmPref = new PrefMenu();
         public static SearchForm frmSearch = new SearchForm();
         public static ResultsForm frmResults = new ResultsForm();
