@@ -73,12 +73,6 @@ namespace GaMMBo.Test
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Controller.frmPref.Hide();
-            Controller.frmSearch.Show();
-
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {

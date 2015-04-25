@@ -33,6 +33,7 @@ namespace GaMMBo.Test
             
             if (Proxy.choice == 1)
             {
+                this.BackColor = System.Drawing.Color.LightBlue;
                 searchFormDropBox.Items.Add("Rap");
                 searchFormDropBox.Items.Add("Rock");
                 searchFormDropBox.Items.Add("Hip Hop");
@@ -44,6 +45,7 @@ namespace GaMMBo.Test
             }
             else if (Proxy.choice == 2)
             {
+                this.BackColor = System.Drawing.Color.LightPink;
                 searchFormDropBox.Items.Add("Comedy");
                 searchFormDropBox.Items.Add("Thriller");
                 searchFormDropBox.Items.Add("Fantasy");
@@ -54,6 +56,7 @@ namespace GaMMBo.Test
 
             else if (Proxy.choice == 3)
             {
+                this.BackColor = System.Drawing.Color.LightGreen;
                 searchFormDropBox.Items.Add("Romance");
                 searchFormDropBox.Items.Add("Fantasy");
                 searchFormDropBox.Items.Add("Mystery");
@@ -67,6 +70,7 @@ namespace GaMMBo.Test
             }
             else if (Proxy.choice == 4)
             {
+                this.BackColor = System.Drawing.Color.LightYellow;
                 searchFormDropBox.Items.Add("Strategy");
                 searchFormDropBox.Items.Add("Sports");
                 searchFormDropBox.Items.Add("Adventure");
@@ -89,7 +93,7 @@ namespace GaMMBo.Test
             if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
             else
             {
-                genreNum = Proxy.getGenreNumber(genreName);
+                genreNum = Proxy.getGenreNumber(genreName) ;
 
                 resultId = Proxy.getGenreObjects(genreNum);
                 GenreResultsForm.setGenreArray(resultId);

@@ -93,7 +93,7 @@ namespace GaMMBo.Test
 
        public static void searchByName(string objectName) {
            conn.Open();
-           sqlCommand = new SqlCommand("Select id, name, description from " + type + " where name = @name",conn);
+           sqlCommand = new SqlCommand("Select id, name, description from " + Controller.catName + " where name = @name",conn);
            sqlCommand.Parameters.Add("@name", SqlDbType.NVarChar);
            sqlCommand.Parameters["@name"].Value = objectName;
 
@@ -103,7 +103,7 @@ namespace GaMMBo.Test
                while (sqlReader.Read())
                {
                    objectId = int.Parse(sqlReader[0].ToString());
-                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + type + "_images\\" + objectId +".jpg");
+                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + Controller.catName + "_images\\" + objectId +".jpg");
                    Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
                    Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
                    Controller.frmPref.categoryImage.Image = image;
