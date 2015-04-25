@@ -100,10 +100,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox searchFormTextBox;
         private System.Windows.Forms.Label searchFormLabel1;
         private System.Windows.Forms.Button searchByNameButton;
         private System.Windows.Forms.ComboBox searchFormDropBox;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox searchFormTextBox;
     }
 }

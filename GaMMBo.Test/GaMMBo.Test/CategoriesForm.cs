@@ -98,6 +98,7 @@ namespace GaMMBo.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Games";
             Controller.frmPref.choice = 4;
             Controller.frmCategories.Hide();
@@ -106,6 +107,7 @@ namespace GaMMBo.Test
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Music";
             Controller.frmPref.choice = 1;
             Controller.frmCategories.Hide();
@@ -114,6 +116,7 @@ namespace GaMMBo.Test
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Movies";
             Controller.frmPref.choice = 2;
             Controller.frmCategories.Hide();
@@ -122,6 +125,7 @@ namespace GaMMBo.Test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Books";
             Controller.frmPref.choice = 3;
             Controller.frmCategories.Hide();

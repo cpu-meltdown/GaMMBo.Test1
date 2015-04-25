@@ -103,17 +103,20 @@ namespace GaMMBo.Test
                while (sqlReader.Read())
                {
                    objectId = int.Parse(sqlReader[0].ToString());
-                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + Controller.catName + "_images\\" + objectId +".jpg");
+                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + Controller.catName + "_images\\" + objectId + ".jpg");
                    Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
                    Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
                    Controller.frmPref.categoryImage.Image = image;
-                   Controller.frmSearch.Hide();
-                   Controller.frmPref.Show();
                }
+               conn.Close();
+               Controller.frmSearch.Hide();
+               Controller.frmPref.Show();
            }
            else
+           {
+               conn.Close();
                MessageBox.Show("Sorry, but " + objectName + " does not exist in the database.");
-           conn.Close();
+           }
        }
        public static void getGuestObject()
        {
