@@ -48,14 +48,14 @@ namespace GaMMBo.Test
         static Genre[] booksGenres = new Genre[9];
        public static void initializeGenres (int c,int u)
         {
-            numOfvotes = 0;
+           numOfvotes = 0;
            choice = c;
            userId = Controller.getUserId() ;
             
            //Setting up Music Genres
            musicGenres[0] = new Genre("Rap");
            musicGenres[1] = new Genre("Rock");
-           musicGenres[2] = new Genre("HipHop");// There is no space because when there was it would only read up til Hip
+           musicGenres[2] = new Genre("Hip Hop");// There is no space because when there was it would only read up til Hip
            musicGenres[3] = new Genre("Country");
            musicGenres[4] = new Genre("Metal");
            musicGenres[5] = new Genre("Pop");
@@ -78,7 +78,7 @@ namespace GaMMBo.Test
            booksGenres[5] = new Genre("Fiction");
            booksGenres[6] = new Genre("Novel");
            booksGenres[7] = new Genre("Autobiography");
-           booksGenres[8] = new Genre("YoungAdult");
+           booksGenres[8] = new Genre("Young Adult");
 
            //Setting up Games Genres
            gamesGenres[0] = new Genre("Strategy");
@@ -91,8 +91,33 @@ namespace GaMMBo.Test
        
        }
 
+       public static void searchByName(string objectName) {
+           conn.Open();
+           sqlCommand = new SqlCommand("Select id, name, description from " + Controller.catName + " where name = @name",conn);
+           sqlCommand.Parameters.Add("@name", SqlDbType.NVarChar);
+           sqlCommand.Parameters["@name"].Value = objectName;
+
+           sqlReader = sqlCommand.ExecuteReader();
+           if (sqlReader.HasRows)
+           {
+               while (sqlReader.Read())
+               {
+                   objectId = int.Parse(sqlReader[0].ToString());
+                   image = Image.FromFile(@"C:\GaMMBo.Test1\" + Controller.catName + "_images\\" + objectId +".jpg");
+                   Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
+                   Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
+                   Controller.frmPref.categoryImage.Image = image;
+                   Controller.frmSearch.Hide();
+                   Controller.frmPref.Show();
+               }
+           }
+           else
+               MessageBox.Show("Sorry, but " + objectName + " does not exist in the database.");
+           conn.Close();
+       }
        public static void getGuestObject()
        {
+           
            if (numOfvotes > 10) {
                
                MessageBox.Show("The user  saw 10 objects this is where we display the results");
@@ -176,13 +201,13 @@ namespace GaMMBo.Test
                genreNumber2 = musicGenre % 10;
                genreName1 = musicGenres[genreNumber1 - 1].getGenreName();
                genreName2 = musicGenres[genreNumber2 - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserMusic set " + genreName1 + " = " + genreName1 + sign + " 1 , " + genreName2 + " = " + genreName2 + sign + "1  Where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserMusic set [" + genreName1 + "] = [" + genreName1+"]" + sign + " 1 , [" + genreName2 + "] = [" + genreName2 +"]"+ sign + "1  Where UserId = @userId", conn);
 
            }
            else
            {
                genreName1 = musicGenres[musicGenre - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserMusic set " + genreName1 + " = " + genreName1 + sign + " 1  where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserMusic set [" + genreName1 + "]= [" + genreName1+"]" + sign + " 1  where UserId = @userId", conn);
            }
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
            sqlCommand.Parameters["@userId"].Value = userId;
@@ -267,13 +292,13 @@ namespace GaMMBo.Test
                genreNumber2 = bookGenre % 10;
                genreName1 = booksGenres[genreNumber1 - 1].getGenreName();
                genreName2 = booksGenres[genreNumber2 - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserBooks set " + genreName1 + " = " + genreName1 + sign + " 1 , " + genreName2 + " = " + genreName2 + sign + "1  Where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserBooks set [" + genreName1 + "] = [" + genreName1 +"]"+ sign + " 1 , [" + genreName2 + "] = [" + genreName2 +"]"+ sign + "1  Where UserId = @userId", conn);
 
            }
            else
            {
                genreName1 = booksGenres[bookGenre - 1].getGenreName();
-               sqlCommand = new SqlCommand("Update UserBooks set " + genreName1 + " = " + genreName1 + sign + " 1  where UserId = @userId", conn);
+               sqlCommand = new SqlCommand("Update UserBooks set [" + genreName1 + "] = [" + genreName1 +"]"+ sign + " 1  where UserId = @userId", conn);
            }
            sqlCommand.Parameters.Add("@userId", SqlDbType.Int);
            sqlCommand.Parameters["@userId"].Value = userId;
@@ -385,6 +410,7 @@ namespace GaMMBo.Test
 
        public static void getUserObject()// takes into account objects that have already been voted on
        {
+         
            if (numOfvotes > 10) { MessageBox.Show("The user saw 10 objects this is where we display the results"); }
            else
            {
@@ -430,8 +456,7 @@ namespace GaMMBo.Test
 
                    image = Image.FromFile(@"C:\GaMMBo.Test1\Games_Images\" + objectId + ".jpg");
                }//this sql command checks if that particular object and user is in the specific linker table 
-               sqlCommand =
-                                          new SqlCommand("Select " + type + ".Name  From " + type +
+               sqlCommand =  new SqlCommand("Select " + type + ".Name  From " + type +
                                            " Inner Join " + linker + " ON " + linker + "." + type + "Id = " + type + ".Id " +
                                           " Where " + linker + "." + type + "Id = @ID AND " + linker + ".UserId = @UID", conn);
 
@@ -521,6 +546,49 @@ namespace GaMMBo.Test
 
            conn.Close();
        }
+
+
+       public static int [] getGenreObjects(int num)
+       {
+           int genre = num + 1;
+           int count = 0;
+           int[] userObject = new int[5];
+           if (choice == 1)
+           {
+               type = "Music";
+           }
+           else if (choice == 2)
+           {
+               type = "Movies";
+           }
+           else if (choice == 3)
+           {
+               type = "Books";
+           }
+           else
+           {
+               type = "Games";
+           }
+
+           sqlCommand = new SqlCommand("Select Id From " + type + " Where Genre % 10  = " + genre + " OR Genre / 10 = " + genre, conn);
+
+           conn.Open();
+           sqlReader = sqlCommand.ExecuteReader();
+
+           while (sqlReader.Read() && (count < 5))
+           {
+               
+               userObject[count] = int.Parse(sqlReader[0].ToString());
+               count = count + 1;
+
+           }
+           conn.Close();
+          
+           return userObject;
+           
+           
+       }
+
 
        public static int[] getUserValues()
        {
@@ -705,7 +773,11 @@ namespace GaMMBo.Test
             }//this sql command checks if that particular object and user is in the specific linker table 
 
             sqlCommand = new SqlCommand("Select Voted From " + linker +
+<<<<<<< HEAD
                                        " Where " + type + "Id = @ID AND UserId = @UID", conn);
+=======
+                        " Where " + type + "Id = @ID AND UserId = @UID", conn);
+>>>>>>> master
 
             sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
             sqlCommand.Parameters["@ID"].Value = objectId;
@@ -733,5 +805,61 @@ namespace GaMMBo.Test
 
             
         }
+       public static int getGenreNumber(string name)
+       {
+           int count = 0;
+           if (choice == 1) 
+           {
+               while (count < 7) 
+               {
+                   if (musicGenres[count].getGenreName().Equals(name))
+                   { return count; }
+                   else { count = count + 1; }
+               
+               }
+           
+           
+           }
+           else if(choice == 2)
+           {
+               while (count < 6)
+               {
+                   if (moviesGenres[count].getGenreName().Equals(name))
+                   { return count; }
+                   else { count = count + 1; }
+
+               }
+           
+           }
+           else if (choice == 3) 
+           {
+               while ( count < 9)
+               {
+                   if (booksGenres[count].getGenreName().Equals(name))
+                   { return count; }
+                   else { count = count + 1; }
+
+               }
+           
+           
+           }
+           else if (choice == 4) 
+           {
+               while(count < 6)
+               {
+                   if (gamesGenres[count].getGenreName().Equals(name))
+                   { return count; }
+                   else { count = count + 1; }
+
+               }
+           
+            
+           
+           }
+
+           return count;       
+       
+       }
+
     }
 }

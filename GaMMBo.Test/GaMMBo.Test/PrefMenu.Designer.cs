@@ -69,6 +69,7 @@
             this.btnSkip.UseVisualStyleBackColor = true;
             this.btnSkip.Click += new System.EventHandler(this.button3_Click);
             // 
+<<<<<<< HEAD
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(4, 404);
@@ -79,6 +80,8 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button4_Click);
             // 
+=======
+>>>>>>> master
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(494, 404);
@@ -92,7 +95,11 @@
             // categoryObjectName
             // 
             this.categoryObjectName.AutoSize = true;
+<<<<<<< HEAD
             this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.categoryObjectName.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> master
             this.categoryObjectName.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectName.Location = new System.Drawing.Point(11, 9);
             this.categoryObjectName.Name = "categoryObjectName";
@@ -115,7 +122,11 @@
             // categoryObjectDescription
             // 
             this.categoryObjectDescription.AutoSize = true;
+<<<<<<< HEAD
             this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> master
             this.categoryObjectDescription.ForeColor = System.Drawing.Color.Black;
             this.categoryObjectDescription.Location = new System.Drawing.Point(12, 49);
             this.categoryObjectDescription.Name = "categoryObjectDescription";

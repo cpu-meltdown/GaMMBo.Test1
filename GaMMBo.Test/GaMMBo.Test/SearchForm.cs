@@ -7,49 +7,101 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace GaMMBo.Test
 {
     public partial class SearchForm : Form
     {
+        string genreName;
         public SearchForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void searchByNameButton_Click(object sender, EventArgs e)
         {
-            //Ben - bring up main form
-            MainForm main = new MainForm();
-            this.Hide();
-            main.ShowDialog();
+            if (Controller.frmSearch.searchFormLabel1.Text.Trim() == "")
+                MessageBox.Show("Check your input please.");
+            else
+            {
+                Proxy.searchByName(Controller.frmSearch.searchFormTextBox.Text);
+            }
+        }
 
-                              
-            // TODO: This line of code loads data into the 'categoriesDataSet1.Music' table. You can move, or remove it, as needed.
-            this.musicTableAdapter.Fill(this.categoriesDataSet1.Music);
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
             
+            if (Proxy.choice == 1)
+            {
+                this.BackColor = System.Drawing.Color.LightBlue;
+                searchFormDropBox.Items.Add("Rap");
+                searchFormDropBox.Items.Add("Rock");
+                searchFormDropBox.Items.Add("Hip Hop");
+                searchFormDropBox.Items.Add("Country");
+                searchFormDropBox.Items.Add("Metal");
+                searchFormDropBox.Items.Add("Pop");
+                searchFormDropBox.Items.Add("Electronic");
+
+            }
+            else if (Proxy.choice == 2)
+            {
+                this.BackColor = System.Drawing.Color.LightPink;
+                searchFormDropBox.Items.Add("Comedy");
+                searchFormDropBox.Items.Add("Thriller");
+                searchFormDropBox.Items.Add("Fantasy");
+                searchFormDropBox.Items.Add("Action");
+                searchFormDropBox.Items.Add("Romance");
+
+            }
+
+            else if (Proxy.choice == 3)
+            {
+                this.BackColor = System.Drawing.Color.LightGreen;
+                searchFormDropBox.Items.Add("Romance");
+                searchFormDropBox.Items.Add("Fantasy");
+                searchFormDropBox.Items.Add("Mystery");
+                searchFormDropBox.Items.Add("Thriller");
+                searchFormDropBox.Items.Add("Science");
+                searchFormDropBox.Items.Add("Fiction");
+                searchFormDropBox.Items.Add("Novel");
+                searchFormDropBox.Items.Add("Autobiography");
+                searchFormDropBox.Items.Add("Young Adult");
+
+            }
+            else if (Proxy.choice == 4)
+            {
+                this.BackColor = System.Drawing.Color.LightYellow;
+                searchFormDropBox.Items.Add("Strategy");
+                searchFormDropBox.Items.Add("Sports");
+                searchFormDropBox.Items.Add("Adventure");
+                searchFormDropBox.Items.Add("Fighting");
+                searchFormDropBox.Items.Add("Racing");
+                searchFormDropBox.Items.Add("RPG");
+
+            }
         }
 
-        private void musicBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Validate();
-            this.musicBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.categoriesDataSet1);
-
+            genreName = searchFormDropBox.Text;
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            MainForm frmMain = new MainForm();
-            this.Hide();
-            frmMain.ShowDialog();
+        private void button2_Click(object sender, EventArgs e)
+        {   int genreNum = 0;
             
-        }
+        int[] resultId = new int[5];
+            if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
+            else
+            {
+                genreNum = Proxy.getGenreNumber(genreName) ;
 
-        private void musicDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+                resultId = Proxy.getGenreObjects(genreNum);
+                GenreResultsForm.setGenreArray(resultId);
+                GenreResultsForm.setPictureBoxes();
+                Controller.frmSearch.Hide();
+                Controller.genreForm.ShowDialog();
+            
+            }
         }
     }
 }

@@ -73,11 +73,14 @@ namespace GaMMBo.Test
 
         }
 
+<<<<<<< HEAD
         private void button4_Click(object sender, EventArgs e)
         {
             //search button
             Controller.frmResults.Show();
         }
+=======
+>>>>>>> master
 
         private void button5_Click(object sender, EventArgs e)
         {

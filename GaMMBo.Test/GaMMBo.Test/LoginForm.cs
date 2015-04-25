@@ -28,8 +28,16 @@ namespace GaMMBo.Test
             Controller.frmLogin.txtUsername.Text = "";
             Controller.frmLogin.txtPassword.Text = "";
             Controller.frmLogin.txtPassword2.Text = "";
-            Controller.frmLogin.Hide();
-            Controller.frmMain.Show();
+            if (Controller.guest)
+            {
+                Controller.frmLogin.Hide();
+                Controller.frmCategories.Show();
+            }
+            else
+            {
+                Controller.frmLogin.Hide();
+                Controller.frmMain.Show();
+            }
 
 
         }
