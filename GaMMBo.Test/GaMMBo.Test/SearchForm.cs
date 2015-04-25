@@ -93,6 +93,7 @@ namespace GaMMBo.Test
 
                 resultId = Proxy.getGenreObjects(genreNum);
                 GenreResultsForm.setGenreArray(resultId);
+                GenreResultsForm.setPictureBoxes();
                 Controller.frmSearch.Hide();
                 Controller.genreForm.ShowDialog();
             

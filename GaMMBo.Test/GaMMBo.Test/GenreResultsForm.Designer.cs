@@ -44,15 +44,17 @@
             // 
             this.result5.Location = new System.Drawing.Point(455, 256);
             this.result5.Name = "result5";
-            this.result5.Size = new System.Drawing.Size(160, 191);
+            this.result5.Size = new System.Drawing.Size(180, 191);
+            this.result5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.result5.TabIndex = 0;
             this.result5.TabStop = false;
             // 
             // result2
             // 
-            this.result2.Location = new System.Drawing.Point(81, 256);
+            this.result2.Location = new System.Drawing.Point(68, 245);
             this.result2.Name = "result2";
-            this.result2.Size = new System.Drawing.Size(160, 191);
+            this.result2.Size = new System.Drawing.Size(173, 202);
+            this.result2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.result2.TabIndex = 1;
             this.result2.TabStop = false;
             // 
@@ -61,6 +63,7 @@
             this.result3.Location = new System.Drawing.Point(265, 142);
             this.result3.Name = "result3";
             this.result3.Size = new System.Drawing.Size(160, 191);
+            this.result3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.result3.TabIndex = 2;
             this.result3.TabStop = false;
             // 
@@ -68,15 +71,17 @@
             // 
             this.result4.Location = new System.Drawing.Point(455, 25);
             this.result4.Name = "result4";
-            this.result4.Size = new System.Drawing.Size(160, 191);
+            this.result4.Size = new System.Drawing.Size(180, 205);
+            this.result4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.result4.TabIndex = 3;
             this.result4.TabStop = false;
             // 
             // result1
             // 
-            this.result1.Location = new System.Drawing.Point(81, 25);
+            this.result1.Location = new System.Drawing.Point(68, 12);
             this.result1.Name = "result1";
-            this.result1.Size = new System.Drawing.Size(160, 191);
+            this.result1.Size = new System.Drawing.Size(173, 204);
+            this.result1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.result1.TabIndex = 4;
             this.result1.TabStop = false;
             // 
@@ -92,6 +97,7 @@
             this.Controls.Add(this.result5);
             this.Name = "GenreResultsForm";
             this.Text = "GenreResultsForm";
+            this.Load += new System.EventHandler(this.GenreResultsForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.result5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.result2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.result3)).EndInit();

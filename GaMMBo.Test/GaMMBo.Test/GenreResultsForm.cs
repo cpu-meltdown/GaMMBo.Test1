@@ -23,37 +23,46 @@ namespace GaMMBo.Test
             categoryIds = cid;
         }
 
-        private void GenreResultsForm_Load(object sender, EventArgs e)
+        public static void setPictureBoxes()
         {
+
             string catName = null;
 
-            MessageBox.Show(categoryIds[1].ToString());
-            if (Proxy.choice == 1) 
-            {
-                catName = "Movies_Images";
-            }
-            else if (Proxy.choice == 2) 
+            if (Proxy.choice == 1)
             {
                 catName = "Music_Images";
             }
-            else if (Proxy.choice == 3) 
+            else if (Proxy.choice == 2)
+            {
+                catName = "Movies_Images";
+            }
+            else if (Proxy.choice == 3)
             {
                 catName = "Books_Images";
             }
-            else if(Proxy.choice == 4)
-            
-             {
-                 catName = "Games_Images";
-            
+            else if (Proxy.choice == 4)
+            {
+                catName = "Games_Images";
+
             }
 
             Controller.genreForm.result1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
-           
+
             Controller.genreForm.result2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
             Controller.genreForm.result3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
             Controller.genreForm.result4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
             Controller.genreForm.result5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
+        }
+
+        private void GenreResultsForm_Load(object sender, EventArgs e)
+        {
            
+           
+        }
+
+        private void GenreResultsForm_Load_1(object sender, EventArgs e)
+        {
+
         }
 
     }
