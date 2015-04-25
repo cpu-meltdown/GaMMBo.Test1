@@ -22,23 +22,10 @@ namespace GaMMBo.Test
         public static int[] topTenSearch()
         {
 
-            
-            
             int[] arrayID = new int[10];
             int[] arrayValue = new int[10];
-
-            /**
-            for (int i = 0; i < 10; i++)
-            {
-                arrayID[i] = 0;
-                arrayValue[i] = 0;
-            }
-            */
-
             int[] userPreferences = new int[10];
-
             int[] objectAttributes = new int[10];
-
             int size = 0;
 
 
@@ -70,11 +57,9 @@ namespace GaMMBo.Test
 
 
                 //if the user has voted on this movie we do not want to add it to the results
-                if (Proxy.getVisibility() == true) { ;}
-
-
-                else
+                if (Proxy.getVisibility() != true) 
                 {
+
                     objectAttributes = Proxy.getObjectValue(i);
                     int value = 0;
 
