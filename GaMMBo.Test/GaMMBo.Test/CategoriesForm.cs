@@ -80,6 +80,7 @@ namespace GaMMBo.Test
         private void gamesButton_Click(object sender, EventArgs e)
         {
             //PrefMenu prefMenu = new PrefMenu(4);
+
             Controller.catName = "Games";
             Controller.frmPref.choice = 4;
             Controller.frmCategories.Hide();
@@ -98,6 +99,7 @@ namespace GaMMBo.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Proxy.choice = 4;
             Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Games";
             Controller.frmPref.choice = 4;
@@ -107,6 +109,7 @@ namespace GaMMBo.Test
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Proxy.choice = 1;
             Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Music";
             Controller.frmPref.choice = 1;
@@ -116,6 +119,7 @@ namespace GaMMBo.Test
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Proxy.choice = 2;
             Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Movies";
             Controller.frmPref.choice = 2;
@@ -125,6 +129,7 @@ namespace GaMMBo.Test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Proxy.choice = 3;
             Controller.frmSearch.searchFormTextBox.Text = "";
             Controller.catName = "Books";
             Controller.frmPref.choice = 3;
