@@ -93,8 +93,6 @@ namespace GaMMBo.Test
             Controller.frmPref.btnLike.Visible = false;
             Controller.frmPref.btnDislike.Visible = false;
             Controller.frmPref.btnSkip.Visible = false;
-            Controller.frmPref.btnSearch.Visible = false;
-            Controller.frmPref.btnSearch.Visible = false;
             Controller.frmPref.categoryImage.Image = pic.Image;
             Controller.frmPref.Show();
 
