@@ -629,15 +629,17 @@ namespace GaMMBo.Test
 
            while (sqlReader.Read())
            {
-               for (int i = 0; i < 9; i++)
+
+               // 1-10 to avoid user id #
+               for (int i = 1; i < 10; i++)
                {
                    if (i <= number)
                    {
-                       local[i] = int.Parse(sqlReader[i].ToString());
+                       local[i - 1] = int.Parse(sqlReader[i].ToString());
                    }
-                   else 
+                   else
                    {
-                       local[i] = 0;
+                       local[i - 1] = 0;
                    }
                }
            }
