@@ -24,6 +24,10 @@ namespace GaMMBo.Test
 
             int[] arrayID = new int[10];
             int[] arrayValue = new int[10];
+            for(int i = 0; i < 10; i++)
+            {
+                arrayValue[i] = -1;
+            }
             int[] userPreferences = new int[10];
             int[] objectAttributes = new int[10];
             int size = 0;
@@ -57,7 +61,7 @@ namespace GaMMBo.Test
 
 
                 //if the user has voted on this movie we do not want to add it to the results
-                if (Proxy.getVisibility() != true)
+                if (Proxy.getVisibility() == true)
                 {
 
                     objectAttributes = Proxy.getObjectValue(i);

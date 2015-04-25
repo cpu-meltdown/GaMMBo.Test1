@@ -22,35 +22,35 @@ namespace GaMMBo.Test
 
         private void ResultsForm_Load(object sender, EventArgs e)
         {
-            categoryIds = new int[10] { 2, 21, 22, 23, 24, 25, 26, 27, 28, 29 };
-            loadResults(1, categoryIds);
+            categoryIds = Searching.topTenSearch();
+            loadResults(categoryIds);
                 
         }
 
 
 
-        public static void loadResults(int category, int[] categoryIds)
+        public static void loadResults(int[] categoryIds)
         {
 
             String catName = "";
-            Controller.catName = "Movies";
-            catName = Controller.catName + "_Images";
+            //Controller.catName = "Movies";
+            //catName = Controller.catName + "_Images";
 
-            //switch (category)
-            //{
-            //    case 1:
-            //        catName = "Movies_Images";
-            //        break;
-            //    case 2:
-            //        catName = "Music_Images";
-            //        break;
-            //    case 3:
-            //        catName = "Books_Images";
-            //        break;
-            //    case 4:
-            //        catName = "Games_Images";
-            //        break;
-            //}
+            switch (Proxy.choice)
+            {
+                case 1:
+                    catName = "Movies_Images";
+                    break;
+                case 2:
+                    catName = "Music_Images";
+                    break;
+                case 3:
+                    catName = "Books_Images";
+                    break;
+                case 4:
+                    catName = "Games_Images";
+                    break;
+            }
 
 
             Controller.frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");

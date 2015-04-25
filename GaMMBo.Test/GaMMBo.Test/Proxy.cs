@@ -414,7 +414,11 @@ namespace GaMMBo.Test
        public static void getUserObject()// takes into account objects that have already been voted on
        {
          
-           if (numOfvotes > 10) { MessageBox.Show("The user saw 10 objects this is where we display the results"); }
+           if (numOfvotes > 10) { 
+               MessageBox.Show("The user saw 10 objects this is where we display the results");
+               Controller.frmPref.Hide();
+               Controller.frmResults.Show();
+           }
            else
            {
                numOfvotes = numOfvotes + 1;
@@ -681,7 +685,7 @@ namespace GaMMBo.Test
 
            sqlCommand = new SqlCommand("Select genre from " + type + " where Id = @ID", conn);
            sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
-           sqlCommand.Parameters["@ID"].Value = objectId;
+           sqlCommand.Parameters["@ID"].Value = num;
 
            conn.Open();
            SqlDataReader sqlReader = sqlCommand.ExecuteReader();
