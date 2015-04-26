@@ -135,7 +135,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PrefMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PrefMenu";
+            this.Text = "Vote";
             this.Load += new System.EventHandler(this.PrefMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoryImage)).EndInit();
             this.ResumeLayout(false);
