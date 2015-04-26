@@ -39,11 +39,12 @@
             // 
             // searchFormTextBox
             // 
-            this.searchFormTextBox.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchFormTextBox.Location = new System.Drawing.Point(142, 64);
+            this.searchFormTextBox.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchFormTextBox.Location = new System.Drawing.Point(189, 22);
             this.searchFormTextBox.Name = "searchFormTextBox";
-            this.searchFormTextBox.Size = new System.Drawing.Size(157, 28);
+            this.searchFormTextBox.Size = new System.Drawing.Size(418, 27);
             this.searchFormTextBox.TabIndex = 0;
+            this.searchFormTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchFormTextBox_KeyUp);
             // 
             // searchFormLabel1
             // 
@@ -58,7 +59,7 @@
             // searchByNameButton
             // 
             this.searchByNameButton.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchByNameButton.Location = new System.Drawing.Point(327, 61);
+            this.searchByNameButton.Location = new System.Drawing.Point(627, 22);
             this.searchByNameButton.Name = "searchByNameButton";
             this.searchByNameButton.Size = new System.Drawing.Size(75, 31);
             this.searchByNameButton.TabIndex = 2;
@@ -68,18 +69,18 @@
             // 
             // searchFormDropBox
             // 
-            this.searchFormDropBox.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchFormDropBox.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchFormDropBox.FormattingEnabled = true;
-            this.searchFormDropBox.Location = new System.Drawing.Point(142, 206);
+            this.searchFormDropBox.Location = new System.Drawing.Point(189, 149);
             this.searchFormDropBox.Name = "searchFormDropBox";
-            this.searchFormDropBox.Size = new System.Drawing.Size(121, 29);
+            this.searchFormDropBox.Size = new System.Drawing.Size(177, 28);
             this.searchFormDropBox.TabIndex = 3;
             this.searchFormDropBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(327, 206);
+            this.button2.Location = new System.Drawing.Point(385, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 29);
             this.button2.TabIndex = 5;
@@ -91,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 163);
+            this.label1.Location = new System.Drawing.Point(14, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 25);
             this.label1.TabIndex = 6;
@@ -99,9 +100,9 @@
             // 
             // searchFormBackButton
             // 
-            this.searchFormBackButton.Location = new System.Drawing.Point(399, 283);
+            this.searchFormBackButton.Location = new System.Drawing.Point(600, 222);
             this.searchFormBackButton.Name = "searchFormBackButton";
-            this.searchFormBackButton.Size = new System.Drawing.Size(75, 23);
+            this.searchFormBackButton.Size = new System.Drawing.Size(102, 32);
             this.searchFormBackButton.TabIndex = 7;
             this.searchFormBackButton.Text = "Back";
             this.searchFormBackButton.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 318);
+            this.ClientSize = new System.Drawing.Size(716, 266);
             this.ControlBox = false;
             this.Controls.Add(this.searchFormBackButton);
             this.Controls.Add(this.label1);

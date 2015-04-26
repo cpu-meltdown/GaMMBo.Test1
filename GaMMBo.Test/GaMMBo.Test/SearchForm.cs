@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GaMMBo.Test
      
 {
 
     public partial class SearchForm : Form
-    { 
-
+    {
+        public string entered;
         string genreName;
         public SearchForm()
         {
@@ -85,6 +86,26 @@ namespace GaMMBo.Test
                 searchFormDropBox.Items.Add("RPG");
 
             }
+
+            searchFormTextBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            searchFormTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection catObjects = new AutoCompleteStringCollection();
+
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+            SqlCommand auto = new SqlCommand("Select Name from " + Controller.catName + " where Name like @name", conn);
+            auto.Parameters.Add("@name", SqlDbType.NVarChar);
+            auto.Parameters["@name"].Value = entered + "%";
+            conn.Open();
+
+            SqlDataReader sqlReader = auto.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                catObjects.Add(sqlReader[0].ToString());
+            }
+
+            searchFormTextBox.AutoCompleteCustomSource = catObjects;
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +138,12 @@ namespace GaMMBo.Test
         {
             Controller.frmSearch.Hide();
             Controller.frmCategories.Show();
+            entered = "";
+        }
+
+        private void searchFormTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            entered = searchFormTextBox.Text;
         }
     }
 }

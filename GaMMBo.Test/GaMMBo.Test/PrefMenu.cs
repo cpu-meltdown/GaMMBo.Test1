@@ -77,6 +77,8 @@ namespace GaMMBo.Test
         private void button5_Click(object sender, EventArgs e)
         {
             skipNum = 0;
+
+            Controller.frmSearch.entered = "";
         
 
 

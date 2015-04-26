@@ -112,38 +112,7 @@ namespace GaMMBo.Test
 
         private void txtUsername_KeyUp(object sender, KeyEventArgs e)
         {
-
-
-            entered = txtUsername.Text;// += e.KeyCode;
-
-
-
-
-
-            //select UserName from Users where UserName like 'b%'
-
-
-
-            // catch (Exception ex) { MessageBox.Show(": " + ex); }
-            //sqlReader.Read();
-            //if (sqlReader.HasRows == true)
-            //{
-            //    txtUsername.Text = sqlReader[0].ToString();
-            //}
-            //else
-            //{
-            //    txtUsername.Text.Substring(0, txtUsername.Text.Length - 1);
-            //    //MessageBox.Show("no resutls");
-
-            //}
-            ////conn.Close();
-
-
-
-
-
-            //MessageBox.Show( entered);
-
+            entered = txtUsername.Text;
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -164,27 +133,5 @@ namespace GaMMBo.Test
             }
         }
         
-
-  
-
-//<<<<<<< HEAD
-//        private void txtUsername_TextChanged(object sender, EventArgs e)
-//=======
-//        private void txtPassword_TextChanged(object sender, EventArgs e)
-//>>>>>>> 55ec1c9872ec4624593c8fd0274546dcfcff902e
-//        {
-
-//        }
-
-        ////Ben - allows setting the repeat password textbox to visible form another form
-        //public Boolean TextBoxValue
-        //{
-        //    set { txtPassword2.Visible = value; }
-        //}
-        ////Ben - allows setting the repeat password label to visible form another form
-        //public Boolean LabelValue
-        //{
-        //    set { lblPassword2.Visible = value; }
-        //}
     }
 }
