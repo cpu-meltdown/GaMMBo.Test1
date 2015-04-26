@@ -22,8 +22,8 @@ namespace GaMMBo.Test
 
         private void ResultsForm_Load(object sender, EventArgs e)
         {
-            categoryIds = Searching.topTenSearch();
-            loadResults(categoryIds);
+            //categoryIds = Searching.topTenSearch();
+            //loadResults(categoryIds);
                 
         }
 
@@ -32,37 +32,21 @@ namespace GaMMBo.Test
         public static void loadResults(int[] categoryIds)
         {
 
-            String catName = "";
+            //String catName = "";
             //Controller.catName = "Movies";
             //catName = Controller.catName + "_Images";
 
-            switch (Proxy.choice)
-            {
-                case 1:
-                    catName = "Movies_Images";
-                    break;
-                case 2:
-                    catName = "Music_Images";
-                    break;
-                case 3:
-                    catName = "Books_Images";
-                    break;
-                case 4:
-                    catName = "Games_Images";
-                    break;
-            }
 
-
-            Controller.frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
-            Controller.frmResults.top2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
-            Controller.frmResults.top3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
-            Controller.frmResults.top4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
-            Controller.frmResults.top5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
-            Controller.frmResults.top6.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[5].ToString() + ".jpg");
-            Controller.frmResults.top7.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[6].ToString() + ".jpg");
-            Controller.frmResults.top8.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[7].ToString() + ".jpg");
-            Controller.frmResults.top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[8].ToString() + ".jpg");
-            Controller.frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
+            //Controller.frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
+            //Controller.frmResults.top2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
+            //Controller.frmResults.top3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
+            //Controller.frmResults.top4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
+            //Controller.frmResults.top5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
+            //Controller.frmResults.top6.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[5].ToString() + ".jpg");
+            //Controller.frmResults.top7.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[6].ToString() + ".jpg");
+            //Controller.frmResults.top8.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[7].ToString() + ".jpg");
+            //Controller.frmResults.top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[8].ToString() + ".jpg");
+            //Controller.frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
 
 
         }
@@ -103,57 +87,70 @@ namespace GaMMBo.Test
         {
             Controller.frmResults.Hide();
             Controller.frmCategories.Show();
+            Controller.frmPref.btnLike.Visible = true;
+            Controller.frmPref.btnDislike.Visible = true;
+            Controller.frmPref.btnSkip.Visible = true;
         }
 
 
         private void top1_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[0], top1);
+            Controller.getResultDetails(Controller.categoryIds[0], top1);
+            //getResultDetails(categoryIds[0], top1);
         }
 
         private void top2_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[1], top2);
+            Controller.getResultDetails(Controller.categoryIds[1], top2);
+            //getResultDetails(categoryIds[1], top2);
         }
 
         private void top3_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[2], top3);
+            Controller.getResultDetails(Controller.categoryIds[2], top3);
+            //getResultDetails(categoryIds[2], top3);
         }
 
         private void top4_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[3], top4);
+            Controller.getResultDetails(Controller.categoryIds[3], top4);
+           //getResultDetails(categoryIds[3], top4);
         }
 
         private void top5_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[4], top5);
+            Controller.getResultDetails(Controller.categoryIds[4], top5);
+            //getResultDetails(categoryIds[4], top5);
         }
 
         private void top6_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[5], top6);
+            Controller.getResultDetails(Controller.categoryIds[5], top6);
+            //getResultDetails(categoryIds[5], top6);
         }
 
         private void top7_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[6], top7);
+            Controller.getResultDetails(Controller.categoryIds[6], top7);
+            //getResultDetails(categoryIds[6], top7);
         }
 
         private void top8_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[7], top8);
+            Controller.getResultDetails(Controller.categoryIds[7], top8);
+            //getResultDetails(categoryIds[7], top8);
         }
 
         private void top9_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[8], top9);
+            Controller.getResultDetails(Controller.categoryIds[8], top9);
+            //getResultDetails(categoryIds[8], top9);
         }
 
         private void top10_Click(object sender, EventArgs e)
         {
-            getResultDetails(categoryIds[9], top10);
+            Controller.getResultDetails(Controller.categoryIds[9], top10);
+            //getResultDetails(categoryIds[9], top10);
         }
 
         

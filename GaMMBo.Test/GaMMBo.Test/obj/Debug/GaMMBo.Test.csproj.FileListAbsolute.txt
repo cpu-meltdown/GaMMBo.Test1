@@ -1,5 +1,8 @@
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe.config
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.exe
+C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
+C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
+C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.AboutUs.resources
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.CategoriesForm.resources
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.GenreResultsForm.resources
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.LoginForm.resources
@@ -11,6 +14,3 @@ C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.SearchForm.resourc
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csproj.GenerateResource.Cache
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.exe
 C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.pdb
-C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\bin\Debug\GaMMBo.Test.pdb
-C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.csprojResolveAssemblyReference.cache
-C:\GaMMBo.Test1\GaMMBo.Test\GaMMBo.Test\obj\Debug\GaMMBo.Test.AboutUs.resources

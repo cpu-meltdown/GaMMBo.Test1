@@ -23,6 +23,7 @@ namespace GaMMBo.Test
         public static PrefMenu frmPref = new PrefMenu();
         public static SearchForm frmSearch = new SearchForm();
         public static ResultsForm frmResults = new ResultsForm();
+        public static int[] categoryIds;
 
         public static String catName;
 
@@ -52,25 +53,52 @@ namespace GaMMBo.Test
         }
         public static void getResults()
         {
-
-            //int[] categoryIds = Searching.topTenSearch();
-
+            categoryIds = Searching.topTenSearch();
 
             String catName = "";
             catName = Controller.catName + "_Images";
 
 
-            //frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
-            //frmResults.top2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
-            //frmResults.top3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
-            //frmResults.top4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
-            //frmResults.top5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
-            //frmResults.top6.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[5].ToString() + ".jpg");
-            //frmResults.top7.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[6].ToString() + ".jpg");
-            //frmResults.top8.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[7].ToString() + ".jpg");
-            //frmResults.top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[8].ToString() + ".jpg");
-            //frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
+            frmResults.top1.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[0].ToString() + ".jpg");
+            frmResults.top2.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[1].ToString() + ".jpg");
+            frmResults.top3.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[2].ToString() + ".jpg");
+            frmResults.top4.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[3].ToString() + ".jpg");
+            frmResults.top5.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[4].ToString() + ".jpg");
+            frmResults.top6.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[5].ToString() + ".jpg");
+            frmResults.top7.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[6].ToString() + ".jpg");
+            frmResults.top8.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[7].ToString() + ".jpg");
+            frmResults.top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[8].ToString() + ".jpg");
+            frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
 
+            frmPref.Hide();
+            frmResults.Show();
+
+        }
+
+        public static void getResultDetails(int resultId, PictureBox pic)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.CategoriesConnectionString);
+            SqlCommand getResults = new SqlCommand("Select Name, Description from " + Controller.catName + " where ID = @ID", conn);
+            getResults.Parameters.Add("@ID", SqlDbType.Int);
+            getResults.Parameters["@ID"].Value = resultId;
+
+            try { conn.Open(); }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+
+            SqlDataReader sqlReader = getResults.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                Controller.frmPref.categoryObjectName.Text = sqlReader[0].ToString();
+                Controller.frmPref.categoryObjectDescription.Text = sqlReader[1].ToString();
+            }
+            conn.Close();
+
+            Controller.frmPref.btnLike.Visible = false;
+            Controller.frmPref.btnDislike.Visible = false;
+            Controller.frmPref.btnSkip.Visible = false;
+            Controller.frmPref.categoryImage.Image = pic.Image;
+            Controller.frmPref.Show();
         }
 
 

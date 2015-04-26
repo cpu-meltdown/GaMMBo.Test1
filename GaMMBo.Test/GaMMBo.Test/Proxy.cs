@@ -417,8 +417,9 @@ namespace GaMMBo.Test
          
            if (numOfvotes > 10) { 
                MessageBox.Show("The user saw 10 objects this is where we display the results");
-               Controller.frmPref.Hide();
-               Controller.frmResults.Show();
+               Controller.getResults();
+               //Controller.frmPref.Hide();
+               //Controller.frmResults.Show();
            }
            else
            {
