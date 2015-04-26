@@ -29,6 +29,7 @@ namespace GaMMBo.Test
                 MessageBox.Show("Check your input please.");
             else
             {
+                searchFormDropBox.Items.Clear();
                 Proxy.searchByName(Controller.frmSearch.searchFormTextBox.Text);
             }
         }
