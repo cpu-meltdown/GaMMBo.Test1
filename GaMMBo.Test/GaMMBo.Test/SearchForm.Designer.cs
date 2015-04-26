@@ -112,6 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 318);
+            this.ControlBox = false;
             this.Controls.Add(this.searchFormBackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -119,7 +120,9 @@
             this.Controls.Add(this.searchByNameButton);
             this.Controls.Add(this.searchFormLabel1);
             this.Controls.Add(this.searchFormTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SearchForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Form";
             this.Load += new System.EventHandler(this.SearchForm_Load);
             this.ResumeLayout(false);
