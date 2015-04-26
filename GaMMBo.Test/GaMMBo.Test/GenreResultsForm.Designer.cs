@@ -33,6 +33,7 @@
             this.result3 = new System.Windows.Forms.PictureBox();
             this.result4 = new System.Windows.Forms.PictureBox();
             this.result1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.result5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.result2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.result3)).BeginInit();
@@ -85,11 +86,23 @@
             this.result1.TabIndex = 4;
             this.result1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(530, 468);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 28);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Back to Categories";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GenreResultsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 499);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.result1);
             this.Controls.Add(this.result4);
             this.Controls.Add(this.result3);
@@ -114,5 +127,6 @@
         private System.Windows.Forms.PictureBox result3;
         private System.Windows.Forms.PictureBox result4;
         private System.Windows.Forms.PictureBox result1;
+        private System.Windows.Forms.Button button1;
     }
 }

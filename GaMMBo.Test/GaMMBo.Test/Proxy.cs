@@ -92,8 +92,9 @@ namespace GaMMBo.Test
        }
 
        public static void searchByName(string objectName) {
+           
            conn.Open();
-           sqlCommand = new SqlCommand("Select id, name, description from " + Controller.catName + " where name = @name",conn);
+           sqlCommand = new SqlCommand("Select Id, Name, Description from " + Controller.catName + " where Name = @name",conn);
            sqlCommand.Parameters.Add("@name", SqlDbType.NVarChar);
            sqlCommand.Parameters["@name"].Value = objectName;
 
@@ -104,7 +105,7 @@ namespace GaMMBo.Test
                {
                    objectId = int.Parse(sqlReader[0].ToString());
                    image = Image.FromFile(@"C:\GaMMBo.Test1\" + Controller.catName + "_images\\" + objectId + ".jpg");
-                   Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
+                  Controller.frmPref.categoryObjectName.Text = sqlReader[1].ToString();
                    Controller.frmPref.categoryObjectDescription.Text = sqlReader[2].ToString();
                    Controller.frmPref.categoryImage.Image = image;
                }
@@ -810,6 +811,7 @@ namespace GaMMBo.Test
         }
        public static int getGenreNumber(string name)
        {
+           
            int count = 0;
            if (choice == 1) 
            {

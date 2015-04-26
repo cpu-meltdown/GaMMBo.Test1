@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GaMMBo.Test
+     
 {
+
     public partial class SearchForm : Form
-    {
+    { 
+
         string genreName;
         public SearchForm()
         {
+           // Proxy.initializeGenres(Controller.frmPref.choice, Controller.frmPref.userId);
+            Proxy.initializeGenres(Proxy.choice, Proxy.userId);
             InitializeComponent();
         }
 
@@ -85,10 +90,10 @@ namespace GaMMBo.Test
         {
             genreName = searchFormDropBox.Text;
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {   int genreNum = 0;
-            
+       
         int[] resultId = new int[5];
             if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
             else
@@ -98,6 +103,8 @@ namespace GaMMBo.Test
                 resultId = Proxy.getGenreObjects(genreNum);
                 GenreResultsForm.setGenreArray(resultId);
                 GenreResultsForm.setPictureBoxes();
+                searchFormDropBox.Text = "";
+                searchFormDropBox.Items.Clear();
                 Controller.frmSearch.Hide();
                 Controller.genreForm.ShowDialog();
             

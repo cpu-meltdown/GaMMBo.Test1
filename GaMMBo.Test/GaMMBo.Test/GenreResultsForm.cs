@@ -30,6 +30,7 @@ namespace GaMMBo.Test
 
             if (Proxy.choice == 1)
             {
+                
                 catName = "Music_Images";
             }
             else if (Proxy.choice == 2)
@@ -56,12 +57,42 @@ namespace GaMMBo.Test
 
         private void GenreResultsForm_Load(object sender, EventArgs e)
         {
-           
+            
            
         }
 
         private void GenreResultsForm_Load_1(object sender, EventArgs e)
         {
+            if (Proxy.choice == 1)
+            {
+                this.BackColor = System.Drawing.Color.LightBlue;
+
+
+            }
+            else if (Proxy.choice == 2)
+            {
+                this.BackColor = System.Drawing.Color.LightPink;
+
+
+            }
+
+            else if (Proxy.choice == 3)
+            {
+                this.BackColor = System.Drawing.Color.LightGreen;
+
+            }
+            else if (Proxy.choice == 4)
+            {
+                this.BackColor = System.Drawing.Color.LightYellow;
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Controller.genreForm.Hide();
+            Controller.frmCategories.Show();
 
         }
 

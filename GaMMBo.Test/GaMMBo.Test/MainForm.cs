@@ -89,5 +89,12 @@ namespace GaMMBo.Test
         {
             Application.Exit();
         }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            Controller.frmMain.Hide();
+            Controller.usform.Show();
+
+        }
     }
 }
