@@ -112,6 +112,7 @@ namespace GaMMBo.Test
         {
             Proxy.choice = 4;
             Controller.frmSearch.searchFormTextBox.Text = "";
+            Controller.frmSearch.Text = "Search Games Database";
             Controller.catName = "Games";
             Controller.frmPref.choice = 4;
             Controller.frmCategories.Hide();
@@ -122,6 +123,7 @@ namespace GaMMBo.Test
         {
             Proxy.choice = 1;
             Controller.frmSearch.searchFormTextBox.Text = "";
+            Controller.frmSearch.Text = "Search Music Database";
             Controller.catName = "Music";
             Controller.frmPref.choice = 1;
             Controller.frmCategories.Hide();
@@ -132,6 +134,7 @@ namespace GaMMBo.Test
         {
             Proxy.choice = 2;
             Controller.frmSearch.searchFormTextBox.Text = "";
+            Controller.frmSearch.Text = "Search Movies Database";
             Controller.catName = "Movies";
             Controller.frmPref.choice = 2;
             Controller.frmCategories.Hide();
@@ -142,6 +145,7 @@ namespace GaMMBo.Test
         {
             Proxy.choice = 3;
             Controller.frmSearch.searchFormTextBox.Text = "";
+            Controller.frmSearch.Text = "Search Books Database";
             Controller.catName = "Books";
             Controller.frmPref.choice = 3;
             Controller.frmCategories.Hide();
