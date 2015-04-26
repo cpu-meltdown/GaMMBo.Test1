@@ -50,7 +50,7 @@ namespace GaMMBo.Test
         {
             
            // PrefMenu prefMenu = new PrefMenu(1);
-            
+            Proxy.numOfvotes = 0;
             Controller.catName = "Music";
             Proxy.choice = 1;
             Controller.frmPref.choice = 1;
@@ -64,6 +64,7 @@ namespace GaMMBo.Test
         private void btnMovies_Click(object sender, EventArgs e)
         {
             //PrefMenu prefMenu = new PrefMenu(2);
+            Proxy.numOfvotes = 0;
             Controller.catName = "Movies";
             Proxy.choice = 2;
             Controller.frmPref.choice = 2;
@@ -75,6 +76,7 @@ namespace GaMMBo.Test
         private void btnBooks_Click(object sender, EventArgs e)
         {
             //PrefMenu prefMenu = new PrefMenu(3);
+            Proxy.numOfvotes = 0;
             Controller.catName = "Books";
             Proxy.choice = 3;
             Controller.frmPref.choice = 3;
@@ -87,6 +89,7 @@ namespace GaMMBo.Test
         private void btnGames_Click(object sender, EventArgs e)
         {
             //PrefMenu prefMenu = new PrefMenu(4);
+            Proxy.numOfvotes = 0;
             Controller.catName = "Games";
             Proxy.choice = 4;
             Controller.frmPref.choice = 4;
