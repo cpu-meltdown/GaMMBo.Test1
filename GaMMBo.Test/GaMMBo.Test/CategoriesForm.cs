@@ -50,8 +50,11 @@ namespace GaMMBo.Test
         {
             
            // PrefMenu prefMenu = new PrefMenu(1);
+            
             Controller.catName = "Music";
+            Proxy.choice = 1;
             Controller.frmPref.choice = 1;
+            Proxy.getUserObject();
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
             
@@ -62,7 +65,9 @@ namespace GaMMBo.Test
         {
             //PrefMenu prefMenu = new PrefMenu(2);
             Controller.catName = "Movies";
+            Proxy.choice = 2;
             Controller.frmPref.choice = 2;
+            Proxy.getUserObject();
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
         }
@@ -71,18 +76,21 @@ namespace GaMMBo.Test
         {
             //PrefMenu prefMenu = new PrefMenu(3);
             Controller.catName = "Books";
+            Proxy.choice = 3;
             Controller.frmPref.choice = 3;
+            Proxy.getUserObject();
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
            
         }
 
-        private void gamesButton_Click(object sender, EventArgs e)
+        private void btnGames_Click(object sender, EventArgs e)
         {
             //PrefMenu prefMenu = new PrefMenu(4);
-
             Controller.catName = "Games";
+            Proxy.choice = 4;
             Controller.frmPref.choice = 4;
+            Proxy.getUserObject();
             Controller.frmCategories.Hide();
             Controller.frmPref.ShowDialog();
         }

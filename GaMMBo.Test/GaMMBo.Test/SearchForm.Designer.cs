@@ -34,6 +34,7 @@
             this.searchFormDropBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.searchFormBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchFormTextBox
@@ -96,11 +97,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Search by Genre";
             // 
+            // searchFormBackButton
+            // 
+            this.searchFormBackButton.Location = new System.Drawing.Point(399, 283);
+            this.searchFormBackButton.Name = "searchFormBackButton";
+            this.searchFormBackButton.Size = new System.Drawing.Size(75, 23);
+            this.searchFormBackButton.TabIndex = 7;
+            this.searchFormBackButton.Text = "Back";
+            this.searchFormBackButton.UseVisualStyleBackColor = true;
+            this.searchFormBackButton.Click += new System.EventHandler(this.searchFormBackButton_Click);
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 318);
+            this.Controls.Add(this.searchFormBackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.searchFormDropBox);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox searchFormTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button searchFormBackButton;
     }
 }

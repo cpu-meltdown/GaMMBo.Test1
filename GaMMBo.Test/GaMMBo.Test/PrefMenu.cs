@@ -131,7 +131,6 @@ namespace GaMMBo.Test
             }
             Proxy.initializeGenres(Controller.frmPref.choice, Controller.frmPref.userId);
             Proxy.insertID(); // inserts userid into the usertable of the category they are voting on 
-            Proxy.getUserObject();
         }
 
 

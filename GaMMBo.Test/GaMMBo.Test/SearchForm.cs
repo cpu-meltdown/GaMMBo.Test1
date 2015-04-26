@@ -92,9 +92,10 @@ namespace GaMMBo.Test
         }
         
         private void button2_Click(object sender, EventArgs e)
-        {   int genreNum = 0;
+        {   
+            int genreNum = 0;
        
-        int[] resultId = new int[5];
+            int[] resultId = new int[5];
             if (genreName == null) { MessageBox.Show("Please select a genre then click go"); }
             else
             {
@@ -109,6 +110,12 @@ namespace GaMMBo.Test
                 Controller.genreForm.ShowDialog();
             
             }
+        }
+
+        private void searchFormBackButton_Click(object sender, EventArgs e)
+        {
+            Controller.frmSearch.Hide();
+            Controller.frmCategories.Show();
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriesForm));
             this.booksButton = new System.Windows.Forms.Button();
-            this.gamesButton = new System.Windows.Forms.Button();
+            this.btnGames = new System.Windows.Forms.Button();
             this.moviesButton = new System.Windows.Forms.Button();
             this.musicButton = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -60,15 +60,15 @@
             this.booksButton.UseVisualStyleBackColor = true;
             this.booksButton.Click += new System.EventHandler(this.btnBooks_Click);
             // 
-            // gamesButton
+            // btnGames
             // 
-            this.gamesButton.Location = new System.Drawing.Point(213, 254);
-            this.gamesButton.Name = "gamesButton";
-            this.gamesButton.Size = new System.Drawing.Size(62, 32);
-            this.gamesButton.TabIndex = 1;
-            this.gamesButton.Text = "Explore";
-            this.gamesButton.UseVisualStyleBackColor = true;
-            this.gamesButton.Click += new System.EventHandler(this.gamesButton_Click);
+            this.btnGames.Location = new System.Drawing.Point(213, 254);
+            this.btnGames.Name = "btnGames";
+            this.btnGames.Size = new System.Drawing.Size(62, 32);
+            this.btnGames.TabIndex = 1;
+            this.btnGames.Text = "Explore";
+            this.btnGames.UseVisualStyleBackColor = true;
+            this.btnGames.Click += new System.EventHandler(this.btnGames_Click);
             // 
             // moviesButton
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.musicButton);
             this.Controls.Add(this.moviesButton);
-            this.Controls.Add(this.gamesButton);
+            this.Controls.Add(this.btnGames);
             this.Controls.Add(this.booksButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CategoriesForm";
@@ -238,7 +238,7 @@
         #endregion
 
         private System.Windows.Forms.Button booksButton;
-        private System.Windows.Forms.Button gamesButton;
+        private System.Windows.Forms.Button btnGames;
         private System.Windows.Forms.Button moviesButton;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button musicButton;
