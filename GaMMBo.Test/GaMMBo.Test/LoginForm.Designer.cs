@@ -36,7 +36,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPassword2 = new System.Windows.Forms.Label();
             this.txtPassword2 = new System.Windows.Forms.TextBox();
-            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -125,18 +124,6 @@
             this.txtPassword2.TextChanged += new System.EventHandler(this.txtPAssword2_TextChanged);
             this.txtPassword2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword2_KeyPress);
             // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(13, 134);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(325, 13);
-            this.lblError.TabIndex = 8;
-            this.lblError.Text = "*Please make sure the password is 8 or more characters";
-            this.lblError.Visible = false;
-            this.lblError.Click += new System.EventHandler(this.label1_Click);
-            // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
@@ -144,7 +131,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 231);
             this.ControlBox = false;
-            this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.lblPassword2);
             this.Controls.Add(this.btnLogin);
@@ -174,6 +160,5 @@
         public System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Label lblPassword2;
         public System.Windows.Forms.TextBox txtPassword2;
-        public System.Windows.Forms.Label lblError;
     }
 }

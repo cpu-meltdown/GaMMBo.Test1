@@ -33,7 +33,8 @@ namespace GaMMBo.Test
 
             if (pass1.Length < 8)
             {
-                Controller.frmLogin.lblError.Visible = true;
+                
+                MessageBox.Show("Password must be more than 8 characters");
                 Controller.frmLogin.txtPassword.Focus();
                 return;
             }
