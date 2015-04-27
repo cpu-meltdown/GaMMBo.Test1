@@ -61,8 +61,9 @@ namespace GaMMBo.Test
 
 
                 //if the user has voted on this movie we do not want to add it to the results
-                if (Proxy.getVisibility() == true)
-                {
+                // removed due to size of DB
+              //  if (Proxy.getVisibility() == true)
+                //{
 
                     objectAttributes = Proxy.getObjectValue(i);
                     int value = 0;
@@ -96,7 +97,7 @@ namespace GaMMBo.Test
                             }
                         }
                     }
-                }
+               // }
             }
 
             return arrayID;

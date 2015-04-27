@@ -781,7 +781,7 @@ namespace GaMMBo.Test
                 
             }//this sql command checks if that particular object and user is in the specific linker table 
 
-            sqlCommand = new SqlCommand("Select Voted From " + linker +
+            sqlCommand = new SqlCommand("Select * From " + linker +
                         " Where " + type + "Id = @ID AND UserId = @UID", conn);
 
             sqlCommand.Parameters.Add("@ID", SqlDbType.Int);
@@ -799,7 +799,7 @@ namespace GaMMBo.Test
 
             conn.Close();
 
-            if (voteValue == "null")
+            if (voteValue == "NULL")
             {
                 return false;
             }
