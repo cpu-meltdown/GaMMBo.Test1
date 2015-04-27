@@ -43,7 +43,7 @@
             this.btnSkip.FlatAppearance.BorderSize = 0;
             this.btnSkip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSkip.Image = global::GaMMBo.Test.Properties.Resources.skip_button9999;
-            this.btnSkip.Location = new System.Drawing.Point(340, 363);
+            this.btnSkip.Location = new System.Drawing.Point(356, 370);
             this.btnSkip.Name = "btnSkip";
             this.btnSkip.Size = new System.Drawing.Size(110, 105);
             this.btnSkip.TabIndex = 2;
@@ -52,7 +52,8 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(514, 430);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(519, 472);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 4;
@@ -77,7 +78,7 @@
             this.categoryObjectDescription.AutoSize = true;
             this.categoryObjectDescription.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryObjectDescription.ForeColor = System.Drawing.Color.Black;
-            this.categoryObjectDescription.Location = new System.Drawing.Point(12, 49);
+            this.categoryObjectDescription.Location = new System.Drawing.Point(12, 47);
             this.categoryObjectDescription.Name = "categoryObjectDescription";
             this.categoryObjectDescription.Size = new System.Drawing.Size(103, 21);
             this.categoryObjectDescription.TabIndex = 7;
@@ -87,9 +88,9 @@
             // categoryImage
             // 
             this.categoryImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.categoryImage.Location = new System.Drawing.Point(158, 78);
+            this.categoryImage.Location = new System.Drawing.Point(167, 77);
             this.categoryImage.Name = "categoryImage";
-            this.categoryImage.Size = new System.Drawing.Size(227, 274);
+            this.categoryImage.Size = new System.Drawing.Size(242, 284);
             this.categoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.categoryImage.TabIndex = 6;
             this.categoryImage.TabStop = false;
@@ -100,7 +101,7 @@
             this.btnDislike.FlatAppearance.BorderSize = 0;
             this.btnDislike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDislike.Image = global::GaMMBo.Test.Properties.Resources.dislikeButton99999;
-            this.btnDislike.Location = new System.Drawing.Point(213, 363);
+            this.btnDislike.Location = new System.Drawing.Point(229, 370);
             this.btnDislike.Name = "btnDislike";
             this.btnDislike.Size = new System.Drawing.Size(110, 105);
             this.btnDislike.TabIndex = 1;
@@ -112,7 +113,7 @@
             this.btnLike.FlatAppearance.BorderSize = 0;
             this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLike.Image = global::GaMMBo.Test.Properties.Resources.like_button99999;
-            this.btnLike.Location = new System.Drawing.Point(86, 363);
+            this.btnLike.Location = new System.Drawing.Point(102, 370);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(110, 105);
             this.btnLike.TabIndex = 0;
@@ -123,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 507);
+            this.ClientSize = new System.Drawing.Size(611, 507);
             this.ControlBox = false;
             this.Controls.Add(this.categoryObjectDescription);
             this.Controls.Add(this.categoryImage);

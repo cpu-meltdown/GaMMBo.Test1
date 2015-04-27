@@ -70,6 +70,29 @@ namespace GaMMBo.Test
             frmResults.top9.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[8].ToString() + ".jpg");
             frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
 
+
+
+            if (Controller.frmPref.choice == 1)
+            {
+                frmResults.BackColor = System.Drawing.Color.LightBlue;
+
+            }
+            else if (Controller.frmPref.choice == 2)
+            {
+                frmResults.BackColor = System.Drawing.Color.LightPink;
+            }
+
+            else if (Controller.frmPref.choice == 3)
+            {
+                frmResults.BackColor = System.Drawing.Color.LightGreen;
+
+            }
+            else if (Controller.frmPref.choice == 4)
+            {
+                frmResults.BackColor = System.Drawing.Color.LightYellow;
+            }
+
+
             frmPref.Hide();
             frmResults.Show();
 

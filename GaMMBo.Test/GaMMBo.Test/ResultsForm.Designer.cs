@@ -263,6 +263,7 @@
             // 
             // btnDone
             // 
+            this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDone.Location = new System.Drawing.Point(710, 495);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(150, 42);

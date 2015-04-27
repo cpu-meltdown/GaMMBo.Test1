@@ -36,9 +36,9 @@ namespace GaMMBo.Test
                         Account.deleteTemproraryAccount();
                         break;
                     case DialogResult.Cancel:
-                        Controller.frmCategories.ShowDialog();
+                        //ben - commented this as it tries to show a form already being handled and crashes
+                        //Controller.frmCategories.ShowDialog();
                         break;
-
                 }
             }
 
@@ -150,6 +150,12 @@ namespace GaMMBo.Test
             Controller.frmPref.choice = 3;
             Controller.frmCategories.Hide();
             Controller.frmSearch.ShowDialog();
+        }
+
+        private void CategoriesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+
         }
     }
 }
