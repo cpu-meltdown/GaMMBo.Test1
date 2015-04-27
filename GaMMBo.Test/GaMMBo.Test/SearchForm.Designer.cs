@@ -44,6 +44,7 @@
             this.searchFormTextBox.Name = "searchFormTextBox";
             this.searchFormTextBox.Size = new System.Drawing.Size(418, 27);
             this.searchFormTextBox.TabIndex = 0;
+            this.searchFormTextBox.TextChanged += new System.EventHandler(this.searchFormTextBox_TextChanged);
             this.searchFormTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchFormTextBox_KeyUp);
             // 
             // searchFormLabel1

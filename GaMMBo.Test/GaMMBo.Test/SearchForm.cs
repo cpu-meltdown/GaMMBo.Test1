@@ -145,5 +145,10 @@ namespace GaMMBo.Test
         {
             entered = searchFormTextBox.Text;
         }
+
+        private void searchFormTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
