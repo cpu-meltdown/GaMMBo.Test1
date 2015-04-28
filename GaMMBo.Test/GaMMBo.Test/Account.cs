@@ -94,6 +94,8 @@ namespace GaMMBo.Test
                     MessageBox.Show("Error: " + err);
                 }
                 Controller.guest = false;
+                //Controller.frmCategories.lblUser.Text = Controller.frmLogin.txtUsername.Text;
+                Controller.frmCategories.lblUser.Text = user;
             }
             else
             {

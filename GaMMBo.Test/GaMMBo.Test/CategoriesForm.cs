@@ -40,6 +40,7 @@ namespace GaMMBo.Test
                         //Controller.frmCategories.ShowDialog();
                         break;
                 }
+                return;
             }
 
             Controller.frmCategories.Hide();
