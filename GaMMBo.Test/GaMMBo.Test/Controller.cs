@@ -52,9 +52,19 @@ namespace GaMMBo.Test
             Account.addUser(userName, password1, password2);
         }
         public static void getResults()
-        {
+        {   
             categoryIds = Searching.topTenSearch();
 
+            //If they disliked everything fill with randoim values
+            if (Controller.frmPref.dislikeNum > 9)
+            {
+                Random rnd = new Random();
+                for (int i = 0; i < 10; i++)
+                {
+                    categoryIds[i] = rnd.Next(1, 89); // only go from 1-88 as max games is 88
+                }
+            }
+            
             String catName = "";
             catName = Controller.catName + "_Images";
 
@@ -71,7 +81,7 @@ namespace GaMMBo.Test
             frmResults.top10.Image = Image.FromFile(@"C:\GaMMBo.Test1\" + catName + "\\" + categoryIds[9].ToString() + ".jpg");
 
 
-
+            //change background color according to current category
             if (Controller.frmPref.choice == 1)
             {
                 frmResults.BackColor = System.Drawing.Color.LightBlue;

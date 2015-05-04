@@ -19,7 +19,7 @@ namespace GaMMBo.Test
     {
 
 
-
+        public int dislikeNum = 0;
         public int skipNum = 0;// variable that keeps track how many times the user skips
         public int choice;// variable keeps track of what category is being accessed
         public int objectId;//the id of the object being voted on
@@ -39,18 +39,20 @@ namespace GaMMBo.Test
         {
             // like button
 
-
+            Proxy.numOfvotes++;
             Proxy.likeOrdislikeObject(1, "+");
             Proxy.getUserObject();
+            
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Proxy.numOfvotes++;
+            dislikeNum++;
             Proxy.likeOrdislikeObject(0, "-");
             Proxy.getUserObject();
-
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

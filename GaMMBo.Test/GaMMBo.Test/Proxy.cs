@@ -122,7 +122,7 @@ namespace GaMMBo.Test
        public static void getGuestObject()
        {
            
-           if (numOfvotes > 10) {
+           if (numOfvotes >= 10) {
                
                MessageBox.Show("The user  saw 10 objects this is where we display the results");
            }
@@ -415,7 +415,7 @@ namespace GaMMBo.Test
        public static void getUserObject()// takes into account objects that have already been voted on
        {
          
-           if (numOfvotes > 10) { 
+           if (numOfvotes >= 10) { 
               // MessageBox.Show("The user saw 10 objects this is where we display the results");
                Controller.getResults();
                //Controller.frmPref.Hide();
@@ -423,7 +423,7 @@ namespace GaMMBo.Test
            }
            else
            {
-               numOfvotes = numOfvotes + 1;
+             //  numOfvotes = numOfvotes + 1;
                String name = null;
 
                String linker = null;

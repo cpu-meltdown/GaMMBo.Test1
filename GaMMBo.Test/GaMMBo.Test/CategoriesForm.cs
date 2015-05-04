@@ -34,6 +34,7 @@ namespace GaMMBo.Test
                         break;
                     case DialogResult.No:
                         Account.deleteTemproraryAccount();
+                        btnLogout.PerformClick();
                         break;
                     case DialogResult.Cancel:
                         //ben - commented this as it tries to show a form already being handled and crashes
